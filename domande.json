@@ -1,0 +1,2014 @@
+{
+  "fisica": {
+    "medio": [
+      {
+        "domanda": "Un corpo di massa 5 kg viene accelerato da una forza netta di 20 N. Qual è la sua accelerazione?",
+        "opzioni": [
+          "2 m/s²",
+          "4 m/s²",
+          "10 m/s²"
+        ],
+        "corretta": "4 m/s²",
+        "spiegazione": "Dalla seconda legge di Newton: a = F/m = 20/5 = 4 m/s²."
+      },
+      {
+        "domanda": "Un oggetto viene lanciato verticalmente verso l'alto con velocità iniziale di 20 m/s. Quanto tempo impiega a raggiungere il punto più alto? (g = 10 m/s²)",
+        "opzioni": [
+          "1 s",
+          "2 s",
+          "4 s"
+        ],
+        "corretta": "2 s",
+        "spiegazione": "Al punto più alto la velocità è zero. t = v₀/g = 20/10 = 2 s."
+      },
+      {
+        "domanda": "Qual è l'unità di misura della pressione nel Sistema Internazionale?",
+        "opzioni": [
+          "Joule",
+          "Pascal",
+          "Newton"
+        ],
+        "corretta": "Pascal",
+        "spiegazione": "La pressione è forza per unità di area. 1 Pa = 1 N/m². Il Joule è unità di energia, il Newton di forza."
+      },
+      {
+        "domanda": "Un circuito ha una resistenza di 10 Ω collegata a una batteria da 20 V. Quale corrente scorre?",
+        "opzioni": [
+          "0,5 A",
+          "2 A",
+          "200 A"
+        ],
+        "corretta": "2 A",
+        "spiegazione": "Dalla legge di Ohm: I = V/R = 20/10 = 2 A."
+      },
+      {
+        "domanda": "Un'onda sonora ha frequenza 440 Hz e velocità 340 m/s. Qual è la sua lunghezza d'onda?",
+        "opzioni": [
+          "0,77 m",
+          "1,29 m",
+          "2,58 m"
+        ],
+        "corretta": "0,77 m",
+        "spiegazione": "λ = v/f = 340/440 ≈ 0,77 m."
+      },
+      {
+        "domanda": "Qual è il lavoro compiuto da una forza di 10 N che sposta un oggetto di 5 m nella direzione della forza?",
+        "opzioni": [
+          "2 J",
+          "15 J",
+          "50 J"
+        ],
+        "corretta": "50 J",
+        "spiegazione": "Il lavoro è W = F × d = 10 × 5 = 50 J."
+      },
+      {
+        "domanda": "Un oggetto di massa 2 kg si trova a 10 m di altezza. Qual è la sua energia potenziale gravitazionale? (g = 10 m/s²)",
+        "opzioni": [
+          "20 J",
+          "100 J",
+          "200 J"
+        ],
+        "corretta": "200 J",
+        "spiegazione": "Ep = mgh = 2 × 10 × 10 = 200 J."
+      },
+      {
+        "domanda": "Quale fenomeno descrive la deviazione della luce quando passa da un mezzo a un altro?",
+        "opzioni": [
+          "Riflessione",
+          "Rifrazione",
+          "Diffrazione"
+        ],
+        "corretta": "Rifrazione",
+        "spiegazione": "La rifrazione è il cambiamento di direzione della luce quando cambia il mezzo di propagazione, a causa della variazione della velocità."
+      },
+      {
+        "domanda": "Qual è la velocità della luce nel vuoto?",
+        "opzioni": [
+          "3 × 10⁶ m/s",
+          "3 × 10⁸ m/s",
+          "3 × 10¹⁰ m/s"
+        ],
+        "corretta": "3 × 10⁸ m/s",
+        "spiegazione": "La velocità della luce nel vuoto è c ≈ 3 × 10⁸ m/s, costante fondamentale della fisica."
+      },
+      {
+        "domanda": "Un corpo in caduta libera da fermo percorre quanti metri nei primi 3 secondi? (g = 10 m/s²)",
+        "opzioni": [
+          "15 m",
+          "30 m",
+          "45 m"
+        ],
+        "corretta": "45 m",
+        "spiegazione": "s = ½gt² = ½ × 10 × 9 = 45 m."
+      },
+      {
+        "domanda": "Qual è l'unità di misura dell'energia nel SI?",
+        "opzioni": [
+          "Watt",
+          "Joule",
+          "Newton"
+        ],
+        "corretta": "Joule",
+        "spiegazione": "L'energia si misura in Joule (J). Il Watt è la potenza, il Newton la forza."
+      },
+      {
+        "domanda": "Due cariche elettriche uguali si respingono. Di che tipo sono?",
+        "opzioni": [
+          "Una positiva e una negativa",
+          "Entrambe dello stesso segno",
+          "Una neutra e una carica"
+        ],
+        "corretta": "Entrambe dello stesso segno",
+        "spiegazione": "La legge di Coulomb stabilisce che cariche dello stesso segno si respingono, cariche di segno opposto si attraggono."
+      },
+      {
+        "domanda": "La potenza è definita come:",
+        "opzioni": [
+          "Forza per velocità",
+          "Lavoro per tempo",
+          "Lavoro diviso tempo"
+        ],
+        "corretta": "Lavoro diviso tempo",
+        "spiegazione": "P = W/t. La potenza è il lavoro compiuto nell'unità di tempo, misurata in Watt (W = J/s)."
+      },
+      {
+        "domanda": "In un moto uniformemente accelerato, la velocità:",
+        "opzioni": [
+          "Rimane costante",
+          "Aumenta o diminuisce a ritmo costante",
+          "Aumenta in modo esponenziale"
+        ],
+        "corretta": "Aumenta o diminuisce a ritmo costante",
+        "spiegazione": "Nel moto uniformemente accelerato l'accelerazione è costante, quindi la velocità varia linearmente nel tempo: v = v₀ + at."
+      },
+      {
+        "domanda": "Qual è la frequenza di un'onda che ha periodo T = 0,01 s?",
+        "opzioni": [
+          "10 Hz",
+          "100 Hz",
+          "1000 Hz"
+        ],
+        "corretta": "100 Hz",
+        "spiegazione": "f = 1/T = 1/0,01 = 100 Hz."
+      },
+      {
+        "domanda": "Osserva il grafico velocità/tempo. La retta orizzontale indica che la velocità è costante nel tempo. Quale tipo di moto descrive?",
+        "svg": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"200\" fill=\"#111827\" rx=\"8\"/>\n<line x1=\"50\" y1=\"170\" x2=\"330\" y2=\"170\" stroke=\"#8a95a8\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"20\"  x2=\"50\"  y2=\"175\" stroke=\"#8a95a8\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"130\" x2=\"330\" y2=\"130\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"50\" y1=\"90\"  x2=\"330\" y2=\"90\"  stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"170\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"170\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"290\" y1=\"20\" x2=\"290\" y2=\"170\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"55\" y1=\"100\" x2=\"320\" y2=\"100\" stroke=\"#c8a96e\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<circle cx=\"55\" cy=\"100\" r=\"4\" fill=\"#c8a96e\"/>\n<circle cx=\"320\" cy=\"100\" r=\"4\" fill=\"#c8a96e\"/>\n<text x=\"20\" y=\"104\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\" transform=\"rotate(-90,20,104)\">v (m/s)</text>\n<text x=\"335\" y=\"178\" fill=\"#8a95a8\" font-size=\"10\">t (s)</text>\n<text x=\"42\" y=\"134\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"end\">10</text>\n<text x=\"42\" y=\"94\"  fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"end\">20</text>\n<text x=\"130\" y=\"183\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">1</text>\n<text x=\"210\" y=\"183\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">2</text>\n<text x=\"290\" y=\"183\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">3</text>\n</svg>",
+        "opzioni": [
+          "Moto uniformemente accelerato",
+          "Moto uniforme",
+          "Moto in caduta libera"
+        ],
+        "corretta": "Moto uniforme",
+        "spiegazione": "Nel grafico v/t una retta orizzontale significa v = costante, cioè accelerazione zero: è il moto rettilineo uniforme. Nel moto uniformemente accelerato la retta sarebbe inclinata."
+      },
+      {
+        "domanda": "Osserva il grafico velocità/tempo. La retta inclinata verso l'alto descrive quale tipo di moto?",
+        "svg": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"200\" fill=\"#111827\" rx=\"8\"/>\n<line x1=\"50\" y1=\"170\" x2=\"330\" y2=\"170\" stroke=\"#8a95a8\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"20\"  x2=\"50\"  y2=\"175\" stroke=\"#8a95a8\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"130\" x2=\"330\" y2=\"130\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"50\" y1=\"90\"  x2=\"330\" y2=\"90\"  stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"130\" y1=\"20\" x2=\"130\" y2=\"170\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"170\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"290\" y1=\"20\" x2=\"290\" y2=\"170\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"55\" y1=\"165\" x2=\"310\" y2=\"45\" stroke=\"#3498db\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<circle cx=\"55\" cy=\"165\" r=\"4\" fill=\"#3498db\"/>\n<circle cx=\"310\" cy=\"45\" r=\"4\" fill=\"#3498db\"/>\n<text x=\"20\" y=\"104\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\" transform=\"rotate(-90,20,104)\">v (m/s)</text>\n<text x=\"335\" y=\"178\" fill=\"#8a95a8\" font-size=\"10\">t (s)</text>\n<text x=\"42\" y=\"134\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"end\">10</text>\n<text x=\"42\" y=\"94\"  fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"end\">20</text>\n<text x=\"130\" y=\"183\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">1</text>\n<text x=\"210\" y=\"183\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">2</text>\n<text x=\"290\" y=\"183\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">3</text>\n</svg>",
+        "opzioni": [
+          "Moto uniforme",
+          "Moto uniformemente accelerato",
+          "Moto armonico"
+        ],
+        "corretta": "Moto uniformemente accelerato",
+        "spiegazione": "Nel grafico v/t una retta con pendenza positiva indica che la velocità aumenta linearmente nel tempo: è il moto uniformemente accelerato. La pendenza della retta è uguale all'accelerazione a = Δv/Δt."
+      }
+    ],
+    "difficile": [
+      {
+        "domanda": "Un gas ideale viene compresso isotermicamente dimezzando il suo volume. Come varia la pressione?",
+        "opzioni": [
+          "Rimane invariata",
+          "Raddoppia",
+          "Si dimezza"
+        ],
+        "corretta": "Raddoppia",
+        "spiegazione": "In una trasformazione isotermica vale la legge di Boyle: P₁V₁ = P₂V₂. Se V₂ = V₁/2, allora P₂ = 2P₁."
+      },
+      {
+        "domanda": "Un proiettile di massa 10 g viene sparato a 300 m/s e si conficca in un blocco di 2 kg inizialmente fermo. Qual è la velocità finale del sistema?",
+        "opzioni": [
+          "1,49 m/s",
+          "3,00 m/s",
+          "0,15 m/s"
+        ],
+        "corretta": "1,49 m/s",
+        "spiegazione": "Conservazione della quantità di moto: m₁v₁ = (m₁+m₂)v_f. v_f = (0,01×300)/(0,01+2) = 3/2,01 ≈ 1,49 m/s."
+      },
+      {
+        "domanda": "Quale grandezza fisica si conserva in una collisione perfettamente anelastica ma NON in una elastica?",
+        "opzioni": [
+          "La quantità di moto totale",
+          "L'energia cinetica totale",
+          "Nessuna delle due si conserva"
+        ],
+        "corretta": "L'energia cinetica totale",
+        "spiegazione": "In una collisione anelastica la quantità di moto si conserva, ma l'energia cinetica no — viene parzialmente convertita in calore o deformazione."
+      },
+      {
+        "domanda": "Un condensatore piano ha capacità C. Se si raddoppia la distanza tra le armature (a vuoto), come varia la capacità?",
+        "opzioni": [
+          "Raddoppia",
+          "Si dimezza",
+          "Rimane invariata"
+        ],
+        "corretta": "Si dimezza",
+        "spiegazione": "C = ε₀·A/d. Se d raddoppia, C si dimezza. La capacità è inversamente proporzionale alla distanza tra le armature."
+      },
+      {
+        "domanda": "Un corpo in moto circolare uniforme ha velocità tangenziale v e raggio r. Qual è l'espressione dell'accelerazione centripeta?",
+        "opzioni": [
+          "v·r",
+          "v²/r",
+          "v/r²"
+        ],
+        "corretta": "v²/r",
+        "spiegazione": "L'accelerazione centripeta è diretta verso il centro e vale a_c = v²/r."
+      },
+      {
+        "domanda": "In una trasformazione adiabatica di un gas ideale, quale grandezza rimane costante?",
+        "opzioni": [
+          "La temperatura",
+          "La pressione",
+          "Il calore scambiato (Q = 0)"
+        ],
+        "corretta": "Il calore scambiato (Q = 0)",
+        "spiegazione": "In una trasformazione adiabatica non c'è scambio di calore con l'esterno. Dal primo principio: ΔU = -W."
+      },
+      {
+        "domanda": "Qual è l'effetto di raddoppiare la distanza tra due cariche sulla forza di Coulomb?",
+        "opzioni": [
+          "La forza si dimezza",
+          "La forza si riduce a un quarto",
+          "La forza si riduce a un ottavo"
+        ],
+        "corretta": "La forza si riduce a un quarto",
+        "spiegazione": "F = kq₁q₂/r². Se r raddoppia, r² quadruplica, quindi F diventa F/4."
+      },
+      {
+        "domanda": "Un'onda elettromagnetica ha lunghezza d'onda di 500 nm. A quale colore corrisponde?",
+        "opzioni": [
+          "Rosso",
+          "Verde",
+          "Violetto"
+        ],
+        "corretta": "Verde",
+        "spiegazione": "Il verde occupa la regione 495–570 nm dello spettro visibile. Il rosso è intorno a 620–750 nm, il violetto a 380–450 nm."
+      },
+      {
+        "domanda": "Quale principio afferma che è impossibile realizzare una macchina termica con rendimento del 100%?",
+        "opzioni": [
+          "Primo principio della termodinamica",
+          "Secondo principio della termodinamica",
+          "Legge di Boyle"
+        ],
+        "corretta": "Secondo principio della termodinamica",
+        "spiegazione": "Il secondo principio impone che ogni macchina termica ceda parte del calore alla sorgente fredda, rendendo impossibile il rendimento unitario."
+      },
+      {
+        "domanda": "In un circuito RLC in risonanza, quale relazione vale tra la reattanza induttiva XL e quella capacitiva XC?",
+        "opzioni": [
+          "XL > XC",
+          "XL = XC",
+          "XL < XC"
+        ],
+        "corretta": "XL = XC",
+        "spiegazione": "Alla frequenza di risonanza ω₀ = 1/√(LC), le reattanze si annullano a vicenda: XL = XC = ωL = 1/(ωC). L'impedenza è minima e uguale a R."
+      },
+      {
+        "domanda": "Un satellite orbita a distanza r dal centro della Terra. Se r raddoppia, il periodo orbitale T:",
+        "opzioni": [
+          "Raddoppia",
+          "Aumenta di un fattore 2√2",
+          "Quadruplica"
+        ],
+        "corretta": "Aumenta di un fattore 2√2",
+        "spiegazione": "Dalla terza legge di Keplero: T² ∝ r³. Se r → 2r, T² → 8T², quindi T → T·2√2 ≈ 2,83 T."
+      },
+      {
+        "domanda": "L'effetto fotoelettrico dimostra che la luce:",
+        "opzioni": [
+          "Si comporta come un'onda",
+          "È costituita da fotoni con energia E = hf",
+          "Viaggia a velocità variabile"
+        ],
+        "corretta": "È costituita da fotoni con energia E = hf",
+        "spiegazione": "Einstein spiegò l'effetto fotoelettrico postulando che la luce è quantizzata in fotoni di energia E = hf, dove h è la costante di Planck."
+      },
+      {
+        "domanda": "Qual è la dimensione fisica dell'entropia?",
+        "opzioni": [
+          "J/K",
+          "J·K",
+          "J/K²"
+        ],
+        "corretta": "J/K",
+        "spiegazione": "L'entropia S è definita da dS = δQ_rev/T. Le sue unità sono quindi Joule/Kelvin (J/K)."
+      },
+      {
+        "domanda": "In ottica geometrica, quale legge descrive la riflessione della luce?",
+        "opzioni": [
+          "L'angolo di incidenza è uguale all'angolo di rifrazione",
+          "L'angolo di incidenza è uguale all'angolo di riflessione",
+          "L'angolo di rifrazione dipende dalla frequenza"
+        ],
+        "corretta": "L'angolo di incidenza è uguale all'angolo di riflessione",
+        "spiegazione": "La legge della riflessione afferma che θᵢ = θᵣ, entrambi misurati rispetto alla normale alla superficie nel punto di incidenza."
+      },
+      {
+        "domanda": "Quale quantità si conserva in un sistema isolato secondo la legge di conservazione della quantità di moto?",
+        "opzioni": [
+          "L'energia cinetica",
+          "La quantità di moto totale",
+          "La velocità di ogni corpo"
+        ],
+        "corretta": "La quantità di moto totale",
+        "spiegazione": "In assenza di forze esterne nette, la quantità di moto totale del sistema rimane costante: Σp = costante."
+      },
+      {
+        "domanda": "Il grafico mostra una curva P/V di un gas ideale. Quale legge descrive questa iperbole?",
+        "svg": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"200\" fill=\"#111827\" rx=\"8\"/>\n<line x1=\"50\" y1=\"170\" x2=\"330\" y2=\"170\" stroke=\"#8a95a8\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"20\"  x2=\"50\"  y2=\"175\" stroke=\"#8a95a8\" stroke-width=\"1.5\"/>\n<line x1=\"50\" y1=\"130\" x2=\"330\" y2=\"130\" stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<line x1=\"50\" y1=\"90\"  x2=\"330\" y2=\"90\"  stroke=\"#2a3a56\" stroke-width=\"0.6\" stroke-dasharray=\"4 3\"/>\n<path d=\"M70 40 Q130 60 180 100 Q230 140 300 160\" fill=\"none\" stroke=\"#e74c3c\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<circle cx=\"70\"  cy=\"40\"  r=\"4\" fill=\"#e74c3c\"/>\n<circle cx=\"300\" cy=\"160\" r=\"4\" fill=\"#e74c3c\"/>\n<text x=\"20\" y=\"104\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\" transform=\"rotate(-90,20,104)\">P (Pa)</text>\n<text x=\"335\" y=\"178\" fill=\"#8a95a8\" font-size=\"10\">V (L)</text>\n<text x=\"310\" y=\"152\" fill=\"#e74c3c\" font-size=\"9\">PV=k</text>\n</svg>",
+        "opzioni": [
+          "Legge di Charles (V/T = cost)",
+          "Legge di Boyle (PV = cost)",
+          "Legge di Gay-Lussac (P/T = cost)"
+        ],
+        "corretta": "Legge di Boyle (PV = cost)",
+        "spiegazione": "L'iperbole P/V con equazione PV = k è la legge di Boyle per trasformazioni isoterme: all'aumentare del volume, la pressione diminuisce proporzionalmente."
+      },
+      {
+        "domanda": "Nel circuito in figura, quale grandezza indica la freccia verde etichettata I?",
+        "svg": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"180\" fill=\"#111827\" rx=\"8\"/>\n<rect x=\"30\" y=\"60\" width=\"300\" height=\"60\" fill=\"none\" stroke=\"#8a95a8\" stroke-width=\"0\" />\n<line x1=\"40\"  y1=\"90\" x2=\"100\" y2=\"90\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<line x1=\"160\" y1=\"90\" x2=\"200\" y2=\"90\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<line x1=\"260\" y1=\"90\" x2=\"320\" y2=\"90\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<line x1=\"40\"  y1=\"90\" x2=\"40\"  y2=\"150\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<line x1=\"320\" y1=\"90\" x2=\"320\" y2=\"150\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<line x1=\"40\"  y1=\"150\" x2=\"320\" y2=\"150\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<rect x=\"100\" y=\"75\" width=\"60\" height=\"30\" rx=\"4\" fill=\"#1a2236\" stroke=\"#3498db\" stroke-width=\"1.5\"/>\n<text x=\"130\" y=\"94\" fill=\"#3498db\" font-size=\"10\" text-anchor=\"middle\">R</text>\n<line x1=\"200\" y1=\"75\" x2=\"200\" y2=\"105\" stroke=\"#8a95a8\" stroke-width=\"0.5\" stroke-dasharray=\"3 2\"/>\n<line x1=\"200\" y1=\"72\" x2=\"260\" y2=\"72\" stroke=\"#e67e22\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<line x1=\"200\" y1=\"108\" x2=\"260\" y2=\"108\" stroke=\"#e67e22\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<text x=\"230\" y=\"67\"  fill=\"#e67e22\" font-size=\"9\" text-anchor=\"middle\">+</text>\n<text x=\"230\" y=\"122\" fill=\"#e67e22\" font-size=\"9\" text-anchor=\"middle\">−</text>\n<rect x=\"148\" y=\"132\" width=\"24\" height=\"36\" rx=\"3\" fill=\"#1a2236\" stroke=\"#c8a96e\" stroke-width=\"1.5\"/>\n<line x1=\"160\" y1=\"132\" x2=\"160\" y2=\"118\" stroke=\"#c8a96e\" stroke-width=\"1.5\"/>\n<line x1=\"155\" y1=\"118\" x2=\"165\" y2=\"118\" stroke=\"#c8a96e\" stroke-width=\"1.5\"/>\n<line x1=\"155\" y1=\"114\" x2=\"165\" y2=\"114\" stroke=\"#c8a96e\" stroke-width=\"1.5\"/>\n<line x1=\"160\" y1=\"168\" x2=\"160\" y2=\"150\" stroke=\"#c8a96e\" stroke-width=\"1.5\"/>\n<text x=\"160\" y=\"147\" fill=\"#c8a96e\" font-size=\"8\" text-anchor=\"middle\">V</text>\n<text x=\"230\" y=\"88\"  fill=\"#e67e22\" font-size=\"9\" text-anchor=\"middle\">C</text>\n<defs><marker id=\"af\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M2 1L8 5L2 9\" fill=\"none\" stroke=\"#2ecc71\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></marker></defs>\n<line x1=\"65\" y1=\"83\" x2=\"95\" y2=\"83\" stroke=\"#2ecc71\" stroke-width=\"1.2\" marker-end=\"url(#af)\"/>\n<text x=\"70\" y=\"76\" fill=\"#2ecc71\" font-size=\"8\">I</text>\n</svg>",
+        "opzioni": [
+          "La tensione ai capi del condensatore",
+          "La corrente elettrica nel circuito",
+          "La resistenza del componente R"
+        ],
+        "corretta": "La corrente elettrica nel circuito",
+        "spiegazione": "In un circuito elettrico la freccia con la lettera I indica convenzionalmente la corrente elettrica e il verso del flusso di cariche positive. R è la resistenza, C il condensatore, V il voltmetro."
+      }
+    ]
+  },
+  "biologia": {
+    "medio": [
+      {
+        "domanda": "Quale organello cellulare è responsabile della sintesi proteica?",
+        "opzioni": [
+          "Mitocondrio",
+          "Ribosoma",
+          "Apparato di Golgi"
+        ],
+        "corretta": "Ribosoma",
+        "spiegazione": "I ribosomi sono il sito della traduzione: leggono l'mRNA e assemblano le proteine."
+      },
+      {
+        "domanda": "Quante coppie di cromosomi omologhi possiede una cellula somatica umana?",
+        "opzioni": [
+          "23",
+          "46",
+          "22"
+        ],
+        "corretta": "23",
+        "spiegazione": "Le cellule somatiche umane sono diploidi (2n = 46) e contengono 23 coppie di cromosomi omologhi."
+      },
+      {
+        "domanda": "Quale molecola funge da 'moneta energetica' della cellula?",
+        "opzioni": [
+          "DNA",
+          "ATP",
+          "NADH"
+        ],
+        "corretta": "ATP",
+        "spiegazione": "L'ATP (adenosina trifosfato) è la principale forma di energia chimica utilizzabile dalla cellula."
+      },
+      {
+        "domanda": "La meiosi produce cellule con quale corredo cromosomico?",
+        "opzioni": [
+          "Diploide (2n)",
+          "Aploide (n)",
+          "Tetraploide (4n)"
+        ],
+        "corretta": "Aploide (n)",
+        "spiegazione": "La meiosi è una divisione riduzionale che porta da una cellula diploide (2n=46) a quattro cellule aploidi (n=23)."
+      },
+      {
+        "domanda": "Quale tipo di tessuto riveste le superfici interne ed esterne del corpo umano?",
+        "opzioni": [
+          "Tessuto connettivo",
+          "Tessuto epiteliale",
+          "Tessuto muscolare"
+        ],
+        "corretta": "Tessuto epiteliale",
+        "spiegazione": "Il tessuto epiteliale forma rivestimenti e ghiandole. Il connettivo ha funzione di supporto; il muscolare è deputato alla contrazione."
+      },
+      {
+        "domanda": "Dove avviene la fotosintesi nelle cellule vegetali?",
+        "opzioni": [
+          "Mitocondri",
+          "Cloroplasti",
+          "Nucleo"
+        ],
+        "corretta": "Cloroplasti",
+        "spiegazione": "I cloroplasti contengono la clorofilla e sono la sede della fotosintesi, dove l'energia luminosa viene convertita in energia chimica."
+      },
+      {
+        "domanda": "Qual è la funzione principale dei globuli rossi?",
+        "opzioni": [
+          "Difesa immunitaria",
+          "Trasporto di ossigeno",
+          "Coagulazione del sangue"
+        ],
+        "corretta": "Trasporto di ossigeno",
+        "spiegazione": "I globuli rossi (eritrociti) contengono emoglobina, che lega l'ossigeno nei polmoni e lo trasporta ai tessuti."
+      },
+      {
+        "domanda": "Quale organo produce l'insulina?",
+        "opzioni": [
+          "Fegato",
+          "Pancreas",
+          "Surrene"
+        ],
+        "corretta": "Pancreas",
+        "spiegazione": "L'insulina è prodotta dalle cellule β delle isole di Langerhans nel pancreas. Regola la glicemia favorendo l'assorbimento del glucosio."
+      },
+      {
+        "domanda": "Il DNA è composto da quattro basi azotate. Quale delle seguenti NON è una base del DNA?",
+        "opzioni": [
+          "Adenina",
+          "Uracile",
+          "Citosina"
+        ],
+        "corretta": "Uracile",
+        "spiegazione": "Le basi del DNA sono Adenina, Timina, Guanina e Citosina. L'Uracile è presente nell'RNA al posto della Timina."
+      },
+      {
+        "domanda": "Quale processo cellulare utilizza ossigeno per produrre ATP?",
+        "opzioni": [
+          "Fermentazione lattica",
+          "Respirazione cellulare aerobica",
+          "Glicolisi anaerobica"
+        ],
+        "corretta": "Respirazione cellulare aerobica",
+        "spiegazione": "La respirazione aerobica avviene nei mitocondri e utilizza ossigeno per ossidare il glucosio, producendo fino a 36-38 ATP."
+      },
+      {
+        "domanda": "Come si chiama il processo mediante cui le cellule inglobano particelle solide?",
+        "opzioni": [
+          "Endocitosi",
+          "Fagocitosi",
+          "Pinocitosi"
+        ],
+        "corretta": "Fagocitosi",
+        "spiegazione": "La fagocitosi è il processo mediante cui la cellula inglobano particelle solide o microorganismi formando un fagosoma."
+      },
+      {
+        "domanda": "Quale struttura cellulare controlla gli scambi tra la cellula e l'ambiente esterno?",
+        "opzioni": [
+          "Parete cellulare",
+          "Membrana plasmatica",
+          "Nucleo"
+        ],
+        "corretta": "Membrana plasmatica",
+        "spiegazione": "La membrana plasmatica è una struttura semipermeabile che regola selettivamente il passaggio di sostanze dentro e fuori la cellula."
+      },
+      {
+        "domanda": "Quale fase della mitosi vede la separazione dei cromatidi fratelli verso i poli opposti?",
+        "opzioni": [
+          "Profase",
+          "Metafase",
+          "Anafase"
+        ],
+        "corretta": "Anafase",
+        "spiegazione": "Nell'anafase i cromatidi fratelli vengono separati e trascinati verso i poli opposti della cellula dal fuso mitotico."
+      },
+      {
+        "domanda": "Qual è la funzione dell'apparato di Golgi?",
+        "opzioni": [
+          "Sintesi proteica",
+          "Modificazione e smistamento di proteine e lipidi",
+          "Produzione di ATP"
+        ],
+        "corretta": "Modificazione e smistamento di proteine e lipidi",
+        "spiegazione": "L'apparato di Golgi riceve le proteine dal reticolo endoplasmatico, le modifica (es. glicosilazione) e le smista verso la destinazione finale."
+      },
+      {
+        "domanda": "Come si chiama il doppio strato fosfolipidico che costituisce le membrane cellulari?",
+        "opzioni": [
+          "Doppio strato lipidico",
+          "Bilayer fosfolipidico",
+          "Entrambe le risposte sono corrette"
+        ],
+        "corretta": "Entrambe le risposte sono corrette",
+        "spiegazione": "Sia 'doppio strato lipidico' che 'bilayer fosfolipidico' indicano la stessa struttura: due strati di fosfolipidi con le teste idrofile verso l'esterno."
+      },
+      {
+        "domanda": "Nella figura della cellula, la freccia dorata indica un organello ovale con membrane interne. Di quale organello si tratta?",
+        "svg": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\">\n<defs><marker id=\"ac\" viewBox=\"0 0 10 10\" refX=\"8\" refY=\"5\" markerWidth=\"5\" markerHeight=\"5\" orient=\"auto-start-reverse\"><path d=\"M2 1L8 5L2 9\" fill=\"none\" stroke=\"#c8a96e\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></marker></defs>\n<rect width=\"360\" height=\"200\" fill=\"#111827\" rx=\"8\"/>\n<ellipse cx=\"170\" cy=\"100\" rx=\"130\" ry=\"85\" fill=\"none\" stroke=\"#3498db\" stroke-width=\"1.5\" opacity=\"0.5\"/>\n<ellipse cx=\"150\" cy=\"95\" rx=\"38\" ry=\"32\" fill=\"#1a3a5c\" stroke=\"#5b8dd9\" stroke-width=\"1.2\"/>\n<text x=\"150\" y=\"93\" fill=\"#8aafdf\" font-size=\"8\" text-anchor=\"middle\">Nucleo</text>\n<ellipse cx=\"240\" cy=\"75\" rx=\"20\" ry=\"11\" fill=\"#1a3a2a\" stroke=\"#2ecc71\" stroke-width=\"1\"/>\n<line x1=\"222\" y1=\"75\" x2=\"258\" y2=\"75\" stroke=\"#2ecc71\" stroke-width=\"0.7\" opacity=\"0.6\"/>\n<ellipse cx=\"235\" cy=\"130\" rx=\"18\" ry=\"10\" fill=\"#1a3a2a\" stroke=\"#2ecc71\" stroke-width=\"1\"/>\n<path d=\"M95 135 Q108 125 104 115 Q100 105 114 100\" fill=\"none\" stroke=\"#9b59b6\" stroke-width=\"1.2\" opacity=\"0.7\"/>\n<circle cx=\"116\" cy=\"100\" r=\"2.5\" fill=\"#e67e22\"/>\n<circle cx=\"108\" cy=\"112\" r=\"2.5\" fill=\"#e67e22\"/>\n<circle cx=\"195\" cy=\"62\"  r=\"2.5\" fill=\"#e67e22\"/>\n<line x1=\"295\" y1=\"50\" x2=\"262\" y2=\"68\" stroke=\"#c8a96e\" stroke-width=\"1.5\" marker-end=\"url(#ac)\"/>\n<text x=\"298\" y=\"46\" fill=\"#c8a96e\" font-size=\"11\" font-weight=\"bold\">?</text>\n</svg>",
+        "opzioni": [
+          "Ribosoma",
+          "Nucleo",
+          "Mitocondrio"
+        ],
+        "corretta": "Mitocondrio",
+        "spiegazione": "I mitocondri sono organelli ovalari con doppia membrana (quella interna forma le creste mitocondriali) sede della respirazione cellulare e della produzione di ATP."
+      }
+    ],
+    "difficile": [
+      {
+        "domanda": "Durante la replicazione del DNA, quale enzima sintetizza il nuovo filamento complementare?",
+        "opzioni": [
+          "DNA ligasi",
+          "DNA polimerasi III",
+          "Elicasi"
+        ],
+        "corretta": "DNA polimerasi III",
+        "spiegazione": "La DNA polimerasi III è l'enzima principale della replicazione nei procarioti: aggiunge nucleotidi in direzione 5'→3'."
+      },
+      {
+        "domanda": "In un incrocio tra due individui eterozigoti Aa, quale percentuale di discendenti sarà omozigote dominante (AA)?",
+        "opzioni": [
+          "25%",
+          "50%",
+          "75%"
+        ],
+        "corretta": "25%",
+        "spiegazione": "Aa × Aa produce: 1 AA : 2 Aa : 1 aa. Gli omozigoti dominanti AA rappresentano il 25% (1/4) della discendenza."
+      },
+      {
+        "domanda": "Quale fase della respirazione cellulare produce il maggior numero di molecole di ATP?",
+        "opzioni": [
+          "Glicolisi",
+          "Ciclo di Krebs",
+          "Catena di trasporto degli elettroni"
+        ],
+        "corretta": "Catena di trasporto degli elettroni",
+        "spiegazione": "La catena di trasporto degli elettroni produce circa 32–34 ATP per molecola di glucosio, contro i 2 ATP della glicolisi e i 2 del ciclo di Krebs."
+      },
+      {
+        "domanda": "Qual è la funzione principale delle cellule T citotossiche (CD8+)?",
+        "opzioni": [
+          "Produrre anticorpi",
+          "Eliminare le cellule infette o tumorali",
+          "Attivare i linfociti B"
+        ],
+        "corretta": "Eliminare le cellule infette o tumorali",
+        "spiegazione": "I linfociti T CD8+ riconoscono antigeni presentati dall'MHC di classe I e inducono l'apoptosi delle cellule bersaglio."
+      },
+      {
+        "domanda": "Cosa si intende per 'splicing' dell'RNA messaggero?",
+        "opzioni": [
+          "La trascrizione del DNA in RNA",
+          "La rimozione degli introni e giunzione degli esoni",
+          "La traduzione dell'mRNA in proteina"
+        ],
+        "corretta": "La rimozione degli introni e giunzione degli esoni",
+        "spiegazione": "Lo splicing è una fase del processamento del pre-mRNA: le sequenze non codificanti (introni) vengono escisse e le sequenze codificanti (esoni) vengono unite."
+      },
+      {
+        "domanda": "Qual è il ruolo del complesso MHC di classe II nella risposta immunitaria?",
+        "opzioni": [
+          "Presentare antigeni alle cellule T CD8+",
+          "Presentare antigeni alle cellule T CD4+",
+          "Produrre anticorpi"
+        ],
+        "corretta": "Presentare antigeni alle cellule T CD4+",
+        "spiegazione": "L'MHC II è espresso sulle cellule presentanti l'antigene (APC) e presenta frammenti peptidici alle cellule T helper (CD4+), attivando la risposta immunitaria adattiva."
+      },
+      {
+        "domanda": "In quale fase della meiosi avviene il crossing-over?",
+        "opzioni": [
+          "Profase I",
+          "Metafase II",
+          "Anafase I"
+        ],
+        "corretta": "Profase I",
+        "spiegazione": "Il crossing-over avviene durante la profase I della meiosi, specificamente nello stadio del pachitene, quando i cromosomi omologhi sono appaiati in tetravalenti."
+      },
+      {
+        "domanda": "Quale enzima catalizza la trascrizione del DNA in RNA?",
+        "opzioni": [
+          "DNA polimerasi",
+          "RNA polimerasi",
+          "Trascrittasi inversa"
+        ],
+        "corretta": "RNA polimerasi",
+        "spiegazione": "L'RNA polimerasi legge il filamento stampo del DNA in direzione 3'→5' e sintetizza il filamento di mRNA complementare in direzione 5'→3'."
+      },
+      {
+        "domanda": "Cosa si intende per 'apoptosi'?",
+        "opzioni": [
+          "Divisione cellulare",
+          "Morte cellulare programmata",
+          "Fusione di due cellule"
+        ],
+        "corretta": "Morte cellulare programmata",
+        "spiegazione": "L'apoptosi è un processo di morte cellulare controllata e programmata, fondamentale per lo sviluppo embrionale e la difesa contro cellule danneggiate o infette."
+      },
+      {
+        "domanda": "Quale struttura del neurone riceve i segnali in ingresso?",
+        "opzioni": [
+          "Assone",
+          "Dendriti",
+          "Guaina mielinica"
+        ],
+        "corretta": "Dendriti",
+        "spiegazione": "I dendriti sono le ramificazioni del neurone che ricevono i segnali chimici dalle sinapsi di altri neuroni e li trasmettono al corpo cellulare."
+      },
+      {
+        "domanda": "Qual è il prodotto finale della glicolisi (per molecola di glucosio)?",
+        "opzioni": [
+          "2 molecole di piruvato + 2 ATP + 2 NADH",
+          "4 molecole di piruvato + 4 ATP",
+          "1 molecola di acetil-CoA + 2 ATP"
+        ],
+        "corretta": "2 molecole di piruvato + 2 ATP + 2 NADH",
+        "spiegazione": "La glicolisi scinde il glucosio (6C) in 2 molecole di piruvato (3C), producendo un guadagno netto di 2 ATP e 2 NADH."
+      },
+      {
+        "domanda": "Come si chiama la struttura tridimensionale delle proteine stabilizzata da ponti disolfuro e interazioni idrofobiche?",
+        "opzioni": [
+          "Struttura primaria",
+          "Struttura terziaria",
+          "Struttura secondaria"
+        ],
+        "corretta": "Struttura terziaria",
+        "spiegazione": "La struttura terziaria è il ripiegamento tridimensionale complessivo di una catena polipeptidica, stabilizzata da interazioni idrofobiche, ponti disolfuro, legami idrogeno e forze ioniche."
+      },
+      {
+        "domanda": "Quale molecola funge da accettore finale di elettroni nella catena di trasporto mitocondriale?",
+        "opzioni": [
+          "NAD+",
+          "Ossigeno molecolare (O₂)",
+          "FAD"
+        ],
+        "corretta": "Ossigeno molecolare (O₂)",
+        "spiegazione": "L'O₂ è l'accettore finale degli elettroni nella catena respiratoria. Viene ridotto ad acqua: O₂ + 4H⁺ + 4e⁻ → 2H₂O."
+      },
+      {
+        "domanda": "Qual è il meccanismo molecolare alla base della contrazione muscolare?",
+        "opzioni": [
+          "Scorrimento dei filamenti di actina e miosina",
+          "Accorciamento delle fibre di collagene",
+          "Contrazione delle membrane sarcoplasmatiche"
+        ],
+        "corretta": "Scorrimento dei filamenti di actina e miosina",
+        "spiegazione": "Secondo il modello dello scorrimento dei filamenti, la miosina forma ponti trasversali con l'actina e, usando ATP, tira i filamenti sottili verso il centro del sarcomero."
+      },
+      {
+        "domanda": "Quale tipo di RNA porta le informazioni genetiche dal nucleo ai ribosomi?",
+        "opzioni": [
+          "tRNA",
+          "rRNA",
+          "mRNA"
+        ],
+        "corretta": "mRNA",
+        "spiegazione": "L'mRNA (RNA messaggero) è trascritto dal DNA nel nucleo ed esportato nel citoplasma, dove viene tradotto dai ribosomi in proteine."
+      },
+      {
+        "domanda": "L'immagine mostra la struttura a doppia elica del DNA con i ponti trasversali evidenziati. Che tipo di legame mantiene uniti i due filamenti?",
+        "svg": "<svg viewBox=\"0 0 360 200\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"200\" fill=\"#111827\" rx=\"8\"/>\n<path d=\"M80 20 Q120 50 80 80 Q40 110 80 140 Q120 170 80 190\" fill=\"none\" stroke=\"#3498db\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<path d=\"M130 20 Q90 50 130 80 Q170 110 130 140 Q90 170 130 190\" fill=\"none\" stroke=\"#e74c3c\" stroke-width=\"2.5\" stroke-linecap=\"round\"/>\n<line x1=\"87\"  y1=\"38\"  x2=\"123\" y2=\"38\"  stroke=\"#c8a96e\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n<line x1=\"72\"  y1=\"62\"  x2=\"138\" y2=\"62\"  stroke=\"#2ecc71\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n<line x1=\"74\"  y1=\"98\"  x2=\"136\" y2=\"98\"  stroke=\"#c8a96e\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n<line x1=\"82\"  y1=\"122\" x2=\"128\" y2=\"122\" stroke=\"#2ecc71\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n<line x1=\"87\"  y1=\"158\" x2=\"123\" y2=\"158\" stroke=\"#c8a96e\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n<line x1=\"76\"  y1=\"178\" x2=\"134\" y2=\"178\" stroke=\"#2ecc71\" stroke-width=\"1.5\" stroke-linecap=\"round\"/>\n<text x=\"180\" y=\"50\"  fill=\"#f0ece4\" font-size=\"10\">I ponti evidenziati</text>\n<text x=\"180\" y=\"65\"  fill=\"#f0ece4\" font-size=\"10\">in giallo collegano:</text>\n<text x=\"180\" y=\"88\"  fill=\"#c8a96e\" font-size=\"10\">— A con T (2 legami H)</text>\n<text x=\"180\" y=\"108\" fill=\"#2ecc71\"  font-size=\"10\">— G con C (3 legami H)</text>\n<text x=\"180\" y=\"140\" fill=\"#8a95a8\" font-size=\"9\">Quale tipo di legame</text>\n<text x=\"180\" y=\"155\" fill=\"#8a95a8\" font-size=\"9\">mantiene uniti i filamenti?</text>\n</svg>",
+        "opzioni": [
+          "Legami covalenti",
+          "Legami idrogeno tra basi complementari",
+          "Legami ionici tra i fosfati"
+        ],
+        "corretta": "Legami idrogeno tra basi complementari",
+        "spiegazione": "I due filamenti del DNA sono tenuti insieme da legami idrogeno tra le basi complementari: A-T (2 legami H) e G-C (3 legami H). Questi legami sono deboli individualmente ma stabili nel complesso grazie alla loro numerosità."
+      }
+    ]
+  },
+  "chimica": {
+    "medio": [
+      {
+        "domanda": "Quale legge afferma che, a temperatura costante, il volume di un gas è inversamente proporzionale alla pressione?",
+        "opzioni": [
+          "Legge di Charles",
+          "Legge di Boyle",
+          "Legge di Gay-Lussac"
+        ],
+        "corretta": "Legge di Boyle",
+        "spiegazione": "La legge di Boyle (trasformazione isotermica) afferma che P·V = costante."
+      },
+      {
+        "domanda": "Qual è il pH di una soluzione con concentrazione di ioni H⁺ pari a 10⁻⁹ mol/L?",
+        "opzioni": [
+          "5",
+          "7",
+          "9"
+        ],
+        "corretta": "9",
+        "spiegazione": "pH = -log[H⁺] = -log(10⁻⁹) = 9. Una soluzione con pH > 7 è basica."
+      },
+      {
+        "domanda": "In quale gruppo della tavola periodica si trovano i gas nobili?",
+        "opzioni": [
+          "Gruppo 1",
+          "Gruppo 17",
+          "Gruppo 18"
+        ],
+        "corretta": "Gruppo 18",
+        "spiegazione": "I gas nobili (He, Ne, Ar, Kr, Xe, Rn) si trovano nel gruppo 18, con configurazione elettronica esterna ns²np⁶ (eccetto He: 1s²)."
+      },
+      {
+        "domanda": "Quale tipo di reazione avviene quando un acido reagisce con una base per formare sale e acqua?",
+        "opzioni": [
+          "Ossidoriduzione",
+          "Neutralizzazione",
+          "Combustione"
+        ],
+        "corretta": "Neutralizzazione",
+        "spiegazione": "La reazione di neutralizzazione è: acido + base → sale + acqua. Ad esempio: HCl + NaOH → NaCl + H₂O."
+      },
+      {
+        "domanda": "Quanti elettroni contiene il secondo livello energetico (n=2) quando è completo?",
+        "opzioni": [
+          "2",
+          "8",
+          "18"
+        ],
+        "corretta": "8",
+        "spiegazione": "Il secondo livello energetico comprende i sottolivelli 2s (max 2e⁻) e 2p (max 6e⁻), per un totale di 8 elettroni."
+      },
+      {
+        "domanda": "Qual è la formula chimica dell'acqua?",
+        "opzioni": [
+          "HO",
+          "H₂O",
+          "H₂O₂"
+        ],
+        "corretta": "H₂O",
+        "spiegazione": "L'acqua è composta da 2 atomi di idrogeno e 1 di ossigeno legati da legami covalenti polari, con formula H₂O."
+      },
+      {
+        "domanda": "Cosa si intende per numero atomico di un elemento?",
+        "opzioni": [
+          "Il numero di neutroni nel nucleo",
+          "Il numero di protoni nel nucleo",
+          "La massa atomica in grammi"
+        ],
+        "corretta": "Il numero di protoni nel nucleo",
+        "spiegazione": "Il numero atomico (Z) è il numero di protoni nel nucleo e determina l'identità dell'elemento nella tavola periodica."
+      },
+      {
+        "domanda": "Quale tipo di legame si forma tra atomi con grande differenza di elettronegatività?",
+        "opzioni": [
+          "Legame covalente apolare",
+          "Legame ionico",
+          "Legame metallico"
+        ],
+        "corretta": "Legame ionico",
+        "spiegazione": "Il legame ionico si forma quando un atomo cede elettroni a un altro (differenza di elettronegatività > 1,7), formando ioni di carica opposta che si attraggono."
+      },
+      {
+        "domanda": "Qual è il simbolo chimico del sodio?",
+        "opzioni": [
+          "So",
+          "Sd",
+          "Na"
+        ],
+        "corretta": "Na",
+        "spiegazione": "Il sodio ha simbolo Na, dal latino Natrium. È un metallo alcalino del gruppo 1 con numero atomico 11."
+      },
+      {
+        "domanda": "In una reazione chimica bilanciata, cosa si conserva sempre?",
+        "opzioni": [
+          "Il numero di molecole",
+          "Il numero di atomi di ogni elemento",
+          "Il volume dei gas"
+        ],
+        "corretta": "Il numero di atomi di ogni elemento",
+        "spiegazione": "La legge di conservazione della massa afferma che in una reazione chimica il numero di atomi di ogni elemento si conserva — la materia non si crea né si distrugge."
+      },
+      {
+        "domanda": "Quale proprietà delle soluzioni indica la concentrazione di soluto per litro di soluzione?",
+        "opzioni": [
+          "Molarità",
+          "Molalità",
+          "Normalità"
+        ],
+        "corretta": "Molarità",
+        "spiegazione": "La molarità (M) è il numero di moli di soluto per litro di soluzione: M = n/V. È la misura di concentrazione più usata in chimica."
+      },
+      {
+        "domanda": "Come si chiama la tabella che organizza gli elementi chimici per numero atomico crescente?",
+        "opzioni": [
+          "Tavola di Mendeleev",
+          "Tavola periodica",
+          "Entrambe le risposte sono corrette"
+        ],
+        "corretta": "Entrambe le risposte sono corrette",
+        "spiegazione": "La tavola periodica fu ideata da Mendeleev nel 1869. Oggi è organizzata per numero atomico crescente e raggruppa gli elementi con proprietà simili."
+      },
+      {
+        "domanda": "Qual è il prodotto della combustione completa di un idrocarburo?",
+        "opzioni": [
+          "CO + H₂",
+          "CO₂ + H₂O",
+          "C + H₂O"
+        ],
+        "corretta": "CO₂ + H₂O",
+        "spiegazione": "Nella combustione completa un idrocarburo (CₓHᵧ) reagisce con O₂ producendo CO₂ e H₂O. Es: CH₄ + 2O₂ → CO₂ + 2H₂O."
+      },
+      {
+        "domanda": "Quale particella subatomica ha carica negativa?",
+        "opzioni": [
+          "Protone",
+          "Neutrone",
+          "Elettrone"
+        ],
+        "corretta": "Elettrone",
+        "spiegazione": "L'elettrone ha carica -1 (−1,6 × 10⁻¹⁹ C). Il protone ha carica +1, il neutrone è privo di carica."
+      },
+      {
+        "domanda": "Cos'è un isotopo?",
+        "opzioni": [
+          "Un elemento con diverso numero atomico",
+          "Un atomo dello stesso elemento con diverso numero di neutroni",
+          "Un composto con la stessa formula ma struttura diversa"
+        ],
+        "corretta": "Un atomo dello stesso elemento con diverso numero di neutroni",
+        "spiegazione": "Gli isotopi sono atomi dello stesso elemento (stesso Z) ma con diverso numero di neutroni, e quindi diversa massa atomica. Es: ¹²C e ¹⁴C."
+      },
+      {
+        "domanda": "Osserva la scala del pH in figura. La freccia indica un valore di pH = 9. Come si classifica questa soluzione?",
+        "svg": "<svg viewBox=\"0 0 360 130\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"130\" fill=\"#111827\" rx=\"8\"/>\n<defs>\n  <linearGradient id=\"phg\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\">\n    <stop offset=\"0%\"   stop-color=\"#e74c3c\"/>\n    <stop offset=\"50%\"  stop-color=\"#2ecc71\"/>\n    <stop offset=\"100%\" stop-color=\"#3498db\"/>\n  </linearGradient>\n</defs>\n<rect x=\"30\" y=\"45\" width=\"300\" height=\"30\" rx=\"6\" fill=\"url(#phg)\" opacity=\"0.85\"/>\n<text x=\"30\"  y=\"40\" fill=\"#e74c3c\" font-size=\"9\" text-anchor=\"middle\">0</text>\n<text x=\"88\"  y=\"40\" fill=\"#e67e22\" font-size=\"9\" text-anchor=\"middle\">2</text>\n<text x=\"130\" y=\"40\" fill=\"#f1c40f\" font-size=\"9\" text-anchor=\"middle\">4</text>\n<text x=\"180\" y=\"40\" fill=\"#2ecc71\" font-size=\"9\" text-anchor=\"middle\">7</text>\n<text x=\"230\" y=\"40\" fill=\"#1abc9c\" font-size=\"9\" text-anchor=\"middle\">10</text>\n<text x=\"280\" y=\"40\" fill=\"#3498db\" font-size=\"9\" text-anchor=\"middle\">12</text>\n<text x=\"330\" y=\"40\" fill=\"#9b59b6\" font-size=\"9\" text-anchor=\"middle\">14</text>\n<text x=\"75\"  y=\"98\" fill=\"#e74c3c\"  font-size=\"8\" text-anchor=\"middle\">Acido</text>\n<text x=\"180\" y=\"98\" fill=\"#2ecc71\"   font-size=\"8\" text-anchor=\"middle\">Neutro</text>\n<text x=\"285\" y=\"98\" fill=\"#3498db\"  font-size=\"8\" text-anchor=\"middle\">Basico</text>\n<line x1=\"180\" y1=\"43\" x2=\"180\" y2=\"77\" stroke=\"#fff\" stroke-width=\"1.5\" stroke-dasharray=\"3 2\" opacity=\"0.6\"/>\n<line x1=\"178\" y1=\"43\" x2=\"178\" y2=\"77\" stroke=\"#fff\" stroke-width=\"0.5\" opacity=\"0.3\"/>\n<text x=\"180\" y=\"112\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">La freccia indica pH = 9. Di che tipo è la soluzione?</text>\n<line x1=\"260\" y1=\"55\" x2=\"260\" y2=\"43\" stroke=\"#c8a96e\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n<polygon points=\"260,38 255,48 265,48\" fill=\"#c8a96e\"/>\n</svg>",
+        "opzioni": [
+          "Acida",
+          "Neutra",
+          "Basica"
+        ],
+        "corretta": "Basica",
+        "spiegazione": "Il pH = 9 è maggiore di 7 (neutro), quindi la soluzione è basica. Le soluzioni acide hanno pH < 7, quelle basiche pH > 7. Ad esempio NaOH ha pH ≈ 13, l'acqua pura pH = 7."
+      },
+      {
+        "domanda": "Nel frammento di tavola periodica, gli elementi nel riquadro dorato (He, Ne, Ar) appartengono allo stesso gruppo. Come si chiamano questi elementi?",
+        "svg": "<svg viewBox=\"0 0 360 180\" xmlns=\"http://www.w3.org/2000/svg\">\n<rect width=\"360\" height=\"180\" fill=\"#111827\" rx=\"8\"/>\n<text x=\"180\" y=\"20\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">Frammento tavola periodica — Periodi 1-3</text>\n<rect x=\"20\"  y=\"30\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#1a3a5c\" stroke=\"#3498db\" stroke-width=\"1\"/>\n<text x=\"38\" y=\"43\" fill=\"#8aafdf\" font-size=\"8\" text-anchor=\"middle\">H</text>\n<text x=\"38\" y=\"55\" fill=\"#5b8dd9\" font-size=\"7\" text-anchor=\"middle\">1</text>\n<rect x=\"304\" y=\"30\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#2a1a3a\" stroke=\"#9b59b6\" stroke-width=\"1\"/>\n<text x=\"322\" y=\"43\" fill=\"#c39bd3\" font-size=\"8\" text-anchor=\"middle\">He</text>\n<text x=\"322\" y=\"55\" fill=\"#9b59b6\" font-size=\"7\" text-anchor=\"middle\">2</text>\n<rect x=\"20\"  y=\"70\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#1a3a5c\" stroke=\"#3498db\" stroke-width=\"1\"/>\n<text x=\"38\" y=\"83\" fill=\"#8aafdf\" font-size=\"8\" text-anchor=\"middle\">Li</text>\n<text x=\"38\" y=\"95\" fill=\"#5b8dd9\" font-size=\"7\" text-anchor=\"middle\">3</text>\n<rect x=\"62\"  y=\"70\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#1a3a2a\" stroke=\"#2ecc71\" stroke-width=\"1\"/>\n<text x=\"80\" y=\"83\" fill=\"#a9dfbf\" font-size=\"8\" text-anchor=\"middle\">Be</text>\n<text x=\"80\" y=\"95\" fill=\"#2ecc71\" font-size=\"7\" text-anchor=\"middle\">4</text>\n<rect x=\"262\" y=\"70\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#3a1a1a\" stroke=\"#e74c3c\" stroke-width=\"1\"/>\n<text x=\"280\" y=\"83\" fill=\"#f0b0b0\" font-size=\"8\" text-anchor=\"middle\">F</text>\n<text x=\"280\" y=\"95\" fill=\"#e74c3c\" font-size=\"7\" text-anchor=\"middle\">9</text>\n<rect x=\"304\" y=\"70\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#2a1a3a\" stroke=\"#9b59b6\" stroke-width=\"2\"/>\n<text x=\"322\" y=\"83\" fill=\"#c39bd3\" font-size=\"8\" text-anchor=\"middle\">Ne</text>\n<text x=\"322\" y=\"95\" fill=\"#9b59b6\" font-size=\"7\" text-anchor=\"middle\">10</text>\n<rect x=\"20\"  y=\"110\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#1a3a5c\" stroke=\"#3498db\" stroke-width=\"1\"/>\n<text x=\"38\" y=\"123\" fill=\"#8aafdf\" font-size=\"8\" text-anchor=\"middle\">Na</text>\n<text x=\"38\" y=\"135\" fill=\"#5b8dd9\" font-size=\"7\" text-anchor=\"middle\">11</text>\n<rect x=\"304\" y=\"110\" width=\"36\" height=\"32\" rx=\"4\" fill=\"#2a1a3a\" stroke=\"#9b59b6\" stroke-width=\"2\"/>\n<text x=\"322\" y=\"123\" fill=\"#c39bd3\" font-size=\"8\" text-anchor=\"middle\">Ar</text>\n<text x=\"322\" y=\"135\" fill=\"#9b59b6\" font-size=\"7\" text-anchor=\"middle\">18</text>\n<rect x=\"304\" y=\"30\" width=\"36\" height=\"112\" rx=\"0\" fill=\"none\" stroke=\"#c8a96e\" stroke-width=\"1.5\" stroke-dasharray=\"4 2\"/>\n<text x=\"180\" y=\"165\" fill=\"#8a95a8\" font-size=\"9\" text-anchor=\"middle\">Gli elementi nel riquadro dorato appartengono allo stesso gruppo. Come si chiamano?</text>\n</svg>",
+        "opzioni": [
+          "Metalli alcalini",
+          "Alogeni",
+          "Gas nobili"
+        ],
+        "corretta": "Gas nobili",
+        "spiegazione": "He, Ne, Ar (gruppo 18) sono i gas nobili: hanno il guscio elettronico esterno completo (ns²np⁶, eccetto He con 1s²), il che li rende praticamente inerti chimicamente."
+      }
+    ],
+    "difficile": [
+      {
+        "domanda": "Quale principio stabilisce che due elettroni nello stesso orbitale devono avere spin opposti?",
+        "opzioni": [
+          "Principio di Aufbau",
+          "Principio di esclusione di Pauli",
+          "Regola di Hund"
+        ],
+        "corretta": "Principio di esclusione di Pauli",
+        "spiegazione": "Il principio di Pauli afferma che nessun elettrone in un atomo può avere tutti e quattro i numeri quantici uguali. Due elettroni nello stesso orbitale devono avere spin opposti."
+      },
+      {
+        "domanda": "In una reazione redox, lo ione Fe³⁺ acquista un elettrone e diventa Fe²⁺. Fe³⁺ si comporta da:",
+        "opzioni": [
+          "Agente riducente",
+          "Agente ossidante",
+          "Acido di Lewis"
+        ],
+        "corretta": "Agente ossidante",
+        "spiegazione": "Fe³⁺ acquista elettroni (si riduce), quindi è l'agente ossidante. L'agente ossidante si riduce; l'agente riducente si ossida cedendo elettroni."
+      },
+      {
+        "domanda": "Qual è il prodotto principale della reazione tra etilene (CH₂=CH₂) e bromo (Br₂) in soluzione?",
+        "opzioni": [
+          "Bromoetano (CH₃CH₂Br)",
+          "1,2-dibromoetano (BrCH₂CH₂Br)",
+          "Butano (C₄H₁₀)"
+        ],
+        "corretta": "1,2-dibromoetano (BrCH₂CH₂Br)",
+        "spiegazione": "L'etilene subisce una reazione di addizione elettrofila con Br₂: il doppio legame C=C si apre e ogni carbonio acquisisce un atomo di bromo."
+      },
+      {
+        "domanda": "Secondo la costante di equilibrio Keq, cosa indica un valore di Keq >> 1 per una reazione?",
+        "opzioni": [
+          "La reazione favorisce i reagenti",
+          "La reazione favorisce i prodotti",
+          "La reazione è a metà del percorso"
+        ],
+        "corretta": "La reazione favorisce i prodotti",
+        "spiegazione": "Keq = [prodotti]/[reagenti]. Un valore molto maggiore di 1 indica che all'equilibrio la concentrazione dei prodotti è molto superiore a quella dei reagenti."
+      },
+      {
+        "domanda": "Quale ibridazione ha il carbonio nel benzene (C₆H₆)?",
+        "opzioni": [
+          "sp³",
+          "sp²",
+          "sp"
+        ],
+        "corretta": "sp²",
+        "spiegazione": "Nel benzene ogni atomo di carbonio è ibridato sp²: forma tre legami σ, mentre l'orbitale p puro contribuisce al sistema π delocalizzato aromatico."
+      },
+      {
+        "domanda": "Cosa afferma il principio di Le Chatelier?",
+        "opzioni": [
+          "Un sistema all'equilibrio, perturbato, si sposta per minimizzare la perturbazione",
+          "La velocità di reazione raddoppia ogni 10°C",
+          "L'energia si conserva nelle reazioni chimiche"
+        ],
+        "corretta": "Un sistema all'equilibrio, perturbato, si sposta per minimizzare la perturbazione",
+        "spiegazione": "Il principio di Le Chatelier afferma che se un sistema in equilibrio viene perturbato (variazione di concentrazione, pressione, temperatura), si sposta nella direzione che tende a ripristinare l'equilibrio."
+      },
+      {
+        "domanda": "Quale legame è responsabile della struttura a doppia elica del DNA?",
+        "opzioni": [
+          "Legami covalenti tra le basi",
+          "Legami idrogeno tra le basi complementari",
+          "Legami ionici tra i fosfati"
+        ],
+        "corretta": "Legami idrogeno tra le basi complementari",
+        "spiegazione": "I due filamenti del DNA sono tenuti insieme da legami idrogeno tra coppie di basi complementari: A-T (2 legami H) e G-C (3 legami H)."
+      },
+      {
+        "domanda": "Qual è la differenza tra una reazione esotermica e una endotermica?",
+        "opzioni": [
+          "L'esotermica assorbe calore, l'endotermica lo rilascia",
+          "L'esotermica rilascia calore (ΔH < 0), l'endotermica lo assorbe (ΔH > 0)",
+          "Non c'è differenza, dipende solo dalla pressione"
+        ],
+        "corretta": "L'esotermica rilascia calore (ΔH < 0), l'endotermica lo assorbe (ΔH > 0)",
+        "spiegazione": "Nelle reazioni esotermiche l'entalpia dei prodotti è minore di quella dei reagenti (ΔH < 0) e il calore viene ceduto all'ambiente. Nelle endotermiche è il contrario."
+      },
+      {
+        "domanda": "Quale tipo di isomeria si ha quando due composti hanno la stessa formula molecolare ma disposizione diversa degli atomi nello spazio?",
+        "opzioni": [
+          "Isomeria di struttura",
+          "Stereoisomeria",
+          "Isomeria di catena"
+        ],
+        "corretta": "Stereoisomeria",
+        "spiegazione": "Gli stereoisomeri hanno la stessa formula molecolare e la stessa sequenza di legami, ma differente disposizione spaziale degli atomi. Include enantiomeri e diastereoisomeri."
+      },
+      {
+        "domanda": "Cosa rappresenta il pKa di un acido?",
+        "opzioni": [
+          "Il pH a cui la soluzione è neutra",
+          "Il pH a cui metà dell'acido è dissociato",
+          "La concentrazione dell'acido alla dissociazione completa"
+        ],
+        "corretta": "Il pH a cui metà dell'acido è dissociato",
+        "spiegazione": "Il pKa = -log(Ka). Quando pH = pKa, le concentrazioni di acido e base coniugata sono uguali: [HA] = [A⁻]. È utile per calcolare tamponi con l'equazione di Henderson-Hasselbalch."
+      },
+      {
+        "domanda": "In chimica organica, come si chiama la reazione in cui un gruppo -OH viene sostituito da un alogeno?",
+        "opzioni": [
+          "Sostituzione nucleofila",
+          "Eliminazione",
+          "Sostituzione elettrofila"
+        ],
+        "corretta": "Sostituzione nucleofila",
+        "spiegazione": "La conversione di un alcol in alogenuro alchilico avviene tramite sostituzione nucleofila (SN1 o SN2), in cui il nucleofilo (X⁻) sostituisce il gruppo uscente (-OH)."
+      },
+      {
+        "domanda": "Qual è la configurazione elettronica dell'atomo di ferro (Fe, Z=26)?",
+        "opzioni": [
+          "[Ar] 3d⁶ 4s²",
+          "[Ar] 3d⁸",
+          "[Ne] 3s² 3p⁶ 3d⁶"
+        ],
+        "corretta": "[Ar] 3d⁶ 4s²",
+        "spiegazione": "Il ferro (Z=26) ha configurazione [Ar] 3d⁶ 4s². Il sottolivello 4s si riempie prima del 3d (regola di Aufbau), ma il 3d ha energia minore negli ioni."
+      },
+      {
+        "domanda": "Cosa si intende per 'entalpia di formazione standard' di un composto?",
+        "opzioni": [
+          "Il calore assorbito quando il composto si decompone",
+          "Il calore rilasciato o assorbito nella formazione di 1 mole di composto dagli elementi nei loro stati standard",
+          "L'energia di legame media del composto"
+        ],
+        "corretta": "Il calore rilasciato o assorbito nella formazione di 1 mole di composto dagli elementi nei loro stati standard",
+        "spiegazione": "ΔH°f è la variazione di entalpia quando 1 mole di composto si forma dagli elementi nei loro stati standard a 298 K e 1 atm. Per convenzione ΔH°f degli elementi puri = 0."
+      },
+      {
+        "domanda": "In elettrochimica, in quale semielemento avviene l'ossidazione?",
+        "opzioni": [
+          "Al catodo",
+          "All'anodo",
+          "In entrambi contemporaneamente"
+        ],
+        "corretta": "All'anodo",
+        "spiegazione": "All'anodo avviene l'ossidazione (perdita di elettroni); al catodo avviene la riduzione (acquisto di elettroni). Mnemonico: An-Ox, Red-Cat."
+      },
+      {
+        "domanda": "Cosa descrive la legge di Hess?",
+        "opzioni": [
+          "La velocità di una reazione dipende dalla temperatura",
+          "L'entalpia di una reazione è indipendente dal percorso seguito",
+          "Il pH di una soluzione tampone dipende dal rapporto acido/base"
+        ],
+        "corretta": "L'entalpia di una reazione è indipendente dal percorso seguito",
+        "spiegazione": "La legge di Hess afferma che la variazione di entalpia totale di una reazione è la stessa indipendentemente dal percorso, poiché H è una funzione di stato."
+      }
+    ]
+  },
+  "gruppo": {
+    "medio": [
+      {
+        "domanda": "Chi è il membro del gruppo che ha scritto più messaggi in assoluto nella chat?",
+        "opzioni": [
+          "Gigio Petri",
+          "Manu",
+          "Pierino"
+        ],
+        "corretta": "Pierino",
+        "spiegazione": "Pierino domina la classifica messaggi con oltre 5.400 messaggi, davanti a Manu (3.468) e Gigio Petri (2.816). Un vero professionista della chat."
+      },
+      {
+        "domanda": "Qual è il brindisi tipico del gruppo, usato da tutti fin dal primo giorno della chat?",
+        "opzioni": [
+          "Cin cin!",
+          "Eia!",
+          "Salute!"
+        ],
+        "corretta": "Eia!",
+        "spiegazione": "\"Eia!\" accompagnato dall'emoji del vino 🍷 è il brindisi storico del gruppo, usato fin dal 28 giugno 2015. Lo ha lanciato Canapino con \"Egliaaaa\" e da lì è diventato un classico."
+      },
+      {
+        "domanda": "Come viene chiamato affettuosamente Pierino nel gruppo?",
+        "opzioni": [
+          "Piatto",
+          "Prisco",
+          "Bindi"
+        ],
+        "corretta": "Piatto",
+        "spiegazione": "Pierino è universalmente noto come \"Piatto\" — soprannome usato da tutti i membri del gruppo in ogni occasione. \"Cavalier Piatto da Spezzacavalli\" nella versione epica."
+      },
+      {
+        "domanda": "Il gruppo ha organizzato un viaggio a Budapest. Chi si è rifiutato di andare perché \"le pizze in Ungheria costano migliaia di fiorini\"?",
+        "opzioni": [
+          "Canapino",
+          "Lele",
+          "Padde"
+        ],
+        "corretta": "Lele",
+        "spiegazione": "Lele ha dichiarato solennemente \"Io non vengo a Budabuda!\" citando il costo delle pizze in Ungheria come motivazione principale. Gigio se lo ricordava ancora settimane dopo."
+      },
+      {
+        "domanda": "Durante una gita, quanto hanno pagato Padde e compagni al meccanico grazie a \"un po' d'amicizia\"?",
+        "opzioni": [
+          "250€",
+          "300€",
+          "321€ + IVA"
+        ],
+        "corretta": "300€",
+        "spiegazione": "\"Senza fattura e con un po' d'amicizia ce la siamo cavata con trecentino secco\" — dopo quasi 800km e un preventivo originale di 321€ + IVA. Topi leggendari."
+      },
+      {
+        "domanda": "Come viene chiamato il Fantacalcio del gruppo?",
+        "opzioni": [
+          "FantaLeggenda",
+          "FantaMarquez",
+          "Tutti e due, si cambia spesso"
+        ],
+        "corretta": "Tutti e due, si cambia spesso",
+        "spiegazione": "Il nome del gruppo WhatsApp cambia continuamente in base agli umori: FantaNonMeLoFare, FantaAnziosi, FantaMarquez, FantaLaxalt... Una lunga storia di rename leggendari."
+      },
+      {
+        "domanda": "Chi è \"Canapino\" nel gruppo?",
+        "opzioni": [
+          "Un personaggio che si nasconde anche nel deserto",
+          "Il più silenzioso del gruppo",
+          "Quello che arriva sempre puntuale"
+        ],
+        "corretta": "Un personaggio che si nasconde anche nel deserto",
+        "spiegazione": "\"Canapino si nasconde anche nel deserto\" — citazione di Manu durante una partita di guerra-sfottò. Famoso per le sue mosse da commando e per aver fatto incazzare Gigio."
+      },
+      {
+        "domanda": "Lele ha scritto un messaggio commovente sulla chat dicendo che senza il gruppo il sapore della vita saprebbe \"un po' di...\"?",
+        "opzioni": [
+          "Acqua fresca",
+          "Malinconico",
+          "Niente"
+        ],
+        "corretta": "Malinconico",
+        "spiegazione": "\"Senza ognuno di voi, il sapore di vivere mi saprebbe un pò di malinconico\" — il messaggio poetico di Lele del 28 giugno 2015, che ha fatto sciogliere tutto il gruppo."
+      },
+      {
+        "domanda": "Cosa porta sempre Manu alle serate del gruppo?",
+        "opzioni": [
+          "La pizza",
+          "I funghi",
+          "Il vino"
+        ],
+        "corretta": "I funghi",
+        "spiegazione": "\"Potrei aver trovato i funghi\" è una frase ricorrente di Manu quando si organizzano le serate. I funghi sono il suo contributo leggendario alle cene del gruppo."
+      },
+      {
+        "domanda": "Paggio arriva alle serate dicendo sempre che arriva \"già mangiato\". A che ora arriva di solito?",
+        "opzioni": [
+          "Alle 19",
+          "Alle 21",
+          "Dopo mezzanotte"
+        ],
+        "corretta": "Alle 21",
+        "spiegazione": "\"Io come detto arrivo alle 9 già mangiato\" — Paggio è famoso per presentarsi alle 21 già sazio, scatenando le ire di Pierino che risponde con un eloquente \"Vomito 🤮\"."
+      },
+      {
+        "domanda": "Come viene chiamato il fantacalcio nel gergo del gruppo?",
+        "opzioni": [
+          "Il Fanta",
+          "L'asta",
+          "La zuzza"
+        ],
+        "corretta": "L'asta",
+        "spiegazione": "\"L'asta\" è il momento clou del Fantacalcio del gruppo — quella per cui ci si organizza la serata, si aspettano tutti, e si va avanti fino alle 4 di notte."
+      },
+      {
+        "domanda": "Chi viene chiamato \"Caliprisco\" o \"il pulcino delle favelas\"?",
+        "opzioni": [
+          "Manu",
+          "Prisco (4 stagioni)",
+          "Padde"
+        ],
+        "corretta": "Prisco (4 stagioni)",
+        "spiegazione": "\"Caliprisco è il pulcino delle favelas... si fa come dice lui\" — Lele sul conto di Prisco (4 stagioni), il cui vero nome sembra essere Fabio e che è il capo indiscusso delle decisioni del gruppo."
+      },
+      {
+        "domanda": "Chi ha scritto più volte la parola 'merda' nella chat? (Risposta basata su dati reali, non opinioni personali)",
+        "opzioni": [
+          "Manu (40 volte)",
+          "Pierino (58 volte)",
+          "Gigio Petri (40 volte)"
+        ],
+        "corretta": "Pierino (58 volte)",
+        "spiegazione": "Pierino domina anche la classifica delle parolacce con 58 'merda' documentate. Medaglia d'argento ex aequo per Manu e Gigio con 40 ciascuno. Yuri invece è l'unico del gruppo con zero 'merda' scritte — evidentemente lo pensa ma non lo scrive. 😇"
+      },
+      {
+        "domanda": "Qual è la parola volgare più usata in assoluto nella chat del FantaLeggenda?",
+        "opzioni": [
+          "Merda (230 volte)",
+          "Cazzo (386 volte)",
+          "Vaffanculo (46 volte)"
+        ],
+        "corretta": "Cazzo (386 volte)",
+        "spiegazione": "Con 386 occorrenze, 'cazzo' è il campione indiscusso del vocabolario del gruppo. 'Merda' è seconda con 230, mentre 'vaffanculo' è il più raro con solo 46. Il gruppo comunica prevalentemente per sfumature di intensità della stessa parola."
+      },
+      {
+        "domanda": "Qual è l'emoji più usata nella chat del FantaLeggenda?",
+        "opzioni": [
+          "👏 (1.938 volte)",
+          "😱 (646 volte)",
+          "😂 (14.060 volte)"
+        ],
+        "corretta": "😂 (14.060 volte)",
+        "spiegazione": "😂 con 14.060 occorrenze è l'emoji dominante — praticamente ogni terzo messaggio contiene almeno una risata. In confronto 👏 con 1.938 sembra quasi sobria. Il gruppo ride tanto, ride forte, e ride spesso di Pierino."
+      },
+      {
+        "domanda": "Chi ha mandato più file multimediali (foto, video, audio) nella chat?",
+        "opzioni": [
+          "Gigio Petri (423 media)",
+          "Meo (290 media)",
+          "Pierino (759 media)"
+        ],
+        "corretta": "Pierino (759 media)",
+        "spiegazione": "Pierino non è solo il re dei messaggi scritti (5.460) e delle parolacce, ma anche il re dei media con 759 file inviati. Praticamente vive su WhatsApp. Al secondo posto Gigio con 423, poi Meo con 290. Yuri con 440 messaggi totali ha probabilmente un basso media-per-messaggio ratio."
+      },
+      {
+        "domanda": "Quante volte Manu ha citato il nome 'Prisco' in 9 anni di chat?",
+        "opzioni": [
+          "12 volte",
+          "93 volte",
+          "168 volte"
+        ],
+        "corretta": "93 volte",
+        "spiegazione": "Manu ha scritto 'Prisco' 93 volte — ma viene battuto da Gigio Petri che lo ha citato ben 168 volte! Sembra che Prisco (alias 4 stagioni) sia una presenza costante nei pensieri del gruppo. Pierino lo ha citato 28 volte, probabilmente solo per insultarlo."
+      },
+      {
+        "domanda": "Chi è il membro del gruppo che ha detto 'vaffanculo' più volte?",
+        "opzioni": [
+          "Manu (14 volte)",
+          "Cileno (8 volte)",
+          "Meo (8 volte)"
+        ],
+        "corretta": "Manu (14 volte)",
+        "spiegazione": "Manu è il campione del vaffanculo con 14 occorrenze, quasi il doppio di Meo e Cileno (8 ciascuno). Gala è l'unico con zero vaffanculo — evidentemente preferisce esprimersi in altri modi. Pierino, sorprendentemente, ne ha detti solo 6."
+      },
+      {
+        "domanda": "Yuri ha aperto la chat con un messaggio leggendario il primo giorno. Cosa aveva appena considerato di fare?",
+        "opzioni": [
+          "Comprare una barca",
+          "Divorziare",
+          "Trasferirsi all'estero"
+        ],
+        "corretta": "Divorziare",
+        "spiegazione": "\"Niente, ho fatto 2 conti ed il divorzio è caro, c'ho provato\" — Yuri il 27 giugno 2015, ore 22:15. Una dichiarazione d'apertura semplicemente leggendaria. Per fortuna i conti non tornavano."
+      },
+      {
+        "domanda": "Chi dà il buongiorno al gruppo con più regolarità, comportandosi come un nonno sveglio alle 5?",
+        "opzioni": [
+          "Manu (6 buongiorno)",
+          "Gigio Petri (4 buongiorno)",
+          "Pierino (13 buongiorno)"
+        ],
+        "corretta": "Pierino (13 buongiorno)",
+        "spiegazione": "Pierino con 13 buongiorno è il gallo della chat — sempre sveglio, sempre pronto. Manu lo insegue con 6, mentre Gala e Cileno hanno scritto buongiorno zero volte in 9 anni. Probabilmente Gala considera il buongiorno una debolezza."
+      },
+      {
+        "domanda": "Quante volte compare 😱 nella chat? Suggerimento: il gruppo si spaventa facilmente.",
+        "opzioni": [
+          "124 volte",
+          "358 volte",
+          "646 volte"
+        ],
+        "corretta": "646 volte",
+        "spiegazione": "Ben 646 😱 — il gruppo si è spaventato, scioccato e indignato 646 volte in 9 anni. Per fare un confronto, ❤️ appare solo 30 volte. Quindi il gruppo si spaventa 21 volte più spesso di quanto si voglia bene. Fa riflettere."
+      },
+      {
+        "domanda": "Il verbo 'cignare' (dare un ceffone) è un classico del gruppo. Quante volte appare nella chat in tutte le sue forme?",
+        "opzioni": [
+          "7 volte",
+          "21 volte",
+          "46 volte"
+        ],
+        "corretta": "21 volte",
+        "spiegazione": "\"Cignare\" e le sue varianti (cigna, cignato, cigni...) appaiono 21 volte — quasi sempre nei confronti di Prisco, Bindi o chiunque abbia fatto una cosa stupida. È il verbo ufficiale del gruppo per minacce affettuose."
+      },
+      {
+        "domanda": "Cosa ha risposto Padde quando ha cercato di scrivere un messaggio commovente come Lele e Gigio?",
+        "opzioni": [
+          "Ha scritto un poema lungo tre schermate",
+          "Ha detto che non riesce a scrivere messaggi potenti ma vi vuole bene",
+          "Ha mandato solo emoji senza spiegazioni"
+        ],
+        "corretta": "Ha detto che non riesce a scrivere messaggi potenti ma vi vuole bene",
+        "spiegazione": "\"Io non riesco a scrivere nessun messaggio potente 😅😂 Però vi voglio bene e parecchio! ❤️\" — Padde il 28 giugno 2015. La risposta più onesta e adorabile della storia del gruppo. Pierino ha risposto: \"Bella storia! 👍\""
+      },
+      {
+        "domanda": "Quante volte 'zuzze' (le sigarette nel gergo del gruppo) compare nella chat?",
+        "opzioni": [
+          "3 volte",
+          "7 volte",
+          "23 volte"
+        ],
+        "corretta": "7 volte",
+        "spiegazione": "\"Zuzze\" appare 7 volte — sempre in contesti di organizzazione serate. Paggio è il principale consumatore e richiedente di zuzze, mentre Pierino risponde regolarmente con \"Fuma meno somaro\" o varianti creative dello stesso concetto."
+      },
+      {
+        "domanda": "Qual è il giorno con più messaggi in assoluto nella storia della chat?",
+        "opzioni": [
+          "5 gennaio 2016 (353 messaggi)",
+          "27 ottobre 2015 (632 messaggi)",
+          "3 febbraio 2016 (425 messaggi)"
+        ],
+        "corretta": "27 ottobre 2015 (632 messaggi)",
+        "spiegazione": "Il 27 ottobre 2015 è il giorno più chiacchierato della storia con 632 messaggi — quasi tutti sul Fantacalcio e su polemiche di mercato. Padde urlava al ricorso già alle 8 di mattina. Un classico."
+      },
+      {
+        "domanda": "Quante volte il gruppo si è detto 'ti voglio bene', 'tvb' o 'vi vu bu' in 9 anni?",
+        "opzioni": [
+          "23 volte",
+          "87 volte",
+          "156 volte"
+        ],
+        "corretta": "23 volte",
+        "spiegazione": "Solo 23 dichiarazioni d'affetto in 9 anni contro 662 parolacce. Il rapporto è di circa 1 'ti voglio bene' ogni 28 parolacce. Il gruppo esprime l'amore principalmente attraverso gli insulti."
+      },
+      {
+        "domanda": "Quante volte viene menzionato 'aperitivo' nella chat?",
+        "opzioni": [
+          "12 volte",
+          "73 volte",
+          "210 volte"
+        ],
+        "corretta": "73 volte",
+        "spiegazione": "73 aperitivi menzionati in 9 anni — circa 8 all'anno, uno ogni 6 settimane. Considerando che molti vengono rimandati, cancellati o dimenticati, quelli effettivamente fatti sono probabilmente molto meno."
+      },
+      {
+        "domanda": "Come si chiama il locale dove il gruppo va spesso a cena ad Arezzo?",
+        "opzioni": [
+          "Il Naboo",
+          "Il Principe",
+          "Il Dolceverde"
+        ],
+        "corretta": "Il Principe",
+        "spiegazione": "Il Principe a Giovi è il ristorante di riferimento del gruppo. Gigio lo frequenta così tanto da commentare sarcasticamente: 'Una cena al Principe è proprio un bel variare'. Il Dolceverde era un'alternativa, il Naboo per gli aperitivi."
+      },
+      {
+        "domanda": "Padde si è definito in un messaggio storico come 'povero studente'. Quanti anni aveva quando è entrato nella chat?",
+        "opzioni": [
+          "Era già laureato",
+          "Era ancora studente universitario",
+          "Era alle superiori"
+        ],
+        "corretta": "Era ancora studente universitario",
+        "spiegazione": "\"Sono un povero studente non ve lo dimenticate 😞\" — Padde nel 2015. Ha usato questa scusa almeno una volta per non pagare. Nessuno ci ha mai creduto veramente."
+      },
+      {
+        "domanda": "Il compleanno di Pierino (alias Piatto) cade a dicembre. Come gli ha fatto gli auguri il gruppo?",
+        "opzioni": [
+          "Con un messaggio collettivo molto commovente",
+          "Pierino stesso ha fatto gli auguri a tutti gli altri",
+          "Con insulti affettuosi e un vaffanculo di servizio"
+        ],
+        "corretta": "Pierino stesso ha fatto gli auguri a tutti gli altri",
+        "spiegazione": "\"Oh ragazzi!..tanti auguriiii al piatto e tanti auguri, di ❤, a tutti voi, umani ed alieni! VTB\" — Pierino il 10 dicembre 2015 ha fatto gli auguri a se stesso E a tutto il gruppo. Efficienza leggendaria."
+      },
+      {
+        "domanda": "Quanti membri unici hanno scritto messaggi nella chat nel periodo documentato?",
+        "opzioni": [
+          "8 membri",
+          "12 membri",
+          "15 membri"
+        ],
+        "corretta": "12 membri",
+        "spiegazione": "I 12 guerrieri del FantaLeggenda sono: Pierino, Manu, Gigio Petri, 4 stagioni (Prisco), Meo, Padde, Lele, Canapino, Gala, Cileno, Paggio e Yuri. Ognuno con il suo ruolo, il suo soprannome e la sua quota di parolacce."
+      },
+      {
+        "domanda": "Lele propone spesso delle 'pedalate' al gruppo. Come le chiama?",
+        "opzioni": [
+          "Pedalate purificanti",
+          "Pedalate spurganti",
+          "Pedalate leggendarie"
+        ],
+        "corretta": "Pedalate spurganti",
+        "spiegazione": "\"Oh ma una pedalata spurgante?? tarda serata... tarda tarda eh!!!\" — Lele il 29 giugno 2015. La pedalata spurgante è un rito del gruppo per smaltire le cene abbondanti. Nessuno ha mai capito esattamente cosa si spurghi."
+      },
+      {
+        "domanda": "Meo si vanta di aver dato 'lezioni' al gruppo in quale videogioco?",
+        "opzioni": [
+          "FIFA",
+          "Un fantastico videogioco (non specificato)",
+          "Crash Team Racing"
+        ],
+        "corretta": "Un fantastico videogioco (non specificato)",
+        "spiegazione": "\"Ma che lezioni che vi ho dato ieri a quel fantastico videogioco?!\" — Meo il 9 novembre 2015. Non ha specificato il gioco, ma la spocchia era massima. Nel 2020 invece il gruppo ha giocato insieme a Crash Team Racing."
+      },
+      {
+        "domanda": "Cosa ha risposto Canapino a Pierino quando quest'ultimo si vantava di averlo battuto al mini ping-pong?",
+        "opzioni": [
+          "Ha ammesso la sconfitta con dignità",
+          "Ha lanciato il tavolo dalla finestra",
+          "Ti ho fatto vincere"
+        ],
+        "corretta": "Ti ho fatto vincere",
+        "spiegazione": "\"Ti ho fatto vincere 😗😗😗\" — la risposta di Canapino alla vanteria leggendaria di Pierino. Classico comportamento da commando: perde, ma dice che ha lasciato vincere. Canapino si nasconde anche nei risultati sportivi."
+      },
+      {
+        "domanda": "Come ha descritto Gigio la barca che ha progettato/mostrato al gruppo?",
+        "opzioni": [
+          "La barca dei sogni",
+          "La barca bottigliosa",
+          "La barca leggendaria"
+        ],
+        "corretta": "La barca bottigliosa",
+        "spiegazione": "\"La barca bottigliosa\" — definizione di Cileno per la creazione nautica di Gigio. Gigio ha risposto con un punto interrogativo, probabilmente orgoglioso. Lo zio gli ha consigliato di divertirsi e tornare da solo."
+      },
+      {
+        "domanda": "Cosa ha scritto Gigio subito dopo una nottata di Crash Team Racing con Manu?",
+        "opzioni": [
+          "È stato togo, rifacciamolo",
+          "Anche io devo avere un cinquantino",
+          "Si, Togo"
+        ],
+        "corretta": "Si, Togo",
+        "spiegazione": "\"Si, Togo\" — Gigio alle 00:23 dopo una sessione di Crash in 2. Nel vocabolario del gruppo 'togo' significa fantastico/divertente. Una parola che vale mille emoji."
+      },
+      {
+        "domanda": "Cos'ha fatto Padde quando ha scoperto che Gigio aveva comunicato in ritardo una notizia importante sul Fantacalcio?",
+        "opzioni": [
+          "Ha accettato stoicamente",
+          "Ha gridato al ricorso e minacciato di non parlare con Gigio per tutto il girone d'andata",
+          "Ha cambiato il nome del gruppo"
+        ],
+        "corretta": "Ha gridato al ricorso e minacciato di non parlare con Gigio per tutto il girone d'andata",
+        "spiegazione": "\"Grido al ricorso!!\" e \"So a rischio di non parlarti per tutto il girone d'andata\" — Padde alle 8 di mattina del 27 ottobre 2015, il giorno record con 632 messaggi. La minaccia non è mai stata eseguita."
+      },
+      {
+        "domanda": "Come ha salutato il gruppo 4 stagioni (Prisco) a Capodanno 2015?",
+        "opzioni": [
+          "Con un messaggio commovente lungo tre schermate",
+          "Auguri a tutti. Musi di merda.",
+          "Con solo un'emoji 🥂"
+        ],
+        "corretta": "Auguri a tutti. Musi di merda.",
+        "spiegazione": "\"auguri a tutti. Musi di merda.\" — Prisco il 31 dicembre 2015. Breve, diretto, affettuoso a modo suo. Probabilmente il miglior augurio di Capodanno mai scritto in questa chat."
+      },
+      {
+        "domanda": "Lele a Natale 2015 ha scritto che il gruppo è 'fantastaspaci'. Cosa ha aggiunto sulla ragione del messaggio natalizio?",
+        "opzioni": [
+          "Perché ci teneva davvero al Natale",
+          "Non è tanto per il natale in sé, è una buona scusa per ricordare quanto siete fantastici",
+          "Perché voleva fare bella figura"
+        ],
+        "corretta": "Non è tanto per il natale in sé, è una buona scusa per ricordare quanto siete fantastici",
+        "spiegazione": "\"Non è tanto per il natale in se per se, diciamo che è un buona scusa per ricordare quanto cazzo siamo fantastaspaci\" — Lele il 25 dicembre 2015 alle 4:55 di notte. Sobrio come sempre."
+      },
+      {
+        "domanda": "Completa la frase storica di Prisco a Capodanno 2015: 'Auguri a tutti. ___'",
+        "opzioni": [
+          "Ci voglio bene.",
+          "Musi di merda.",
+          "Che l'anno nuovo sia leggendario."
+        ],
+        "corretta": "Musi di merda.",
+        "spiegazione": "\"Auguri a tutti. Musi di merda.\" — Prisco il 31 dicembre 2015. Conciso, diretto, affettuoso. Il miglior augurio di Capodanno nella storia della chat."
+      },
+      {
+        "domanda": "Completa il titolo nobiliare che si è dato Pierino: 'Cavalier ___ da Spezzacavalli'",
+        "opzioni": [
+          "Rizzo",
+          "Piatto",
+          "Grande"
+        ],
+        "corretta": "Piatto",
+        "spiegazione": "\"La leggenda di Cavalier Piatto da Spezzacavalli\" — Pierino il 22 luglio 2015. Un titolo inventato, ma portato con grande dignità."
+      },
+      {
+        "domanda": "Completa il soprannome di Canapino inventato da Pierino: 'Arnold ___'",
+        "opzioni": [
+          "Swarzecanapo",
+          "Canaperone",
+          "Comandando"
+        ],
+        "corretta": "Swarzecanapo",
+        "spiegazione": "\"Arnold Swarzecanapo\" — Pierino su Canapino dopo le sue gesta da commando durante una gita. Una fusione perfetta tra Arnold Schwarzenegger e Canapino."
+      },
+      {
+        "domanda": "VERO O FALSO: Yuri ha più messaggi scritti di Canapino nella chat.",
+        "opzioni": [
+          "VERO — Yuri ha 440, Canapino 957",
+          "FALSO — Canapino ha 957, Yuri solo 440",
+          "Sono pari"
+        ],
+        "corretta": "FALSO — Canapino ha 957, Yuri solo 440",
+        "spiegazione": "Canapino con 957 messaggi quasi doppia Yuri che ne ha 440. Yuri è il più silenzioso del gruppo — ma quando parla, dice cose memorabili come 'il divorzio è caro'."
+      },
+      {
+        "domanda": "VERO O FALSO: Il gruppo ha mai cambiato il nome della chat in 'FantaLaxalt'.",
+        "opzioni": [
+          "VERO",
+          "FALSO",
+          "Non si ricorda"
+        ],
+        "corretta": "VERO",
+        "spiegazione": "Sì! Il 28 ottobre 2015 Gigio ha cambiato il nome in FantaLaxalt dopo che il giocatore aveva segnato. Prima era FantaMarquez. Il gruppo cambia nome più spesso di quante volte si dica 'ti voglio bene'."
+      },
+      {
+        "domanda": "VERO O FALSO: Lele ha scritto il messaggio commovente sulla chat alle 4:55 di notte di Natale.",
+        "opzioni": [
+          "VERO",
+          "FALSO — era mezzogiorno",
+          "FALSO — era mezzanotte"
+        ],
+        "corretta": "VERO",
+        "spiegazione": "\"Non è tanto per il natale in se per se...\" — Lele il 25 dicembre 2015 alle 04:55. Sobrio come sempre. Il gruppo ha probabilmente trovato il messaggio la mattina dopo con grande sorpresa."
+      },
+      {
+        "domanda": "VERO O FALSO: Canapino ha votato nella disputa sul mercato Fantacalcio del 27 ottobre 2015.",
+        "opzioni": [
+          "VERO — ha votato sì",
+          "FALSO — si è astenuto con comunicato ufficiale dell'A.C.Picchia",
+          "FALSO — non era online"
+        ],
+        "corretta": "FALSO — si è astenuto con comunicato ufficiale dell'A.C.Picchia",
+        "spiegazione": "Canapino ha emesso un 'Comunicato ufficiale dell'A.C.Picchia' per astenersi dalla votazione. Pierino ha risposto: 'Non puoi astenerti Cana! ...vota!' Ma Canapino, da vero commando, ha tenuto la posizione."
+      },
+      {
+        "domanda": "Chi ha detto 'Io sono leggenda!!!' nella chat?",
+        "opzioni": [
+          "Gigio Petri",
+          "Meo",
+          "Pierino"
+        ],
+        "corretta": "Pierino",
+        "spiegazione": "\"Io sono leggenda!!!\" — Pierino il 27 ottobre 2015, nel giorno più caotico della chat. Lo ha detto con tutta la modestia che lo contraddistingue."
+      },
+      {
+        "domanda": "Chi ha detto 'Laxalt facci sognare' almeno tre volte nella stessa giornata?",
+        "opzioni": [
+          "Pierino",
+          "Yuri",
+          "Gigio Petri"
+        ],
+        "corretta": "Gigio Petri",
+        "spiegazione": "Gigio ha invocato Laxalt come una divinità il 27 ottobre 2015, ripetendo 'Laxalt facci sognare' più volte. Laxalt poi ha segnato e il gruppo ha cambiato il nome della chat in FantaLaxalt. La fede viene premiata."
+      },
+      {
+        "domanda": "Chi ha detto 'Non c'è una cura per voi' dopo una nottata di emoji inviate a raffica?",
+        "opzioni": [
+          "Manu",
+          "Prisco",
+          "Gigio Petri"
+        ],
+        "corretta": "Gigio Petri",
+        "spiegazione": "\"Non c'è una cura per voi\" — Gigio il mattino dopo che Lele e Manu si erano mandati emoji a raffica per mezz'ora di notte. Una diagnosi medica accurata."
+      },
+      {
+        "domanda": "Chi ha descritto la Fulminense FC come squadra che 'vi mette dietro tutti'?",
+        "opzioni": [
+          "Meo",
+          "Lele",
+          "Padde"
+        ],
+        "corretta": "Lele",
+        "spiegazione": "\"Quest'anno la Fulminense vi mette dietri tuttiiiiii\" — Lele il 9 settembre 2015 con quattro punti esclamativi e quattro emoji di cacca. La Fulminense è la squadra di Meo nel Fantacalcio."
+      },
+      {
+        "domanda": "Come si chiama la squadra del Fantacalcio di Gigio Petri?",
+        "opzioni": [
+          "Desaparecidos FC",
+          "Cimbanella FC",
+          "Fulminense FC"
+        ],
+        "corretta": "Cimbanella FC",
+        "spiegazione": "Gigio gestisce la Cimbanella FC — nome decisamente originale. La squadra viene insultata regolarmente da Meo ('CIMBANELLA VAFFANCULO!!!') e difesa con altrettanto entusiasmo dal suo patron."
+      },
+      {
+        "domanda": "Come si chiama la squadra del Fantacalcio di Pierino?",
+        "opzioni": [
+          "Cimbanella FC",
+          "Fulminense FC",
+          "Desaparecidos FC"
+        ],
+        "corretta": "Desaparecidos FC",
+        "spiegazione": "La Desaparecidos FC di Pierino — un nome che evoca mistero e sparizioni improvvise, proprio come Canapino nel deserto. Pierino ne parla sempre con grandissimo orgoglio."
+      },
+      {
+        "domanda": "Chi sono i nuovi membri del gruppo apparsi nelle conversazioni più recenti (2022-2024)?",
+        "opzioni": [
+          "Pinolo e Frasca",
+          "Pila e Frasca",
+          "Antico e Fo"
+        ],
+        "corretta": "Pila e Frasca",
+        "spiegazione": "Pila e Frasca 🌿 appaiono nelle conversazioni più recenti (2022-2024), insieme ad Antico e Fo che erano già presenti dal 2016. Il gruppo si è espanso nel tempo come un buon vino."
+      },
+      {
+        "domanda": "Cosa ha proposto Pila per la fantacena di Natale 2022, scatenando reazioni di orrore?",
+        "opzioni": [
+          "Pizza hawaiana",
+          "Sushi",
+          "Trippa"
+        ],
+        "corretta": "Sushi",
+        "spiegazione": "\"Si va al sushi\" — Pila con carta bianca per organizzare la cena. Manu ha risposto: \"Non fare cazzate. Tipo sushi 😂\". Gala ha mandato 🙈. Il sushi non è nel DNA del FantaLeggenda."
+      },
+      {
+        "domanda": "Come ha definito Gigio Manu nella chat del 2022 quando doveva decidere il ristorante?",
+        "opzioni": [
+          "Il Grande Capo",
+          "Il super mega campionissimo fortissimo simpaticissimo bellissimo",
+          "Il nostro salvatore"
+        ],
+        "corretta": "Il super mega campionissimo fortissimo simpaticissimo bellissimo",
+        "spiegazione": "\"Io sceglierei il super mega campionissimo fortissimo simpaticissimo bellissimo Manu\" — Gigio il 20 dicembre 2022. Tanta ironia, zero sarcasmo. Manu ha risposto: \"Fuori\" e \"😂\"."
+      },
+      {
+        "domanda": "Il Fo ha proposto un indovinello al gruppo: Q di 007 + Oche non ammazza (Pistorius) = ?",
+        "opzioni": [
+          "Chi non sente non pecca",
+          "Quello che non ammazza ingrassa",
+          "Il silenzio è d'oro"
+        ],
+        "corretta": "Quello che non ammazza ingrassa",
+        "spiegazione": "Q (personaggio di 007) + 'Uelle OCHE non AMMAZZA' (Pistorius che non ammazzò le oche) = 'Quello che non ammazza ingrassa'. Un indovinello di livello PhD in creatività trash. Gigio non sapeva chi fosse Q di 007."
+      },
+      {
+        "domanda": "Quante volte appare 'aperitivo' nella chat rispetto a 'pizza'?",
+        "opzioni": [
+          "Aperitivo meno di pizza",
+          "Aperitivo uguale a pizza",
+          "Aperitivo più di pizza (73 vs 21)"
+        ],
+        "corretta": "Aperitivo più di pizza (73 vs 21)",
+        "spiegazione": "Aperitivo: 73 volte. Pizza: 21 volte. Il gruppo parla di aperitivi 3,5 volte più spesso che di pizza. Priorità chiare nella vita."
+      },
+      {
+        "domanda": "Cosa ha fatto Gigio dopo aver visto la chat piena di emoji alle 2 di notte e aver detto che 'non c'è una cura per voi'?",
+        "opzioni": [
+          "Ha mandato 50 emoji a sua volta",
+          "Ha scritto un lungo messaggio di protesta",
+          "Ha commentato con una sola riga e basta"
+        ],
+        "corretta": "Ha commentato con una sola riga e basta",
+        "spiegazione": "Gigio è il filosofo del gruppo — interviene con aforismi brevi e micidiali ('Non c'è una cura per voi', 'Anche io devo avere un cinquantino') e poi sparisce. Economia di parole, massimo impatto."
+      },
+      {
+        "domanda": "Gala scrive 'buongiorno' nella chat esattamente quante volte in 9 anni?",
+        "opzioni": [
+          "0 volte",
+          "2 volte",
+          "17 volte"
+        ],
+        "corretta": "0 volte",
+        "spiegazione": "Zero buongiorno in 9 anni. Anche Cileno: zero. Gala probabilmente considera il buongiorno una debolezza o semplicemente non è una mattinara. Pierino invece lo scrive 13 volte — abbastanza per compensare."
+      },
+      {
+        "domanda": "In che anno è iniziata la chat del FantaLeggenda?",
+        "opzioni": [
+          "2013",
+          "2015",
+          "2017"
+        ],
+        "corretta": "2015",
+        "spiegazione": "Il primo messaggio è del 27 giugno 2015 — Manu ha mandato due media omessi e poi Yuri ha considerato il divorzio. Un inizio in grande stile per quella che sarebbe diventata una chat leggendaria."
+      },
+      {
+        "domanda": "Pierino ha una frase ricorrente quando qualcuno fa una mossa a sorpresa: lo chiama come un animale. Quale?",
+        "opzioni": [
+          "Serpente",
+          "Topo 🐭",
+          "Volpe"
+        ],
+        "corretta": "Topo 🐭",
+        "spiegazione": "\"Nei conti del pulmino te ci rietri 🐭\" — Pierino usa l'emoji del topo per chi fa mosse furbe o risparmia in modo creativo. È il massimo appellativo di astuzia nel vocabolario del gruppo."
+      },
+      {
+        "domanda": "Come si chiama il locale ad Arezzo dove il gruppo fa gli aperitivi citato da Pierino?",
+        "opzioni": [
+          "Il Naboo",
+          "Lo Strawberry",
+          "Il Principe"
+        ],
+        "corretta": "Il Naboo",
+        "spiegazione": "\"Sennò Manu al Nabooooooo... aperitivo dal jonny e poi lì vicino!\" — Pierino il 9 luglio 2015. Il Naboo è il locale degli aperitivi, il Principe per le cene. Una geografia aretina precisa."
+      },
+      {
+        "domanda": "INDOVINELLO STATISTICO: Se il gruppo dice 'cazzo' 386 volte in 9 anni, quante volte al mese in media?",
+        "opzioni": [
+          "Circa 1 volta al mese",
+          "Circa 3,5 volte al mese",
+          "Circa 10 volte al mese"
+        ],
+        "corretta": "Circa 3,5 volte al mese",
+        "spiegazione": "386 ÷ 108 mesi ≈ 3,57 volte al mese. Ovvero circa una volta ogni 8-9 giorni qualcuno scrive 'cazzo' nella chat. Una frequenza moderata, quasi professionale."
+      },
+      {
+        "domanda": "Chi nel gruppo gioca a tutto — anche ai videogiochi — secondo Manu?",
+        "opzioni": [
+          "Meo",
+          "Yuri",
+          "Paggio"
+        ],
+        "corretta": "Yuri",
+        "spiegazione": "\"Juri giocherà eh. Gioca a tutto lui\" — Manu il 23 novembre 2020 durante l'organizzazione della serata gaming. Yuri quella sera però era già a letto dalle 22:40. Anche i tuttogiocatori hanno i loro limiti."
+      },
+      {
+        "domanda": "Cosa ha risposto Yuri quando Manu lo ha chiamato per giocare a Crash alle 22:40?",
+        "opzioni": [
+          "Arrivo subito!",
+          "Io sono a letto da mezz'ora 🥺",
+          "Non ho internet"
+        ],
+        "corretta": "Io sono a letto da mezz'ora 🥺",
+        "spiegazione": "\"io sono a letto da mezz'ora 🥺\" — Yuri con la faccina triste. Lui che 'gioca a tutto' era già sotto le coperte alle 22:10 di un lunedì sera. Manu ha risposto con 😭."
+      },
+      {
+        "domanda": "VERO O FALSO: Gigio ha vinto la partita di mini ping-pong contro Canapino.",
+        "opzioni": [
+          "VERO secondo Pierino, FALSO secondo Canapino",
+          "VERO — tutti confermano",
+          "FALSO — ha perso"
+        ],
+        "corretta": "VERO secondo Pierino, FALSO secondo Canapino",
+        "spiegazione": "Pierino si è vantato della vittoria definendola leggendaria. Canapino ha risposto: 'Ti ho fatto vincere 😗'. La verità, come sempre in questo gruppo, dipende da chi lo racconta."
+      },
+      {
+        "domanda": "Come ha risposto Manu quando Gigio gli ha chiesto di organizzare il ristorante per la fantacena 2022?",
+        "opzioni": [
+          "Ha accettato subito con entusiasmo",
+          "Ha detto 'Fuori' e poi 'Ci penso' senza impegnarsi",
+          "Ha proposto il sushi"
+        ],
+        "corretta": "Ha detto 'Fuori' e poi 'Ci penso' senza impegnarsi",
+        "spiegazione": "Manu ha prima votato 'Fuori' (per non andare da Pinolo), poi quando Gigio lo ha caricato di responsabilità ha risposto 'Ci penso... Non a fissare, al Prisco'. Classica tattica di deviazione."
+      },
+      {
+        "domanda": "Quanti messaggi in meno ha scritto Cileno (626) rispetto a Paggio (520)?",
+        "opzioni": [
+          "Cileno ne ha scritti 106 in più",
+          "Cileno ne ha scritti 106 in meno",
+          "Sono uguali"
+        ],
+        "corretta": "Cileno ne ha scritti 106 in più",
+        "spiegazione": "Cileno 626 vs Paggio 520 — Cileno è davanti di 106 messaggi. Paggio però compensa in qualità: arriva alle serate già mangiato, chiede le zuzze e propone orari impossibili. Efficienza comunicativa al massimo."
+      }
+    ],
+    "difficile": [
+      {
+        "domanda": "Quante ore ha dormito Gigio Petri dopo la gita, lamentandosi di sentirsi un catorcio?",
+        "opzioni": [
+          "8 ore",
+          "11 ore",
+          "13 ore"
+        ],
+        "corretta": "11 ore",
+        "spiegazione": "\"Sarà per quei km che mi sento un catorcio? E sono stato a letto 11 ore\" — Gigio dopo quasi 800km di avventure. Il nuovo lavoro non gli faceva bene, come ha ribadito più volte."
+      },
+      {
+        "domanda": "A che ora era fissato il ritrovo al Piazzone per il viaggio a Budapest?",
+        "opzioni": [
+          "Alle 7:00 o 7:30",
+          "Alle 8:00",
+          "Alle 6:30"
+        ],
+        "corretta": "Alle 7:00 o 7:30",
+        "spiegazione": "\"Alle 7 al piazzone. Anche 7:30 va\" — Gigio con la sua proverbiale flessibilità. Pierino però voleva la colazione, quindi le 7:29 erano fondamentali."
+      },
+      {
+        "domanda": "Chi ha vinto al mini ping-pong contro Riccardo Bindi, definendo la vittoria \"leggendaria\"?",
+        "opzioni": [
+          "Gigio Petri",
+          "Meo",
+          "Pierino"
+        ],
+        "corretta": "Pierino",
+        "spiegazione": "\"Ma che lezione ti ho dato caro Riccardo Bindi al mini-pingpong!?!?..leggendaria direi\" — Pierino si è vantato della vittoria, ma Canapino ha risposto: \"Ti ho fatto vincere\" 😗"
+      },
+      {
+        "domanda": "Quanto tempo hanno impiegato Prisco e Cileno a fare una cosa non specificata, battendo ogni record precedente?",
+        "opzioni": [
+          "19 ore e 50 minuti",
+          "22 ore e 50 minuti",
+          "12 ore e 30 minuti"
+        ],
+        "corretta": "22 ore e 50 minuti",
+        "spiegazione": "\"Prisco e cileno battono il precedente record con un grandissimo 22 e 50 minuti\" — Gigio il 29 giugno 2015. Non è chiaro cosa abbiano fatto, ma il record è entrato nella leggenda."
+      },
+      {
+        "domanda": "Quale soprannome epico si è dato Pierino nella chat?",
+        "opzioni": [
+          "Il Commando",
+          "Cavalier Piatto da Spezzacavalli",
+          "Arnold Swarzecanapo"
+        ],
+        "corretta": "Cavalier Piatto da Spezzacavalli",
+        "spiegazione": "\"La leggenda di Cavalier Piatto da Spezzacavalli\" — Pierino si è inventato questo titolo nobiliare il 22 luglio 2015. Non è da confondere con Arnold Swarzecanapo, che è Canapino."
+      },
+      {
+        "domanda": "La Tuscar è una squadra di calcio locale. Contro chi ha giocato Pierino in una partita finita 6-5 ai rigori?",
+        "opzioni": [
+          "Arezzo",
+          "La Sangio",
+          "I Desaparecidos"
+        ],
+        "corretta": "La Sangio",
+        "spiegazione": "\"Ieri sera partitone contro la Sangio... 6-5 ai rigori!!\" — Pierino il 7 giugno 2018, entusiasta della vittoria ai rigori."
+      },
+      {
+        "domanda": "Chi è il \"Fo\" citato da Gigio come quello che \"dopo 3 mesi sta finalmente perdendo l'imbarazzo e sforna le sue leggendarie perle trash\"?",
+        "opzioni": [
+          "Un nuovo membro del gruppo",
+          "Il fratello di Manu",
+          "Canapino con un altro nome"
+        ],
+        "corretta": "Un nuovo membro del gruppo",
+        "spiegazione": "Fo🏅 è un membro del gruppo entrato nella chat in un secondo momento. La sua prima \"perla\" è stato un indovinello: Q (James Bond) + Oche non ammazza (Pistorius) = \"Quello che non ammazza ingrassa\"."
+      },
+      {
+        "domanda": "Cosa ha fatto il Pera (Gala) il giorno prima del compleanno del Lele?",
+        "opzioni": [
+          "Ha organizzato una festa a sorpresa",
+          "Ha svuotato tutte le scorte di bere del locale",
+          "Ha cucinato per tutto il gruppo"
+        ],
+        "corretta": "Ha svuotato tutte le scorte di bere del locale",
+        "spiegazione": "\"Il pera ha tolto tutto il bere e penso anche luccheccato il giorno dopo c'è il compleanno del lelo quindi ha svuotato tutto... C'è solo il caffè\" — Gala il 12 settembre 2024. Strategia preventiva leggendaria."
+      },
+      {
+        "domanda": "Se sommiamo tutte le occorrenze di 'merda', 'cazzo' e 'vaffanculo' nella chat, quante parolacce totali troviamo?",
+        "opzioni": [
+          "512 parolacce",
+          "662 parolacce",
+          "841 parolacce"
+        ],
+        "corretta": "662 parolacce",
+        "spiegazione": "Merda (230) + Cazzo (386) + Vaffanculo (46) = 662 parolacce certificate. Considerando che la chat dura dal 2015 al 2024, fanno circa 73 parolacce all'anno, 6 al mese, o 1 ogni 5 giorni. Un gruppo moderato, tutto sommato."
+      },
+      {
+        "domanda": "Pierino ha mandato 759 media nella chat. Se li dividessimo per i 9 anni di chat, quanti media al mese ha inviato in media?",
+        "opzioni": [
+          "Circa 3 al mese",
+          "Circa 7 al mese",
+          "Circa 14 al mese"
+        ],
+        "corretta": "Circa 7 al mese",
+        "spiegazione": "759 media ÷ 108 mesi (9 anni) = circa 7 media al mese. Significa che ogni 4 giorni Pierino mandava una foto, un video o un audio. Probabilmente il 90% erano meme sul Fantacalcio o foto di cene."
+      },
+      {
+        "domanda": "Gigio Petri ha citato Prisco 168 volte. Considerando che Prisco ha scritto circa 2.544 messaggi totali, quante volte Gigio lo ha citato per ogni messaggio scritto da Prisco?",
+        "opzioni": [
+          "Ogni 15 messaggi di Prisco",
+          "Ogni 5 messaggi di Prisco",
+          "Ogni 30 messaggi di Prisco"
+        ],
+        "corretta": "Ogni 15 messaggi di Prisco",
+        "spiegazione": "168 citazioni ÷ 2.544 messaggi = una citazione ogni ~15 messaggi di Prisco. Ovvero Gigio pensa a Prisco con una frequenza inquietante. O lo sfotte. Probabilmente entrambe le cose, con intensità variabile a seconda dei risultati del Fantacalcio."
+      },
+      {
+        "domanda": "Il gruppo usa 😂 14.060 volte in 191.272 messaggi totali. Più o meno ogni quanti messaggi appare almeno una 😂?",
+        "opzioni": [
+          "Ogni 3-4 messaggi",
+          "Ogni 7-8 messaggi",
+          "Ogni 13-14 messaggi"
+        ],
+        "corretta": "Ogni 13-14 messaggi",
+        "spiegazione": "14.060 ÷ 191.272 = circa 1 ogni 13,6 messaggi. Considerando che molti messaggi contengono più 😂, si può dire che il gruppo ride in modo quasi industriale. Nota: questa statistica non include le risate scritte come 'ahahahaha' (altre 314 occorrenze)."
+      },
+      {
+        "domanda": "Il 27 ottobre 2015 è il giorno record con 632 messaggi. A cosa era dedicata principalmente quella giornata?",
+        "opzioni": [
+          "Una gita del gruppo andata male",
+          "Polemiche sul Fantacalcio e cambi di mercato",
+          "Il compleanno di qualcuno"
+        ],
+        "corretta": "Polemiche sul Fantacalcio e cambi di mercato",
+        "spiegazione": "Il 27 ottobre 2015 alle 8 di mattina Padde gridava già al ricorso per una comunicazione tardiva di Gigio sul mercato del Fanta. Quel giorno è stato anche cambiato il nome del gruppo in FantaMarquez, poi FantaConcionerossss, poi di nuovo FantaMarquez. Una giornata produttiva."
+      },
+      {
+        "domanda": "Quanti messaggi totali sono stati scritti nella chat (approssimativamente)?",
+        "opzioni": [
+          "Circa 50.000",
+          "Circa 100.000",
+          "Circa 191.000"
+        ],
+        "corretta": "Circa 191.000",
+        "spiegazione": "191.272 righe nel file esportato — considerando che ogni messaggio occupa almeno una riga, sono circa 170.000-180.000 messaggi effettivi al netto delle righe sistema. In 9 anni, fanno circa 52 messaggi al giorno ogni giorno senza mai fermarsi."
+      },
+      {
+        "domanda": "Se Pierino con 5.460 messaggi è il primo, e Manu con 3.468 è il secondo, di quanti messaggi è il distacco?",
+        "opzioni": [
+          "Circa 1.000 messaggi",
+          "Circa 2.000 messaggi",
+          "Circa 500 messaggi"
+        ],
+        "corretta": "Circa 2.000 messaggi",
+        "spiegazione": "5.460 - 3.468 = 1.992 messaggi di distacco. Pierino ha scritto quasi il doppio di Manu. Se ogni messaggio fosse una parola, Pierino avrebbe scritto un romanzo da 1.992 parole in più rispetto al secondo classificato."
+      },
+      {
+        "domanda": "Yuri ha scritto due volte di fila 'C'è Mazzoli???' nell'agosto 2015. Quante volte Yuri ha scritto questa domanda nella stessa sessione?",
+        "opzioni": [
+          "2 volte",
+          "3 volte",
+          "4 volte"
+        ],
+        "corretta": "3 volte",
+        "spiegazione": "Il 5 agosto 2015, Yuri ha scritto 'C'è Mazzoli???' tre volte consecutive in neanche un minuto. Nessuno ha risposto. Mazzoli evidentemente non c'era, oppure si stava nascondendo come Canapino nel deserto."
+      },
+      {
+        "domanda": "La chat è partita il 27 giugno 2015. Qual era l'emoji usata nel primissimo messaggio non-media della chat?",
+        "opzioni": [
+          "😂",
+          "😢",
+          "👍"
+        ],
+        "corretta": "😢",
+        "spiegazione": "Il secondo messaggio in assoluto è di Yuri: 'C'ho ripensato 😢' — seguito da '😂😂😂'. La chat del FantaLeggenda è partita con una lacrima. Poetico. Poi Yuri ha spiegato di aver ripensato al divorzio perché 'è caro'."
+      },
+      {
+        "domanda": "Qual è il rapporto tra le volte che il gruppo si è detto 'ti voglio bene' (23) e le volte che ha scritto 'cazzo' (386)?",
+        "opzioni": [
+          "Circa 1 a 10",
+          "Circa 1 a 17",
+          "Circa 1 a 30"
+        ],
+        "corretta": "Circa 1 a 17",
+        "spiegazione": "386 ÷ 23 ≈ 16,8. Per ogni dichiarazione d'affetto ci sono circa 17 'cazzo'. Questo non significa che il gruppo non si voglia bene — significa che lo esprime in modo molto particolare. È la matematica dell'amicizia virile aretina."
+      },
+      {
+        "domanda": "Se sommiamo i messaggi di Pierino (5.460), Manu (3.468) e Gigio (2.816), quanti messaggi fanno i tre 'big' del gruppo?",
+        "opzioni": [
+          "Circa 10.000",
+          "Circa 11.744",
+          "Circa 9.500"
+        ],
+        "corretta": "Circa 11.744",
+        "spiegazione": "5.460 + 3.468 + 2.816 = 11.744 messaggi — i tre moschettieri coprono quasi il 70% di tutti i messaggi del gruppo considerando i 12 membri. Gli altri 9 si dividono il restante 30%. Democrazia non pervenuta."
+      },
+      {
+        "domanda": "Pierino ha mandato 759 media. Se fossero tutti meme del Fantacalcio da 100KB l'uno, quanti MB di meme ha prodotto?",
+        "opzioni": [
+          "Circa 26 MB",
+          "Circa 76 MB",
+          "Circa 150 MB"
+        ],
+        "corretta": "Circa 76 MB",
+        "spiegazione": "759 × 100KB = circa 76MB di contenuto multimediale. Ovviamente non sono tutti meme e non tutti pesano 100KB, ma l'ordine di grandezza è quello. Abbastanza per riempire un CD-ROM degli anni '90 con i contributi di Pierino."
+      },
+      {
+        "domanda": "La disputa sul mercato Fantacalcio del 27 ottobre 2015 ha generato 632 messaggi. Quante votazioni formali ci sono state in quella giornata?",
+        "opzioni": [
+          "Nessuna — Gigio ha deciso da solo",
+          "Una votazione ufficiale",
+          "Tre votazioni separate"
+        ],
+        "corretta": "Nessuna — Gigio ha deciso da solo",
+        "spiegazione": "\"Non c'è bisogno di votare. Non rubo nessuno. Ho già deciso io.\" — Gigio il 27 ottobre 2015. Nonostante Pierino avesse fissato la scadenza alle 14:00, Canapino si fosse astenuto con comunicato ufficiale e Padde avesse gridato al ricorso, Gigio ha semplicemente risolto la questione da solo."
+      },
+      {
+        "domanda": "Quante squadre del Fantacalcio vengono nominate esplicitamente nella chat?",
+        "opzioni": [
+          "2 squadre",
+          "3 squadre",
+          "4 o più squadre"
+        ],
+        "corretta": "4 o più squadre",
+        "spiegazione": "Almeno 4 squadre vengono nominate: Cimbanella FC (Gigio), Desaparecidos FC (Pierino), Fulminense FC (Meo) e A.C.Picchia (Canapino). Ogni squadra ha la sua personalità — come il proprietario."
+      },
+      {
+        "domanda": "Il nome del gruppo è cambiato in FantaLaxalt dopo un gol. Di quale campionato/competizione si trattava?",
+        "opzioni": [
+          "Campionato di Serie A",
+          "Champions League",
+          "Non viene specificato nella chat"
+        ],
+        "corretta": "Non viene specificato nella chat",
+        "spiegazione": "La chat riporta solo 'Laxalt!!!' di Yuri e il cambio nome immediato in FantaLaxalt. Non viene specificato se fosse Serie A o altra competizione. L'importante è che segnò — e Gigio era euforico."
+      },
+      {
+        "domanda": "SFIDA MATEMATICA: Se la chat ha 191.272 righe e i 3 più attivi (Pierino 5.460, Manu 3.468, Gigio 2.816) coprono 11.744 messaggi, che percentuale del totale righe rappresentano?",
+        "opzioni": [
+          "Circa il 3%",
+          "Circa il 6%",
+          "Circa il 12%"
+        ],
+        "corretta": "Circa il 6%",
+        "spiegazione": "11.744 ÷ 191.272 × 100 ≈ 6,1%. Considerando che molte righe sono righe di sistema, media omessi e messaggi brevi, i tre big coprono una fetta sproporzionata del contenuto testuale effettivo — probabilmente oltre il 40% delle parole scritte."
+      },
+      {
+        "domanda": "Chi ha scritto di più tra Meo (1.715) e Padde (1.650)?",
+        "opzioni": [
+          "Padde con 1.650",
+          "Meo con 1.715",
+          "Sono praticamente uguali — meno di 4% di differenza"
+        ],
+        "corretta": "Meo con 1.715",
+        "spiegazione": "Meo con 1.715 batte Padde con 1.650 — solo 65 messaggi di differenza in 9 anni. Meno di 1 messaggio a settimana di distacco. La sfida più serrata della classifica messaggi del FantaLeggenda."
+      },
+      {
+        "domanda": "Canapino ha emesso un 'Comunicato ufficiale dell'A.C.Picchia' per astenersi da una votazione. Cosa ha risposto Pierino?",
+        "opzioni": [
+          "Ha accettato l'astensione",
+          "Ha detto 'Non puoi astenerti Cana! ...vota!'",
+          "Ha emesso a sua volta un comunicato ufficiale della Desaparecidos"
+        ],
+        "corretta": "Ha detto 'Non puoi astenerti Cana! ...vota!'",
+        "spiegazione": "\"Non puoi astenerti Cana! ...vota!\" — Pierino, che aveva fissato la scadenza alle 14:00 e non accettava eccezioni. Gigio intanto aveva già deciso da solo rendendo tutta la discussione inutile."
+      },
+      {
+        "domanda": "Se ogni messaggio di Pierino (5.460) fosse lungo in media 10 parole, quante parole ha scritto in 9 anni?",
+        "opzioni": [
+          "Circa 27.000 parole",
+          "Circa 54.600 parole",
+          "Circa 100.000 parole"
+        ],
+        "corretta": "Circa 54.600 parole",
+        "spiegazione": "5.460 × 10 = 54.600 parole. Per confronto, un romanzo medio ha circa 80.000 parole. Pierino è a metà romanzo. Considerando però che molti messaggi sono una sola emoji o 'Si', le parole effettive potrebbero essere meno — ma anche molti messaggi sono lunghi sfoghi sul Fantacalcio."
+      },
+      {
+        "domanda": "Yuri ha scritto 'C'è Mazzoli???' tre volte di fila. Quanto tempo è passato tra il primo e il terzo messaggio?",
+        "opzioni": [
+          "Circa 1 minuto",
+          "Circa 10 minuti",
+          "Circa 1 ora"
+        ],
+        "corretta": "Circa 1 minuto",
+        "spiegazione": "Il 5 agosto 2015: due messaggi alle 16:54 e uno alle 16:55 — meno di un minuto. Yuri era evidentemente urgentissimo nel trovare Mazzoli. Mazzoli non ha mai risposto (almeno non nella chat)."
+      },
+      {
+        "domanda": "Cosa succede nella chat quando qualcuno scrive 'Eia!'?",
+        "opzioni": [
+          "Tutti rispondono con insulti",
+          "È il segnale per pagare il conto",
+          "È il brindisi del gruppo e tutti rispondono con 'Eia!'"
+        ],
+        "corretta": "È il brindisi del gruppo e tutti rispondono con 'Eia!'",
+        "spiegazione": "Dal 28 giugno 2015, 'Eia!' (spesso con 🍷) è il brindisi ufficiale del FantaLeggenda. Lanciato da Canapino come 'Egliaaaa', si è evoluto nel semplice 'Eia!' che tutti riconoscono e ripetono. È il momento più tenero della chat."
+      },
+      {
+        "domanda": "Come viene chiamata la gita/uscita periodica del gruppo nel linguaggio della chat?",
+        "opzioni": [
+          "La missione",
+          "La gita",
+          "L'operazione"
+        ],
+        "corretta": "La gita",
+        "spiegazione": "'La gita' è l'evento ricorrente del gruppo — un weekend o una giornata fuori tutti insieme. Lele nel primo messaggio commovente la cita come uno dei pilastri del gruppo: 'la gita, un sorriso, una pacca sulla spalla'."
+      },
+      {
+        "domanda": "Chi ha definito la chat 'una banda bellissima' nel messaggio di Natale 2015?",
+        "opzioni": [
+          "Gigio Petri",
+          "Pierino",
+          "Lele"
+        ],
+        "corretta": "Lele",
+        "spiegazione": "\"Non è tanto per il natale in se per se, diciamo che è un buona scusa per ricordare quanto cazzo siamo fantastaspaci... una banda bellissima\" — Lele il 25 dicembre 2015 alle 4:55 di mattina. Poetico e puntuale come sempre."
+      },
+      {
+        "domanda": "Qual è il soprannome del gruppo che Pierino usa nel buongiorno del 29 giugno 2015?",
+        "opzioni": [
+          "Cricca",
+          "Branco",
+          "Banda"
+        ],
+        "corretta": "Branco",
+        "spiegazione": "\"Buongiorno 'branco'!\" — Pierino il 29 giugno 2015. Un saluto affettuoso che dice tutto sul tipo di amicizia del gruppo: un branco unito, leale e rumoroso."
+      }
+    ]
+  }
+}

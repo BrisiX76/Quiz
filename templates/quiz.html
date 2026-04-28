@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz · Domanda {{ indice }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
+</head>
+<body{% if modalita == 'gruppo' %} class="gruppo-body"{% endif %}>
+
+  {% if modalita == 'gruppo' %}
+  <!-- Reazione overlay -->
+  <div class="reazione-overlay" id="reazione-overlay">
+    <span class="reazione-emoji" id="reazione-emoji"></span>
+  </div>
+
+  <!-- Classifica live -->
+  <div class="live-rank" id="live-rank">
+    <div class="live-rank-title">🏆 Live</div>
+    <div id="live-rank-rows">carico...</div>
+  </div>
+  {% endif %}
+
+  <div class="page-wrapper">
+
+    <div class="quiz-meta">
+      <span>Domanda <span class="q-num">{{ indice }}</span> di {{ totale }}</span>
+      <div style="display:flex; align-items:center; gap:0.8rem;">
+        <span id="timer-display" style="font-family:'Playfair Display',serif; font-size:1.1rem; color:{% if modalita == 'gruppo' %}var(--g-green2){% else %}var(--accent){% endif %}; font-weight:600; min-width:2rem; text-align:right;">90</span>
+        <a href="{% if modalita == 'gruppo' %}/gruppo{% else %}/{% endif %}" style="color:var(--muted); text-decoration:none; font-size:0.82rem;">← Esci</a>
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: {{ (indice / totale * 100) | round }}%"></div>
+    </div>
+
+    {% if feedback is none %}
+    <div id="timer-wrap" style="position:relative; height:44px; background:var(--surface2); border:1px solid var(--border2); border-radius:var(--radius); overflow:hidden; margin-bottom:1.4rem;">
+      <div id="timer-bar" style="position:absolute; top:0; left:0; bottom:0; width:100%; background:linear-gradient(90deg,{% if modalita == 'gruppo' %}#2ea043,#56d364{% else %}#c8a96e,#e8c98e{% endif %}); border-radius:var(--radius); transition:width 1s linear, background 0.5s;"></div>
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:0.5rem; z-index:1;">
+        <span style="font-size:0.75rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:#0a0f1e; opacity:0.7;">Tempo</span>
+        <span id="timer-display2" style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#0a0f1e; min-width:2rem; text-align:center;">90</span>
+        <span style="font-size:0.75rem; font-weight:600; color:#0a0f1e; opacity:0.7;">sec</span>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="card{% if modalita == 'gruppo' %} gruppo-card quiz-gruppo{% endif %}">
+
+      <p class="question-text">{{ domanda.domanda }}</p>
+
+      {% if domanda.svg %}
+      <div class="question-svg">{{ domanda.svg | safe }}</div>
+      {% endif %}
+
+      {% if feedback is none %}
+      <form method="post" action="/quiz" id="quiz-form">
+        <input type="hidden" name="action" value="risposta">
+        <input type="hidden" name="scelta" id="scelta-input" value="">
+        <ul class="options-list">
+          {% for op in domanda.opzioni %}
+          <li>
+            <button type="button" class="btn-option" onclick="seleziona({{ loop.index0 }}, this)">
+              <span class="opt-letter">{{ lettere[loop.index0] }}</span>
+              {{ op }}
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+      </form>
+
+      {% else %}
+      <ul class="options-list">
+        {% for op in domanda.opzioni %}
+          {% set i = loop.index0 %}
+          {% if op == feedback.risposta_giusta %}
+            <li><button class="btn-option correct" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          {% elif i == feedback.scelta and not feedback.corretta %}
+            <li><button class="btn-option wrong" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          {% else %}
+            <li><button class="btn-option" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      {% if feedback.corretta %}
+      <div class="feedback-box correct-fb">
+        <div class="fb-title">✓ Risposta corretta!</div>
+        {{ feedback.spiegazione }}
+      </div>
+      {% if modalita == 'gruppo' %}
+      <div class="complimento-box" id="msg-reazione"></div>
+      {% endif %}
+      {% else %}
+      <div class="feedback-box wrong-fb">
+        <div class="fb-title">✗ Risposta errata</div>
+        {{ feedback.spiegazione }}
+      </div>
+      {% if modalita == 'gruppo' %}
+      <div class="insulto-box" id="msg-reazione"></div>
+      {% endif %}
+      {% endif %}
+
+      <form method="post" action="/quiz">
+        <input type="hidden" name="action" value="avanti">
+        {% if indice == totale %}
+          <button type="submit" class="btn-next{% if modalita == 'gruppo' %} btn-gruppo{% endif %}">Vedi risultato →</button>
+        {% else %}
+          <button type="submit" class="btn-next{% if modalita == 'gruppo' %} btn-gruppo{% endif %}">Prossima domanda →</button>
+        {% endif %}
+      </form>
+      {% endif %}
+
+    </div>
+
+    <footer class="app-footer">
+      {% if modalita == 'gruppo' %}FantaLeggenda · dal 2015 con furore
+      {% else %}Simulatore non ufficiale · uso didattico{% endif %}
+    </footer>
+  </div>
+
+  <script>
+    const TEMPO = 90;
+    const MODALITA = "{{ modalita }}";
+    let secondi = TEMPO;
+    let bloccato = false;
+
+    const display1   = document.getElementById('timer-display');
+    const display2   = document.getElementById('timer-display2');
+    const barra      = document.getElementById('timer-bar');
+    const form       = document.getElementById('quiz-form');
+    const inputScelta = document.getElementById('scelta-input');
+
+    // ── AUDIO ──
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    function suona(tipo) {
+      if (!ctx) return;
+      if (tipo === 'click') {
+        const o = ctx.createOscillator(), g = ctx.createGain();
+        o.connect(g); g.connect(ctx.destination);
+        o.type = 'sine'; o.frequency.setValueAtTime(820, ctx.currentTime);
+        o.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.08);
+        g.gain.setValueAtTime(0.06, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
+        o.start(); o.stop(ctx.currentTime + 0.1);
+      } else if (tipo === 'timeout') {
+        [0, 0.15, 0.30].forEach((d, i) => {
+          const o = ctx.createOscillator(), g = ctx.createGain();
+          o.connect(g); g.connect(ctx.destination);
+          o.type = 'sine'; o.frequency.setValueAtTime(400 - i*60, ctx.currentTime + d);
+          g.gain.setValueAtTime(0.07, ctx.currentTime + d);
+          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + d + 0.12);
+          o.start(ctx.currentTime + d); o.stop(ctx.currentTime + d + 0.12);
+        });
+      }
+    }
+
+    {% if feedback is none %}
+    document.querySelectorAll('.btn-option').forEach(btn => {
+      btn.addEventListener('mousedown', () => suona('click'));
+    });
+
+    function aggiornaTimer() {
+      if (display1) display1.textContent = secondi;
+      if (display2) display2.textContent = secondi;
+      const perc = (secondi / TEMPO) * 100;
+      if (barra) {
+        barra.style.width = perc + '%';
+        if (secondi > 30) {
+          barra.style.background = MODALITA === 'gruppo'
+            ? 'linear-gradient(90deg,#2ea043,#56d364)'
+            : 'linear-gradient(90deg,#c8a96e,#e8c98e)';
+        } else if (secondi > 10) {
+          barra.style.background = 'linear-gradient(90deg,#e67e22,#f39c12)';
+        } else {
+          barra.style.background = 'linear-gradient(90deg,#c0392b,#e74c3c)';
+        }
+      }
+    }
+
+    function seleziona(idx, btn) {
+      if (bloccato) return;
+      bloccato = true;
+      clearInterval(tick);
+      inputScelta.value = idx;
+      document.querySelectorAll('.btn-option').forEach(b => b.disabled = true);
+      btn.style.borderColor = MODALITA === 'gruppo' ? 'var(--g-green)' : 'var(--accent)';
+      setTimeout(() => form.submit(), 300);
+    }
+
+    function tempoScaduto() {
+      if (bloccato) return;
+      bloccato = true;
+      suona('timeout');
+      inputScelta.value = -1;
+      if (barra) barra.style.width = '0%';
+      if (display1) display1.textContent = '0';
+      if (display2) display2.textContent = '0';
+      document.querySelectorAll('.btn-option').forEach(b => b.disabled = true);
+      setTimeout(() => form.submit(), 500);
+    }
+
+    const tick = setInterval(() => {
+      secondi--;
+      aggiornaTimer();
+      if (secondi <= 0) { clearInterval(tick); tempoScaduto(); }
+    }, 1000);
+    aggiornaTimer();
+    {% endif %}
+
+    {% if modalita == 'gruppo' and feedback is not none %}
+    // ── INSULTI E COMPLIMENTI ──
+    const insulti = [
+      "Pierino ti avrebbe risposto giusto anche al buio... e lui sa a malapena scrivere.",
+      "Manu con 3 caffè e 4 sfottò avrebbe fatto meglio. E lui non studia da vent'anni.",
+      "Canapino si nasconde anche nel deserto ma questa la sapeva pure lui.",
+      "Yuri ha fatto 2 conti e ha capito che neanche il divorzio ti salva da questa figuraccia.",
+      "Lele avrebbe scritto un messaggio poetico sulla tua ignoranza. Lunga tre schermate.",
+      "Paggio arriva alle 21 già mangiato e già più preparato di te.",
+      "Prisco con 22 ore e 50 minuti di ritardo conosce la risposta meglio di te.",
+      "Gala ha svuotato il bar E sapeva la risposta. Tu hai fatto solo metà lavoro.",
+      "Il Bindi al mini ping-pong ti avrebbe battuto anche in questo quiz.",
+      "Anche Arnold Swarzecanapo (aka Canapino) avrebbe fatto meglio. E lui si nasconde nel deserto.",
+    ];
+    const complimenti = [
+      "EIA! 🍷 Degno di entrare nella leggenda del gruppo!",
+      "Cavalier Piatto da Spezzacavalli sarebbe fiero di te!",
+      "Bravo! Anche Yuri ha smesso di piangere il divorzio per applaudirti.",
+      "Leggendario! Lele sta già scrivendo un messaggio commovente in tuo onore.",
+      "Pago! Sei il pulcino delle favelas che ce la fa.",
+      "Meno male che qualcuno studia in questo gruppo di somari!",
+      "Grandissimo! Anche Canapino è uscito dal deserto per vederti rispondere.",
+      "🔝 dei 🔝! Pierino ti cederebbe il titolo di Campione della Chat.",
+      "Madonna che risposta! Sei più forte di 14.060 😂 nella chat.",
+      "Eia! Degno erede del FantaLeggenda!",
+    ];
+
+    const corretta = {{ 'true' if feedback.corretta else 'false' }};
+    const lista = corretta ? complimenti : insulti;
+    const msg = lista[Math.floor(Math.random() * lista.length)];
+    const el = document.getElementById('msg-reazione');
+    if (el) el.textContent = msg;
+
+    // ── REAZIONE EMOJI ──
+    const overlay = document.getElementById('reazione-overlay');
+    const emojiEl = document.getElementById('reazione-emoji');
+    const emojiBene = ['🎉','🏆','⚽','🔝','🥳','👑','💚'];
+    const emojiMale = ['😂','💀','🪣','🤦','😭','🫠','💩'];
+    const emojiList = corretta ? emojiBene : emojiMale;
+    if (overlay && emojiEl) {
+      emojiEl.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
+      overlay.classList.add('show');
+      setTimeout(() => overlay.classList.remove('show'), 1200);
+    }
+
+    // ── FUOCHI D'ARTIFICIO (solo se corretto) ──
+    {% if feedback.corretta %}
+    function fuochiArtificio() {
+      const colori = ['#56d364','#e3b341','#2ea043','#ffffff','#f85149'];
+      for (let i = 0; i < 18; i++) {
+        setTimeout(() => {
+          const el = document.createElement('div');
+          el.className = 'fuoco';
+          const x = Math.random() * window.innerWidth;
+          const y = Math.random() * window.innerHeight * 0.6;
+          const tx = (Math.random() - 0.5) * 200;
+          const ty = (Math.random() - 0.5) * 200;
+          el.style.cssText = `left:${x}px; top:${y}px; background:${colori[Math.floor(Math.random()*colori.length)]}; --tx:${tx}px; --ty:${ty}px; animation: fuoco-esplodi 0.8s ease-out forwards;`;
+          document.body.appendChild(el);
+          setTimeout(() => el.remove(), 900);
+        }, i * 60);
+      }
+    }
+    setTimeout(fuochiArtificio, 200);
+    {% endif %}
+
+    // ── CLASSIFICA LIVE ──
+    fetch('/api/classifica-live')
+      .then(r => r.json())
+      .then(data => {
+        const widget = document.getElementById('live-rank');
+        const rows = document.getElementById('live-rank-rows');
+        if (!widget || !rows || data.length === 0) return;
+        widget.classList.add('visible');
+        rows.innerHTML = data.slice(0,5).map((r,i) => `
+          <div class="live-rank-row">
+            <span>${['🥇','🥈','🥉','4.','5.'][i]} ${r.nome}</span>
+            <span style="color:var(--g-green2)">${r.best}%</span>
+          </div>`).join('');
+      }).catch(() => {});
+    {% endif %}
+  </script>
+</body>
+</html>

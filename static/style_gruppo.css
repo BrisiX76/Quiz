@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+  --g-bg:      #061208;
+  --g-surface: rgba(10,25,12,0.92);
+  --g-surface2: rgba(15,35,18,0.88);
+  --g-border:  rgba(46,160,67,0.2);
+  --g-border2: rgba(46,160,67,0.35);
+  --g-green:   #2ea043;
+  --g-green2:  #56d364;
+  --g-gold:    #e3b341;
+  --g-text:    #e6edf3;
+  --g-muted:   #7d8590;
+}
+
+/* ── BODY ── */
+.gruppo-body {
+  background: #061208 !important;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Sfondo foto gruppo */
+.gruppo-body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/static/foto_gruppo.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: brightness(0.22) saturate(0.6);
+  z-index: 0;
+}
+
+/* Overlay verde sfumato sopra la foto */
+.gruppo-body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(6,18,8,0.45);
+  z-index: 0;
+}
+
+.campo-bg { display: none; }
+
+.verde { color: var(--g-green2) !important; }
+
+/* ── BADGE ── */
+.gruppo-badge {
+  color: var(--g-green2) !important;
+  border-color: rgba(46,160,67,0.4) !important;
+}
+
+/* ── CARD ── */
+.gruppo-card {
+  background: var(--g-surface) !important;
+  border-color: var(--g-border2) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.gruppo-card::before {
+  background: linear-gradient(90deg, transparent, rgba(46,160,67,0.3), transparent) !important;
+}
+
+.gruppo-card select,
+.gruppo-card input[type="text"] {
+  background: var(--g-surface2) !important;
+  border-color: var(--g-border2) !important;
+  color: var(--g-text) !important;
+}
+
+.gruppo-card select:focus,
+.gruppo-card input[type="text"]:focus {
+  border-color: var(--g-green) !important;
+  box-shadow: 0 0 0 3px rgba(46,160,67,0.15) !important;
+  outline: none;
+}
+
+/* ── BOTTONI ── */
+.btn-gruppo {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #2ea043, #56d364);
+  color: #061208;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  margin-bottom: 0.7rem;
+}
+.btn-gruppo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(46,160,67,0.3);
+}
+
+.btn-gruppo-secondary {
+  width: 100%;
+  padding: 0.85rem;
+  border: 1px solid var(--g-border2);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--g-text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.btn-gruppo-secondary:hover {
+  background: var(--g-surface2);
+  border-color: var(--g-green);
+}
+
+/* ── STAT BOX ── */
+.gruppo-stat {
+  background: var(--g-surface) !important;
+  border-color: var(--g-border) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* ── QUIZ GRUPPO ── */
+.quiz-gruppo { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.quiz-gruppo .progress-fill { background: linear-gradient(90deg, #2ea043, #56d364) !important; }
+.quiz-gruppo #timer-bar { background: linear-gradient(90deg, #2ea043, #56d364) !important; }
+.quiz-gruppo .btn-option:hover:not(:disabled) {
+  border-color: var(--g-green) !important;
+  background: rgba(46,160,67,0.08) !important;
+}
+.quiz-gruppo .btn-option:hover:not(:disabled) .opt-letter {
+  border-color: var(--g-green) !important;
+  color: var(--g-green2) !important;
+}
+.quiz-gruppo .btn-next { background: linear-gradient(135deg, #2ea043, #56d364) !important; color: #061208 !important; }
+.quiz-gruppo .q-num { color: var(--g-green2) !important; }
+
+/* ── REAZIONE RISPOSTA ── */
+.reazione-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.reazione-overlay.show { opacity: 1; }
+
+.reazione-emoji {
+  font-size: 5rem;
+  animation: reazione-pop 0.5s cubic-bezier(0.175,0.885,0.32,1.275);
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,0.5));
+}
+@keyframes reazione-pop {
+  0%   { transform: scale(0) rotate(-20deg); }
+  70%  { transform: scale(1.3) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+/* ── INSULTO BOX ── */
+.insulto-box {
+  background: rgba(248,81,73,0.1);
+  border: 1px solid rgba(248,81,73,0.3);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  color: #f09090;
+  font-style: italic;
+  animation: fadeUp 0.4s ease;
+}
+
+.complimento-box {
+  background: rgba(86,211,100,0.1);
+  border: 1px solid rgba(86,211,100,0.3);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  margin-top: 0.8rem;
+  font-size: 0.88rem;
+  color: #7be4a8;
+  font-style: italic;
+  animation: fadeUp 0.4s ease;
+}
+
+/* ── FUOCHI D'ARTIFICIO ── */
+.fuoco {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 998;
+}
+@keyframes fuoco-esplodi {
+  0%   { transform: translate(0,0) scale(1); opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+/* ── CLASSIFICA ── */
+.rank-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--g-border);
+}
+.rank-pos { font-family: 'Playfair Display', serif; font-size: 1.2rem; min-width: 2rem; text-align: center; }
+.rank-name { font-weight: 600; font-size: 0.95rem; flex: 1; }
+.rank-score { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--g-green2); }
+.rank-detail { font-size: 0.75rem; color: var(--g-muted); }
+
+.storico-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--g-border);
+  font-size: 0.85rem;
+}
+
+/* ── LIVE CLASSIFICA WIDGET ── */
+.live-rank {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 180px;
+  background: var(--g-surface);
+  border: 1px solid var(--g-border2);
+  border-radius: var(--radius);
+  padding: 0.7rem;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  font-size: 0.78rem;
+  display: none;
+}
+.live-rank.visible { display: block; }
+.live-rank-title { color: var(--g-green2); font-weight: 600; margin-bottom: 0.5rem; font-size: 0.75rem; letter-spacing: 0.5px; }
+.live-rank-row { display: flex; justify-content: space-between; padding: 0.2rem 0; border-bottom: 1px solid var(--g-border); }
+.live-rank-row:last-child { border: none; }
+
+/* ── HOME MODALITA' ── */
+.btn-modalita {
+  display: block;
+  width: 100%;
+  padding: 1.4rem 1.2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border2);
+  background: var(--surface2);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+.btn-modalita:hover { transform: translateY(-2px); }
+.btn-modalita.medicina-btn:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(200,169,110,0.15); }
+.btn-modalita.gruppo-btn:hover { border-color: #2ea043; box-shadow: 0 8px 24px rgba(46,160,67,0.15); }
+.btn-modalita .m-icon { font-size: 2rem; margin-bottom: 0.5rem; display: block; }
+.btn-modalita .m-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; display: block; margin-bottom: 0.2rem; }
+.btn-modalita .m-sub { font-size: 0.82rem; color: var(--muted); }

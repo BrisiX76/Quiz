@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risultato · Test Medicina</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
+</head>
+<body>
+  <!-- Sfondo accademico-scientifico -->
+  <div class="bg-canvas">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="glow1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a3a6e" stop-opacity="0.7"/><stop offset="100%" stop-color="#0a0f1e" stop-opacity="0"/></radialGradient>
+        <radialGradient id="glow2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c8a96e" stop-opacity="0.45"/><stop offset="100%" stop-color="#0a0f1e" stop-opacity="0"/></radialGradient>
+      </defs>
+      <ellipse cx="200" cy="200" rx="400" ry="350" fill="url(#glow1)"/>
+      <ellipse cx="1200" cy="700" rx="380" ry="300" fill="url(#glow1)"/>
+      <ellipse cx="900" cy="150" rx="300" ry="250" fill="url(#glow2)"/>
+      <g class="bg-el-1" fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.35"><rect x="60" y="200" width="28" height="480" rx="2"/><rect x="55" y="190" width="38" height="18" rx="1"/><line x1="68" y1="210" x2="68" y2="668"/><line x1="74" y1="210" x2="74" y2="668"/><line x1="80" y1="210" x2="80" y2="668"/></g>
+      <g class="bg-el-3" fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.28"><rect x="1350" y="180" width="28" height="500" rx="2"/><rect x="1345" y="170" width="38" height="18" rx="1"/><line x1="1358" y1="190" x2="1358" y2="670"/><line x1="1364" y1="190" x2="1364" y2="670"/><line x1="1370" y1="190" x2="1370" y2="670"/></g>
+      <g class="bg-el-2" fill="none" stroke="#8aafdf" stroke-width="0.7" opacity="0.35"><path d="M 180 350 Q 220 370 180 390 Q 140 410 180 430 Q 220 450 180 470 Q 140 490 180 510 Q 220 530 180 550"/><path d="M 200 350 Q 160 370 200 390 Q 240 410 200 430 Q 160 450 200 470 Q 240 490 200 510 Q 160 530 200 550"/><line x1="185" y1="368" x2="195" y2="372"/><line x1="183" y1="408" x2="197" y2="412"/><line x1="185" y1="448" x2="195" y2="452"/></g>
+      <g class="bg-el-1" opacity="0.25" font-family="Georgia, serif" fill="#c8a96e"><text x="80" y="160" font-size="13">F = ma</text><text x="1300" y="280" font-size="11">E = hν</text><text x="70" y="750" font-size="11">λ = v/f</text><text x="1290" y="800" font-size="12">pH = -log[H⁺]</text></g>
+      <g class="bg-el-3" opacity="0.22" font-family="Georgia, serif" fill="#8aafdf"><text x="100" y="580" font-size="10">2n = 46</text><text x="1310" y="160" font-size="11">ATP → ADP</text><text x="85" y="480" font-size="11">I = V/R</text></g>
+    </svg>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="app-header">
+      <div class="badge">Risultato</div>
+      <h1>Il tuo <span>Score</span></h1>
+    </header>
+
+    <div class="card">
+
+      <div class="score-circle">
+        <span class="score-num">{{ punteggio }}</span>
+        <span class="score-tot">su {{ totale }}</span>
+      </div>
+
+      {% if percentuale >= 80 %}
+        <p class="result-message">🎯 Ottimo lavoro!</p>
+        <p class="result-sub">Sei sulla strada giusta per superare il filtro.</p>
+      {% elif percentuale >= 60 %}
+        <p class="result-message">📚 Buona base</p>
+        <p class="result-sub">Ancora qualche lacuna — ripassaci sopra.</p>
+      {% elif percentuale >= 40 %}
+        <p class="result-message">⚠️ Da migliorare</p>
+        <p class="result-sub">Torna sui fondamentali prima di riprovare.</p>
+      {% else %}
+        <p class="result-message">💡 Continua a studiare</p>
+        <p class="result-sub">Non mollare — riparti dalla teoria.</p>
+      {% endif %}
+
+      <div class="divider"></div>
+
+      <div class="result-grid">
+        <div class="result-stat">
+          <div class="rs-val">{{ percentuale }}%</div>
+          <div class="rs-label">Percentuale</div>
+        </div>
+        <div class="result-stat">
+          <div class="rs-val">{{ totale - punteggio }}</div>
+          <div class="rs-label">Errori</div>
+        </div>
+        <div class="result-stat">
+          <div class="rs-val">{{ materia | capitalize }}</div>
+          <div class="rs-label">Materia</div>
+        </div>
+        <div class="result-stat">
+          <div class="rs-val">{{ livello | capitalize }}</div>
+          <div class="rs-label">Livello</div>
+        </div>
+      </div>
+
+      <a href="/start-same" style="text-decoration:none;">
+        <button class="{% if modalita == 'gruppo' %}btn-gruppo{% else %}btn-primary{% endif %}" style="margin-bottom: 0.7rem;">Riprova →</button>
+      </a>
+      {% if modalita == 'gruppo' %}
+      <a href="/classifica" style="text-decoration:none;">
+        <button class="btn-gruppo-secondary" style="margin-bottom: 0.7rem;">🏆 Vedi classifica</button>
+      </a>
+      <a href="/gruppo" style="text-decoration:none;">
+        <button class="btn-gruppo-secondary">Cambia livello</button>
+      </a>
+      {% else %}
+      <a href="/statistiche" style="text-decoration:none;">
+        <button class="btn-secondary" style="margin-bottom: 0.7rem;">Vedi statistiche →</button>
+      </a>
+      <a href="/medicina" style="text-decoration:none;">
+        <button class="btn-secondary">Cambia materia / livello</button>
+      </a>
+      {% endif %}
+
+    </div>
+
+    <footer class="app-footer">Simulatore non ufficiale · uso didattico</footer>
+  </div>
+
+  <script>
+    // Salva il risultato nel localStorage
+    const risultato = {
+      data: new Date().toLocaleDateString('it-IT'),
+      materia: "{{ materia }}",
+      livello: "{{ livello }}",
+      punteggio: {{ punteggio }},
+      totale: {{ totale }},
+      percentuale: {{ percentuale }}
+    };
+    const storico = JSON.parse(localStorage.getItem('quiz_storico') || '[]');
+    storico.unshift(risultato);
+    if (storico.length > 50) storico.pop();
+    localStorage.setItem('quiz_storico', JSON.stringify(storico));
+
+    // ── SUONO RISULTATO ──
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const perc = {{ percentuale }};
+
+    function suonaRisultato() {
+      if (perc >= 60) {
+        // Due note ascendenti morbide — esito positivo
+        [[520, 0], [780, 0.18]].forEach(([freq, delay]) => {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.connect(g); g.connect(ctx.destination);
+          o.type = 'sine';
+          o.frequency.setValueAtTime(freq, ctx.currentTime + delay);
+          g.gain.setValueAtTime(0.08, ctx.currentTime + delay);
+          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.35);
+          o.start(ctx.currentTime + delay);
+          o.stop(ctx.currentTime + delay + 0.35);
+        });
+      } else {
+        // Nota bassa discendente — esito negativo
+        const o = ctx.createOscillator();
+        const g = ctx.createGain();
+        o.connect(g); g.connect(ctx.destination);
+        o.type = 'sine';
+        o.frequency.setValueAtTime(320, ctx.currentTime);
+        o.frequency.exponentialRampToValueAtTime(200, ctx.currentTime + 0.4);
+        g.gain.setValueAtTime(0.07, ctx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+        o.start(ctx.currentTime);
+        o.stop(ctx.currentTime + 0.4);
+      }
+    }
+
+    // Piccolo delay per dare tempo alla pagina di caricarsi
+    setTimeout(suonaRisultato, 400);
+  </script>
+</body>
+</html>

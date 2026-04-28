@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FantaLeggenda Quiz</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
+</head>
+<body class="gruppo-body">
+
+  <!-- Sfondo campo da calcio -->
+  <div class="campo-bg">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- Righe campo -->
+      <line x1="0" y1="450" x2="1440" y2="450" stroke="#1a5c2a" stroke-width="60" opacity="0.5"/>
+      <line x1="0" y1="150" x2="1440" y2="150" stroke="#1a5c2a" stroke-width="60" opacity="0.3"/>
+      <line x1="0" y1="750" x2="1440" y2="750" stroke="#1a5c2a" stroke-width="60" opacity="0.3"/>
+      <!-- Cerchio centrocampo -->
+      <circle cx="720" cy="450" r="160" fill="none" stroke="#1e6b30" stroke-width="2" opacity="0.4"/>
+      <circle cx="720" cy="450" r="5" fill="#1e6b30" opacity="0.5"/>
+      <!-- Linea centrocampo -->
+      <line x1="0" y1="450" x2="1440" y2="450" stroke="#1e6b30" stroke-width="1.5" opacity="0.4"/>
+      <!-- Area sx -->
+      <rect x="0" y="270" width="200" height="360" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
+      <rect x="0" y="360" width="80" height="180" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
+      <!-- Area dx -->
+      <rect x="1240" y="270" width="200" height="360" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
+      <rect x="1360" y="360" width="80" height="180" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
+      <!-- Glow verde centrale -->
+      <ellipse cx="720" cy="450" rx="400" ry="300" fill="radial" opacity="0.08"/>
+      <!-- Testo sfondo -->
+      <text x="200" y="200" fill="#1e6b30" font-size="120" font-family="Georgia" opacity="0.06" transform="rotate(-15,200,200)">⚽</text>
+      <text x="1100" y="750" fill="#1e6b30" font-size="100" font-family="Georgia" opacity="0.06" transform="rotate(10,1100,750)">🏆</text>
+    </svg>
+  </div>
+
+  <div class="page-wrapper">
+
+    <header class="app-header">
+      <div class="badge gruppo-badge">🍷 FantaLeggenda</div>
+      <h1>Quiz del <span class="verde">Gruppo</span></h1>
+      <p>Quanto conosci davvero i tuoi amici?<br>Inserisci il tuo nome e scoprilo.</p>
+    </header>
+
+    <div class="card gruppo-card">
+      <form action="/start-gruppo" method="post">
+
+        <div class="form-group">
+          <label for="nome">Il tuo nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Come ti chiami?" maxlength="20" autocomplete="off" style="width:100%; background:var(--g-surface2); border:1px solid var(--g-border); border-radius:var(--radius); color:var(--g-text); font-family:'DM Sans',sans-serif; font-size:1rem; padding:0.85rem 1.1rem; outline:none;">
+        </div>
+
+        <div class="form-group">
+          <label for="livello">Difficoltà</label>
+          <select id="livello" name="livello">
+            <option value="medio">🟡 Medio — Roba che dovresti sapere</option>
+            <option value="difficile">🔴 Difficile — Roba che probabilmente non sai</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="n_domande">Numero di domande</label>
+          <select id="n_domande" name="n_domande">
+            <option value="5">5 — Riscaldamento veloce</option>
+            <option value="10" selected>10 — Partita normale</option>
+            <option value="15">15 — Partita lunga</option>
+            <option value="20">20 — Maratona leggendaria</option>
+          </select>
+        </div>
+
+        <div class="divider"></div>
+
+        <button type="submit" class="btn-gruppo">Inizia il Quiz ⚽</button>
+
+      </form>
+
+      <div class="divider"></div>
+
+      <a href="/classifica" style="text-decoration:none;">
+        <button class="btn-gruppo-secondary">🏆 Classifica del gruppo</button>
+      </a>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-box gruppo-stat">
+        <span class="stat-num verde">36</span>
+        <span class="stat-label">Domande</span>
+      </div>
+      <div class="stat-box gruppo-stat">
+        <span class="stat-num verde">9</span>
+        <span class="stat-label">Anni di chat</span>
+      </div>
+      <div class="stat-box gruppo-stat">
+        <span class="stat-num verde">12</span>
+        <span class="stat-label">Personaggi</span>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:1.5rem;">
+      <a href="/" style="color:var(--g-muted); text-decoration:none; font-size:0.82rem;">← Torna al Test di Medicina</a>
+    </div>
+
+    <footer class="app-footer" style="color:var(--g-muted);">FantaLeggenda · dal 2015 con furore</footer>
+  </div>
+</body>
+</html>
