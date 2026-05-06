@@ -9,122 +9,220 @@
   <style>
     body { background:#000 !important; padding:0 !important; display:block !important; }
     body::before, body::after { display:none !important; }
-    .home-bg {
-      position: fixed; inset: 0; z-index: 0;
-      background: #000;
-    }
+
+    .home-bg { position:fixed; inset:0; z-index:0; background:#000; }
     .home-bg::after {
-      content: '';
-      position: absolute; inset: 0;
+      content:''; position:absolute; inset:0;
       background:
-        radial-gradient(ellipse at 30% 40%, rgba(139,26,42,0.06) 0%, transparent 55%),
-        radial-gradient(ellipse at 70% 60%, rgba(124,111,205,0.04) 0%, transparent 50%);
+        radial-gradient(ellipse at 30% 40%, rgba(139,26,42,0.08) 0%, transparent 55%),
+        radial-gradient(ellipse at 70% 60%, rgba(124,111,205,0.05) 0%, transparent 50%);
     }
     .home-texture {
-      position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: 0.04;
+      position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0.04;
       background-image:
         repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.05) 2px,rgba(255,255,255,.05) 4px),
         repeating-linear-gradient(90deg,transparent,transparent 8px,rgba(255,255,255,.02) 8px,rgba(255,255,255,.02) 10px);
     }
     .home-center {
-      position: relative; z-index: 1;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      min-height: 100vh; padding: 2rem 1rem;
+      position:relative; z-index:1;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center;
+      min-height:100vh; padding:2rem 1rem;
     }
     .home-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 9px; letter-spacing: 5px;
-      text-transform: uppercase; color: #333;
-      margin-bottom: 1.6rem;
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:13px; letter-spacing:5px;
+      text-transform:uppercase; color:#888;
+      margin-bottom:1.4rem;
     }
-    .home-cards { width: 100%; max-width: 560px; display: flex; flex-direction: column; gap: 10px; }
-    .home-tag-row { display: flex; gap: 18px; justify-content: center; margin-top: 1.6rem; }
-    .home-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; font-style: italic; color: rgba(255,255,255,0.10); }
+    .home-cards { width:100%; max-width:560px; display:flex; flex-direction:column; gap:12px; }
+    .home-tag-row { display:flex; gap:18px; justify-content:center; margin-top:1.6rem; flex-wrap:wrap; }
+    .home-tag { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-style:italic; color:rgba(255,255,255,0.18); }
 
-    /* CARD DRONDROLONI */
+    /* ══ CARD DRONDROLONI ══ */
     .card-drond {
-      position: relative; border: 1px solid rgba(139,26,42,0.45);
-      border-radius: 14px; overflow: hidden; cursor: pointer;
-      text-decoration: none; display: block;
-      transition: transform 0.15s, box-shadow 0.15s;
+      position:relative;
+      border:1px solid rgba(139,26,42,0.55);
+      border-radius:16px; overflow:hidden; cursor:pointer;
+      text-decoration:none; display:block;
+      transition:transform 0.15s, box-shadow 0.15s;
     }
-    .card-drond:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(139,26,42,0.3); }
+    .card-drond:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(139,26,42,0.35); }
     .card-drond-bg {
-      position: absolute; inset: 0;
-      background: url("{{ url_for('static', filename='foto_gruppo_cartoon.jpg') }}") center/cover;
-      filter: brightness(0.22) saturate(0.65);
+      position:absolute; inset:0;
+      background:url("{{ url_for('static', filename='foto_gruppo_cartoon.jpg') }}") center/cover;
+      filter:brightness(0.20) saturate(0.60);
     }
-    .card-drond-ov { position: absolute; inset: 0; background: rgba(0,0,0,0.48); }
-    .card-drond-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,#c0283c,transparent); }
-    .card-drond-inner { position: relative; z-index: 1; padding: 16px; }
-    .card-drond-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .card-drond-logo { width: 34px; height: 34px; border-radius: 50%; border: 2px solid #f0c010; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 10px rgba(240,192,16,0.25); }
-    .card-drond-logo img { width: 100%; height: 100%; object-fit: cover; }
-    .card-drond-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; font-style: italic; color: #f0c010; letter-spacing: 2px; -webkit-text-stroke: 0.5px #8b1a2a; text-shadow: 2px 2px 0 #8b1a2a; line-height: 1; }
-    .card-drond-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 9px; letter-spacing: 2px; color: #5a3a40; text-transform: uppercase; margin-bottom: 8px; }
-    .card-drond-tags { display: flex; gap: 5px; margin-bottom: 10px; flex-wrap: wrap; }
-    .card-drond-tag { font-size: 8px; color: #4a2a30; background: rgba(139,26,42,0.12); border: 1px solid rgba(139,26,42,0.25); border-radius: 6px; padding: 2px 7px; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; }
-    .card-drond-cta { background: linear-gradient(135deg,#8b1a2a,#c0283c); border-radius: 8px; padding: 10px; text-align: center; position: relative; overflow: hidden; box-shadow: 0 3px 14px rgba(139,26,42,0.4); }
-    .card-drond-cta::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg,transparent,transparent 4px,rgba(0,0,0,0.06) 4px,rgba(0,0,0,0.06) 8px); }
-    .card-drond-cta span { position: relative; font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: #f0c010; letter-spacing: 4px; }
+    .card-drond-ov { position:absolute; inset:0; background:rgba(0,0,0,0.50); }
+    .card-drond-line { position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#c0283c,transparent); }
+    .card-drond-line-top { position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,rgba(240,192,16,0.4),transparent); }
 
-    /* CARD MEDICINA */
-    .card-med {
-      border: 1px solid rgba(124,111,205,0.2);
-      border-radius: 14px; background: rgba(0,0,10,0.82);
-      cursor: pointer; position: relative; overflow: hidden;
-      text-decoration: none; display: block;
-      transition: transform 0.15s, box-shadow 0.15s;
+    /* Layout desktop: testo sx, logo dx */
+    .card-drond-inner {
+      position:relative; z-index:1;
+      display:flex; align-items:center; gap:0;
+      padding:0;
     }
-    .card-med:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(124,111,205,0.12); }
-    .card-med-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg,transparent,#7c6fcd,transparent); }
-    .card-med-inner { padding: 16px; }
-    .card-med-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-    .card-med-icon { font-size: 22px; line-height: 1; }
-    .card-med-title { font-family: 'Oswald', sans-serif; font-size: 20px; color: #a89cef; letter-spacing: 1px; text-transform: uppercase; line-height: 1.1; }
-    .card-med-sub { font-family: 'Share Tech Mono', monospace; font-size: 8px; letter-spacing: 2px; color: #4a4468; text-transform: uppercase; margin-bottom: 8px; }
-    .card-med-tags { display: flex; gap: 5px; margin-bottom: 10px; }
-    .card-med-tag { font-size: 8px; color: #3a3458; background: rgba(124,111,205,0.08); border: 1px solid rgba(124,111,205,0.15); border-radius: 6px; padding: 2px 7px; font-family: 'Share Tech Mono', monospace; }
-    .card-med-cta { background: #7c6fcd; border-radius: 8px; padding: 10px; text-align: center; }
-    .card-med-cta span { font-family: 'Oswald', sans-serif; font-size: 14px; color: #fff; letter-spacing: 4px; text-transform: uppercase; }
+    .card-drond-text { flex:1; min-width:0; padding:18px; }
+    .card-drond-logo {
+      flex-shrink:0;
+      width:160px; height:160px;
+      overflow:hidden; align-self:stretch;
+      display:flex; align-items:center; justify-content:center;
+      background:#000;
+    }
+    .card-drond-logo img {
+      width:85%; height:85%;
+      object-fit:contain;
+    }
+
+    .card-drond-badge {
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:10px; letter-spacing:3px; color:rgba(240,192,16,0.55);
+      text-transform:uppercase; margin-bottom:5px; display:block;
+    }
+    .card-drond-title {
+      font-family:'Bebas Neue',sans-serif;
+      font-size:38px; font-style:italic;
+      color:#f0c010; letter-spacing:3px;
+      -webkit-text-stroke:0.5px #8b1a2a;
+      text-shadow:3px 3px 0 #8b1a2a;
+      line-height:1; display:block; margin-bottom:5px;
+    }
+    .card-drond-sub {
+      font-family:'Barlow Condensed',sans-serif;
+      font-size:12px; letter-spacing:1px;
+      color:#8a5a60; text-transform:uppercase; margin-bottom:10px;
+    }
+    .card-drond-tags { display:flex; gap:5px; margin-bottom:12px; flex-wrap:wrap; }
+    .card-drond-tag {
+      font-size:10px; color:#7a4a50;
+      background:rgba(139,26,42,0.15);
+      border:1px solid rgba(139,26,42,0.30);
+      border-radius:6px; padding:3px 8px;
+      font-family:'Barlow Condensed',sans-serif; letter-spacing:1px;
+    }
+    .card-drond-cta {
+      display:block;
+      background:linear-gradient(135deg,#8b1a2a,#c0283c);
+      border-radius:8px; padding:12px;
+      position:relative; overflow:hidden;
+      box-shadow:0 3px 14px rgba(139,26,42,0.45);
+      text-align:center;
+    }
+    .card-drond-cta::before {
+      content:''; position:absolute; inset:0;
+      background:repeating-linear-gradient(45deg,transparent,transparent 4px,rgba(0,0,0,0.06) 4px,rgba(0,0,0,0.06) 8px);
+    }
+    .card-drond-cta span {
+      position:relative;
+      font-family:'Bebas Neue',sans-serif;
+      font-size:18px; color:#f0c010; letter-spacing:4px;
+    }
+
+    /* ══ CARD MEDICINA ══ */
+    .card-med {
+      border:1px solid rgba(124,111,205,0.25);
+      border-radius:16px; background:rgba(5,5,20,0.88);
+      cursor:pointer; position:relative; overflow:hidden;
+      text-decoration:none; display:block;
+      transition:transform 0.15s, box-shadow 0.15s;
+    }
+    .card-med::before {
+      content:''; position:absolute; inset:0;
+      background:url("{{ url_for('static', filename='sfondo_medicina.jpg') }}") center/cover;
+      filter:brightness(0.25) saturate(0.7); z-index:0;
+    }
+    .card-med::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(5,5,30,0.55); z-index:0;
+    }
+    .card-med:hover { transform:translateY(-2px); box-shadow:0 10px 32px rgba(124,111,205,0.15); }
+    .card-med-line { position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,#7c6fcd,transparent); z-index:1; }
+    .card-med-line-top { position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,rgba(124,111,205,0.3),transparent); z-index:1; }
+
+    /* Layout desktop: testo sx, logo dx */
+    .card-med-inner {
+      position:relative; z-index:1;
+      display:flex; align-items:center; gap:0;
+      padding:0;
+    }
+    .card-med-text { flex:1; min-width:0; padding:18px; }
+    .card-med-logo {
+      flex-shrink:0;
+      width:130px; height:130px;
+      overflow:hidden; align-self:stretch;
+      display:flex; align-items:center; justify-content:center;
+      background:rgba(0,0,20,0.6);
+    }
+    .card-med-logo img { width:80%; height:80%; object-fit:contain; }
+
+    .card-med-badge {
+      font-family:'Share Tech Mono',monospace;
+      font-size:10px; letter-spacing:3px; color:rgba(124,111,205,0.5);
+      text-transform:uppercase; margin-bottom:5px; display:block;
+    }
+    .card-med-title {
+      font-family:'Oswald',sans-serif;
+      font-size:32px; color:#b0a4f5;
+      letter-spacing:2px; text-transform:uppercase;
+      line-height:1.05; margin-bottom:5px;
+    }
+    .card-med-sub {
+      font-family:'Share Tech Mono',monospace;
+      font-size:10px; letter-spacing:1px;
+      color:#5a5478; text-transform:uppercase; margin-bottom:10px;
+    }
+    .card-med-tags { display:flex; gap:5px; margin-bottom:12px; flex-wrap:wrap; }
+    .card-med-tag {
+      font-size:10px; color:#5a5278;
+      background:rgba(124,111,205,0.10);
+      border:1px solid rgba(124,111,205,0.20);
+      border-radius:6px; padding:3px 8px;
+      font-family:'Share Tech Mono',monospace;
+    }
+    .card-med-cta {
+      display:block;
+      background:linear-gradient(135deg,#5c52a8,#7c6fcd);
+      border-radius:8px; padding:12px;
+      box-shadow:0 3px 14px rgba(124,111,205,0.25);
+      text-align:center;
+    }
+    .card-med-cta span {
+      font-family:'Oswald',sans-serif;
+      font-size:18px; color:#fff; letter-spacing:4px; text-transform:uppercase;
+    }
 
     /* ══ MOBILE ══ */
     @media (max-width: 500px) {
-      .card-drond-inner {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0; gap: 0;
-      }
+      .home-label { font-size:11px; letter-spacing:3px; }
+
+      /* Drondroloni: logo in alto full width, testo sotto */
+      .card-drond-inner { flex-direction:column; }
       .card-drond-logo {
-        width: 100%; height: 160px;
-        border-radius: 16px 16px 0 0;
-        align-self: auto;
+        width:100%; height:180px;
+        border-radius:0; align-self:auto;
+        background:#000;
       }
-      .card-drond-logo img { object-position: center 20%; }
-      .card-drond-text { padding: 14px; }
-      .card-drond-title { font-size: 38px; }
-      .card-drond-badge { letter-spacing: 2px; font-size: 9px; }
+      .card-drond-logo img { width:60%; height:60%; }
+      .card-drond-text { padding:14px; width:100%; }
+      .card-drond-title { font-size:40px; }
+      .card-drond-badge { font-size:9px; letter-spacing:2px; }
 
-      .card-med-inner {
-        flex-direction: column;
-        align-items: stretch;
-        padding: 0; gap: 0;
-      }
+      /* Medicina: logo in alto full width, testo sotto */
+      .card-med-inner { flex-direction:column; }
       .card-med-logo {
-        width: 100%; height: 110px;
-        border-radius: 16px 16px 0 0;
-        background: rgba(5,5,30,0.5);
-        justify-content: center;
+        width:100%; height:120px;
+        border-radius:0; align-self:auto;
+        background:rgba(0,0,20,0.7);
       }
-      .card-med-logo img { height: 85px; width: auto; }
-      .card-med-text { padding: 14px; }
-      .card-med-title { font-size: 30px; }
-      .card-med-badge { letter-spacing: 1px; font-size: 9px; }
+      .card-med-logo img { width:auto; height:85px; }
+      .card-med-text { padding:14px; width:100%; }
+      .card-med-title { font-size:30px; }
+      .card-med-badge { font-size:9px; letter-spacing:1px; }
 
-      .home-label { font-size: 11px; letter-spacing: 3px; }
-      .home-tag-row { gap: 10px; }
-      .home-tag { font-size: 10px; }
+      .home-tag-row { gap:10px; }
+      .home-tag { font-size:10px; }
     }
   </style>
 </head>
@@ -142,42 +240,46 @@
         <div class="card-drond-bg"></div>
         <div class="card-drond-ov"></div>
         <div class="card-drond-line"></div>
+        <div class="card-drond-line-top"></div>
         <div class="card-drond-inner">
-          <div class="card-drond-head">
-            <div class="card-drond-logo">
-              <img src="{{ url_for('static', filename='dondroloni.jpg') }}" alt="Drondroloni">
+          <div class="card-drond-text">
+            <span class="card-drond-badge">// quiz del gruppo · dal 2010</span>
+            <span class="card-drond-title">DRONDROLONI</span>
+            <div class="card-drond-sub">🦍 15 anni di chat · leggende viventi</div>
+            <div class="card-drond-tags">
+              <span class="card-drond-tag">150 domande</span>
+              <span class="card-drond-tag">📸 Foto</span>
+              <span class="card-drond-tag">🏆 Classifica</span>
+              <span class="card-drond-tag">⏱ Timer</span>
             </div>
-            <div class="card-drond-title">DRONDROLONI</div>
-            <div style="margin-left:auto; font-family:'Barlow Condensed',sans-serif; font-size:9px; color:rgba(240,192,16,0.35); letter-spacing:2px;">ENTRA //</div>
+            <div class="card-drond-cta"><span>INIZIA IL QUIZ</span></div>
           </div>
-          <div class="card-drond-sub">🦍 Quiz del gruppo · 15 anni di chat</div>
-          <div class="card-drond-tags">
-            <span class="card-drond-tag">150 domande</span>
-            <span class="card-drond-tag">📸 Foto</span>
-            <span class="card-drond-tag">🏆 Classifica</span>
-            <span class="card-drond-tag">⏱ Timer</span>
+          <div class="card-drond-logo">
+            <img src="{{ url_for('static', filename='dondroloni.png') }}" alt="Drondroloni">
           </div>
-          <div class="card-drond-cta"><span>INIZIA IL QUIZ</span></div>
         </div>
       </a>
 
       <!-- MEDICINA -->
       <a href="/medicina" class="card-med">
         <div class="card-med-line"></div>
+        <div class="card-med-line-top"></div>
         <div class="card-med-inner">
-          <div class="card-med-head">
-            <div class="card-med-icon">🔬</div>
+          <div class="card-med-text">
+            <span class="card-med-badge">// simulatore · semestre filtro</span>
             <div class="card-med-title">TEST<br>MEDICINA</div>
-            <div style="margin-left:auto; font-family:'Share Tech Mono',monospace; font-size:9px; color:rgba(124,111,205,0.35); letter-spacing:2px;">ENTRA //</div>
+            <div class="card-med-sub">Biologia · Chimica · Fisica</div>
+            <div class="card-med-tags">
+              <span class="card-med-tag">🧬 Bio</span>
+              <span class="card-med-tag">⚗️ Chim</span>
+              <span class="card-med-tag">⚡ Fis</span>
+              <span class="card-med-tag">98 domande</span>
+            </div>
+            <div class="card-med-cta"><span>INIZIA IL TEST</span></div>
           </div>
-          <div class="card-med-sub">Semestre filtro · Biologia, Chimica, Fisica</div>
-          <div class="card-med-tags">
-            <span class="card-med-tag">🧬 Bio</span>
-            <span class="card-med-tag">⚗️ Chim</span>
-            <span class="card-med-tag">⚡ Fis</span>
-            <span class="card-med-tag">98 domande</span>
+          <div class="card-med-logo">
+            <img src="{{ url_for('static', filename='log_medicina.png') }}" alt="Medicina">
           </div>
-          <div class="card-med-cta"><span>INIZIA IL TEST</span></div>
         </div>
       </a>
 
