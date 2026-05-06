@@ -197,7 +197,7 @@
     @media (max-width: 500px) {
       .home-label { font-size:11px; letter-spacing:3px; }
 
-      .card-drond-inner { flex-direction:column; }
+      .card-drond-inner { flex-direction:column-reverse; }
       .card-drond-logo {
         width:100%; height:180px;
         border-radius:0; align-self:auto;
@@ -208,7 +208,7 @@
       .card-drond-title { font-size:40px; }
       .card-drond-badge { font-size:9px; letter-spacing:2px; }
 
-      .card-med-inner { flex-direction:column; }
+      .card-med-inner { flex-direction:column-reverse; }
       .card-med-logo {
         width:100%; height:120px;
         border-radius:0; align-self:auto;
@@ -233,30 +233,30 @@
 
     <div class="home-cards">
 
-      <!-- DRONDROLONI -->
-      <a href="/gruppo" class="card-drond">
-        <div class="card-drond-bg"></div>
-        <div class="card-drond-ov"></div>
-        <div class="card-drond-line"></div>
-        <div class="card-drond-line-top"></div>
-        <div class="card-drond-inner">
-          <div class="card-drond-text">
-            <span class="card-drond-badge">// quiz del gruppo · dal 2010</span>
-            <span class="card-drond-title">DRONDROLONI</span>
-            <div class="card-drond-sub">🦍 15 anni di chat · leggende viventi</div>
-            <div class="card-drond-tags">
-              <span class="card-drond-tag">150 domande</span>
-              <span class="card-drond-tag">📸 Foto</span>
-              <span class="card-drond-tag">🏆 Classifica</span>
-              <span class="card-drond-tag">⏱ Timer</span>
-            </div>
-            <div class="card-drond-cta"><span>INIZIA IL QUIZ</span></div>
-          </div>
-          <div class="card-drond-logo">
-            <img src="{{ url_for('static', filename='dondroloni.png') }}" alt="Drondroloni">
-          </div>
-        </div>
-      </a>
+   <!-- DRONDROLONI -->
+<a href="/gruppo" class="card-drond">
+  <div class="card-drond-bg"></div>
+  <div class="card-drond-ov"></div>
+  <div class="card-drond-line"></div>
+  <div class="card-drond-line-top"></div>
+  <div class="card-drond-inner">
+    <div class="card-drond-text">
+      <span class="card-drond-badge">// quiz del gruppo · dal 2010</span>
+      <span class="card-drond-title">DRONDROLONI</span>
+      <div class="card-drond-sub">🦍 15 anni di chat · leggende viventi</div>
+      <div class="card-drond-tags">
+        <span class="card-drond-tag">150 domande</span>
+        <span class="card-drond-tag">📸 Foto</span>
+        <span class="card-drond-tag">🏆 Classifica</span>
+        <span class="card-drond-tag">⏱ Timer</span>
+      </div>
+      <div class="card-drond-cta"><span>INIZIA IL QUIZ</span></div>
+    </div>
+    <div class="card-drond-logo">
+      <img src="{{ url_for('static', filename='dondroloni.png') }}" alt="Drondroloni">
+    </div>
+  </div>
+</a>
 
       <!-- MEDICINA -->
       <a href="/medicina" class="card-med">
