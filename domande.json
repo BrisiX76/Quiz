@@ -2532,5 +2532,275 @@
         "spiegazione": "\"3421 rizla\" — Gala il 26 maggio 2025 con screenshot allegato perché temeva di sbagliare i nomi dei giocatori (specialmente 'Salamandra' e 'Soletta'). Rizla è il nome della squadra. La cosa più importante è che ha fatto uno screenshot. Priorità operative di alto livello."
       }
     ]
+  },
+  "cdr": {
+    "medio": [
+      {
+        "domanda": "Quale documento deve presentare un'utenza domestica che utilizza un mezzo di una società terza per conferire i propri rifiuti?",
+        "opzioni": [
+          "MDATST19 – Attestazione della provenienza del rifiuto domestico",
+          "MDATST05 – Dichiarazione di presa in carico rifiuti",
+          "MDATST08 – Convenzione ingresso SSR",
+          "Nessun documento, basta la bolletta TARI"
+        ],
+        "corretta": "MDATST19 – Attestazione della provenienza del rifiuto domestico",
+        "spiegazione": "Quando l'utenza domestica utilizza un mezzo di una società terza, deve presentare il modello MDATST19 controfirmato dall'utenza stessa prima dell'accesso alla SSR."
+      },
+      {
+        "domanda": "Qual è il livello massimo di riempimento consentito per i serbatoi degli oli presso il CdR/STE?",
+        "opzioni": [
+          "50%",
+          "75%",
+          "90%",
+          "100%"
+        ],
+        "corretta": "90%",
+        "spiegazione": "Il Piano dei Controlli PDCATST02 stabilisce che il livello di riempimento dei serbatoi oli non deve superare il 90%. Superata questa soglia va effettuata richiesta di ritiro tramite Ekovison."
+      },
+      {
+        "domanda": "Cosa deve fare l'operatore se un utente si rifiuta di esibire la documentazione che comprova il diritto di accesso al CdR/STE?",
+        "opzioni": [
+          "Consentire comunque l'accesso se i rifiuti sembrano conformi",
+          "Respingere l'utente in qualsiasi momento",
+          "Contattare il Comune per autorizzazione",
+          "Accettare i rifiuti e segnalarlo in seguito"
+        ],
+        "corretta": "Respingere l'utente in qualsiasi momento",
+        "spiegazione": "L'istruzione IATST04 prevede che l'addetto respinga chiunque non sia in grado o si rifiuti di esibire la documentazione che comprova la possibilità di accesso al CDR/STE."
+      },
+      {
+        "domanda": "Chi può accedere gratuitamente al Centro di Raccolta tra le utenze domestiche?",
+        "opzioni": [
+          "Solo i residenti nel Comune dove è ubicato il CdR",
+          "Cittadini residenti, domiciliati nel Comune servito e utenti non residenti con utenza TARI nel territorio comunale",
+          "Tutti i cittadini italiani senza limitazioni",
+          "Solo gli iscritti a ruolo TARI da almeno 12 mesi"
+        ],
+        "corretta": "Cittadini residenti, domiciliati nel Comune servito e utenti non residenti con utenza TARI nel territorio comunale",
+        "spiegazione": "Il Regolamento di accesso SSR prevede che possano accedere i cittadini residenti o domiciliati nel Comune servito e gli utenti non residenti ma detentori di utenze domestiche iscritte a ruolo TARI nel territorio comunale."
+      },
+      {
+        "domanda": "Entro quanti giorni lavorativi SEI Toscana garantisce una risposta alla richiesta di accreditamento di un'utenza non domestica?",
+        "opzioni": [
+          "5 giorni lavorativi",
+          "10 giorni lavorativi",
+          "15 giorni lavorativi",
+          "30 giorni lavorativi"
+        ],
+        "corretta": "10 giorni lavorativi",
+        "spiegazione": "Il Regolamento di accesso SSR stabilisce che SEI garantisce una risposta entro 10 giorni lavorativi, sia essa di accettazione totale, parziale o diniego motivato."
+      },
+      {
+        "domanda": "È possibile prelevare rifiuti dal Centro di Raccolta da parte degli utenti?",
+        "opzioni": [
+          "Sì, se autorizzati dall'operatore",
+          "Sì, ma solo in via bonaria",
+          "No, in nessun caso",
+          "Sì, solo per i RAEE funzionanti"
+        ],
+        "corretta": "No, in nessun caso",
+        "spiegazione": "Il Regolamento vieta esplicitamente di prelevare rifiuti dal Centro di Raccolta, nemmeno in via bonaria, né è possibile rimuovere o disassemblare componenti da RAEE o ingombranti."
+      },
+      {
+        "domanda": "Quale documento deve utilizzare l'operatore per registrare i controlli giornalieri all'inizio del turno?",
+        "opzioni": [
+          "MDATST06 – Registro infrastrutture minori",
+          "MDATST04 – Registro di conduzione CdR/STE",
+          "MDATST10 – Registro uscite centro di raccolta",
+          "PDCATST02 – Piano dei controlli"
+        ],
+        "corretta": "MDATST04 – Registro di conduzione CdR/STE",
+        "spiegazione": "All'inizio del turno l'addetto effettua i controlli previsti dal PDCATST02 e ne annota l'esito sul registro MDATST04. In caso di anomalie ne dà anche tempestiva comunicazione telefonica al Tecnico Territoriale."
+      },
+      {
+        "domanda": "Quale frazione di rifiuto NON può essere conferita al CdR/STE?",
+        "opzioni": [
+          "Pannelli fotovoltaici sotto i 10 kW",
+          "Materiali contenenti amianto",
+          "Batterie al piombo da auto",
+          "Pneumatici privi di cerchio"
+        ],
+        "corretta": "Materiali contenenti amianto",
+        "spiegazione": "Il Regolamento vieta espressamente il conferimento di materiali contenenti amianto, insieme a cartongesso, guaina catramata e bombole contenenti GPL, ossigeno o gas tecnici."
+      },
+      {
+        "domanda": "Quale documento deve richiedere un'utenza domestica che vuole ottenere la dichiarazione di presa in carico dei rifiuti conferiti?",
+        "opzioni": [
+          "MDATST08 – Convenzione ingresso SSR",
+          "MDATST19 – Attestazione provenienza rifiuto domestico",
+          "MDATST05 – Dichiarazione di presa in carico rifiuti",
+          "MDATST04 – Registro di conduzione"
+        ],
+        "corretta": "MDATST05 – Dichiarazione di presa in carico rifiuti",
+        "spiegazione": "L'utenza deve inviare il modulo MDATST05 compilato per la parte di propria competenza a direzioneoperativa@seitoscana.it."
+      },
+      {
+        "domanda": "Con quale frequenza viene verificata la presenza di roditori/insetti presso il CdR/STE secondo il Piano dei Controlli?",
+        "opzioni": [
+          "Mensile",
+          "Semestrale",
+          "Trimestrale",
+          "Annuale"
+        ],
+        "corretta": "Trimestrale",
+        "spiegazione": "Il PDCATST02 prevede derattizzazioni con frequenza trimestrale tramite sostituzione delle esche, al fine di garantire l'assenza di roditori."
+      },
+      {
+        "domanda": "Cosa deve fare l'operatore se lo stato di riempimento di un contenitore supera i 2/3?",
+        "opzioni": [
+          "Chiudere il contenitore e vietare ulteriori conferimenti",
+          "Effettuare richiesta di ritiro tramite Ekovison (tablet/computer)",
+          "Contattare immediatamente le autorità ambientali",
+          "Trasferire manualmente i rifiuti in un altro contenitore"
+        ],
+        "corretta": "Effettuare richiesta di ritiro tramite Ekovison (tablet/computer)",
+        "spiegazione": "Il Piano dei Controlli PDCATST02 prevede che se il livello di riempimento supera i 2/3, l'operatore deve effettuare richiesta di ritiro tramite Ekovison (tablet/computer)."
+      },
+      {
+        "domanda": "Le utenze non domestiche devono preventivamente accreditarsi presso SEI per accedere alle SSR. Tramite quale modulo?",
+        "opzioni": [
+          "MDATST05 – Dichiarazione presa in carico rifiuti",
+          "MDATST08 – Convenzione ingresso SSR",
+          "MDATST19 – Attestazione provenienza rifiuto domestico",
+          "MDATST04 – Registro di conduzione"
+        ],
+        "corretta": "MDATST08 – Convenzione ingresso SSR",
+        "spiegazione": "Le utenze non domestiche devono accreditarsi compilando il modulo MDATST08 'Convenzione ingresso SSR', disponibile sul sito di SEI, e inviarlo a segreteria@seitoscana.it."
+      }
+    ],
+    "difficile": [
+      {
+        "domanda": "Un'utenza non domestica di categoria 'carrozzeria/autofficina' intende conferire rifiuti urbani al CdR. Di quale autorizzazione al trasporto ha bisogno?",
+        "opzioni": [
+          "Categoria 1 dell'Albo Gestori Ambientali",
+          "Categoria 2bis dell'Albo Gestori Ambientali",
+          "Categoria 3bis dell'Albo Gestori Ambientali",
+          "Non serve autorizzazione al trasporto"
+        ],
+        "corretta": "Categoria 2bis dell'Albo Gestori Ambientali",
+        "spiegazione": "Secondo la tabella degli adempimenti del Regolamento SSR, le utenze non domestiche presenti nell'allegato L-quinquies che conferiscono rifiuti classificati come urbani (allegato L-quater) devono avere autorizzazione CAT 2bis."
+      },
+      {
+        "domanda": "Un carico in uscita dalla SSR viene parzialmente respinto dall'impianto di destinazione. Cosa deve fare l'operatore con il FIR respinto?",
+        "opzioni": [
+          "Annullare il FIR e compilarne uno nuovo",
+          "Allegare scansione del FIR respinto firmato e con campo 11 compilato al modulo di NC, con documentazione fotografica",
+          "Conservare il FIR e attendere istruzioni dalla Direzione",
+          "Registrare il respingimento solo sul MDATST04"
+        ],
+        "corretta": "Allegare scansione del FIR respinto firmato e con campo 11 compilato al modulo di NC, con documentazione fotografica",
+        "spiegazione": "Il RAS provvede ad allegare al modulo di NC la scansione del FIR respinto, firmato per presa visione e compilato nel campo 11 con la motivazione, corredato di documentazione fotografica ove disponibile."
+      },
+      {
+        "domanda": "Entro quanti giorni va effettuata l'annotazione di carico sul registro per i rifiuti pericolosi in uscita da un Centro di Raccolta?",
+        "opzioni": [
+          "Entro 2 giorni dall'uscita",
+          "Entro 5 giorni dall'uscita",
+          "Contestualmente all'uscita, entro 10 giorni",
+          "Entro 30 giorni dall'uscita"
+        ],
+        "corretta": "Contestualmente all'uscita, entro 10 giorni",
+        "spiegazione": "Per i rifiuti pericolosi gestiti dal Centro di Raccolta, la registrazione del carico e dello scarico va effettuata contestualmente al momento dell'uscita (entro dieci giorni) in maniera cumulativa per codice CER."
+      },
+      {
+        "domanda": "Quale norma regolamenta il trasporto dei RAEE da parte dei distributori che li conferiscono alle SSR?",
+        "opzioni": [
+          "D.Lgs 152/2006",
+          "DM 65 del 08 marzo 2010",
+          "D.Lgs 116/2020",
+          "DM 8 aprile 2008"
+        ],
+        "corretta": "DM 65 del 08 marzo 2010",
+        "spiegazione": "Il trasporto RAEE da parte di distributori/installatori richiede autorizzazione CAT 3bis e DDT RAEE secondo il DM 65/2010 (All. II ed All. III)."
+      },
+      {
+        "domanda": "In caso di sversamento accidentale di acido solforico da una batteria, quale CER viene assegnato al rifiuto prodotto dall'intervento di bonifica?",
+        "opzioni": [
+          "200199",
+          "150202*",
+          "130208*",
+          "160601*"
+        ],
+        "corretta": "150202*",
+        "spiegazione": "L'istruzione IATST04 prevede che il materiale assorbente utilizzato per la bonifica degli sversamenti acidi venga conferito nel contenitore con codice CER 15.02.02*."
+      },
+      {
+        "domanda": "Per quanti anni deve essere conservata la documentazione di gestione rifiuti (FIR e registri carico/scarico) presso il CDR/STE?",
+        "opzioni": [
+          "1 anno",
+          "2 anni",
+          "3 anni",
+          "5 anni"
+        ],
+        "corretta": "3 anni",
+        "spiegazione": "L'istruzione IATST04 stabilisce che l'addetto assicura l'archiviazione della documentazione di gestione rifiuti presso gli uffici di cantiere, da conservare per un periodo minimo di tre anni."
+      },
+      {
+        "domanda": "Un'utenza non domestica vuole conferire rifiuti urbani per conto di privati. Quale procedura deve seguire PRIMA di presentarsi alla SSR?",
+        "opzioni": [
+          "Presentarsi direttamente con il MDATST19 compilato",
+          "Inviare mail a direzioneoperativa@seitoscana.it con struttura, tipologia, quantitativi e data presunta, attendere conferma",
+          "Telefonare al numero verde SEI per prenotare l'accesso",
+          "Compilare il MDATST08 e presentarsi allo sportello SEI"
+        ],
+        "corretta": "Inviare mail a direzioneoperativa@seitoscana.it con struttura, tipologia, quantitativi e data presunta, attendere conferma",
+        "spiegazione": "Il Regolamento prevede che le utenze non domestiche che conferiscono per conto di privati inviino preventivamente mail a direzioneoperativa@seitoscana.it. Solo dopo aver ricevuto conferma possono presentarsi con il modello MDATST19 compilato e controfirmato."
+      },
+      {
+        "domanda": "Qual è la quantità massima consentita per il conferimento di inerti da attività fai da te da parte di utenze domestiche?",
+        "opzioni": [
+          "0,2 mc una tantum",
+          "0,5 mc una tantum",
+          "1 mc una tantum",
+          "Nessun limite, purché siano sanitari senza rubinetteria"
+        ],
+        "corretta": "0,5 mc una tantum",
+        "spiegazione": "Il Regolamento SSR consente il conferimento di piccole partite di demolizioni provenienti da attività fatte in autonomia, UNA TANTUM con un massimo di 0,5 mc."
+      },
+      {
+        "domanda": "Decorsi quanti giorni dall'effettuazione del trasporto l'addetto deve comunicare al RAS gli estremi dei formulari privi di quarta copia?",
+        "opzioni": [
+          "30 giorni",
+          "45 giorni",
+          "60 giorni",
+          "90 giorni"
+        ],
+        "corretta": "60 giorni",
+        "spiegazione": "L'istruzione IATST04 prevede che decorsi 60 giorni dall'effettuazione del trasporto, l'addetto comunichi al Tecnico Territoriale – Capo Turno – RAS gli estremi dei formulari in cui risulta assente la quarta copia."
+      },
+      {
+        "domanda": "Durante un'ispezione da parte di organi di controllo (es. ARPAT), quale deve essere il primo atto dell'operatore CdR/STE?",
+        "opzioni": [
+          "Consentire immediatamente l'accesso all'area senza indugi",
+          "Chiedere evidenza del ruolo ricoperto e dell'organo di appartenenza",
+          "Contattare immediatamente l'Avvocatura di SEI",
+          "Rifiutare l'accesso fino all'arrivo del RAS"
+        ],
+        "corretta": "Chiedere evidenza del ruolo ricoperto e dell'organo di appartenenza",
+        "spiegazione": "L'istruzione IATST04 stabilisce che in caso di ispezione da parte di organi di controllo, l'addetto deve SEMPRE chiedere evidenza del ruolo ricoperto e dell'organo di appartenenza."
+      },
+      {
+        "domanda": "Le Stazioni Ecologiche (STE) si differenziano dai Centri di Raccolta (CdR) perché sono autorizzate a svolgere operazioni di:",
+        "opzioni": [
+          "Trattamento termico dei rifiuti",
+          "Messa in riserva e/o deposito preliminare ai sensi dell'art. 208 del D.Lgs 152/06",
+          "Smaltimento finale dei rifiuti urbani",
+          "Recupero energetico dai rifiuti"
+        ],
+        "corretta": "Messa in riserva e/o deposito preliminare ai sensi dell'art. 208 del D.Lgs 152/06",
+        "spiegazione": "La STE è autorizzata alle operazioni di 'messa in riserva' e/o 'deposito preliminare' ai sensi dell'art. 208 del D.Lgs 152/06. I CdR invece effettuano solo raggruppamento differenziato."
+      },
+      {
+        "domanda": "In caso di rifiuti combusti a seguito di incendio nel CdR/STE, entro quanto tempo dall'annotazione sul registro di carico/scarico devono essere smaltiti?",
+        "opzioni": [
+          "Entro 30 giorni",
+          "Entro 60 giorni",
+          "Entro 3 mesi",
+          "Entro 6 mesi"
+        ],
+        "corretta": "Entro 3 mesi",
+        "spiegazione": "L'istruzione IATST04 prevede che i rifiuti combusti da evento accidentale debbano essere smaltiti entro tre mesi dalla presa in carico sul registro presso l'impianto di ambito previsto."
+      }
+    ]
   }
 }
