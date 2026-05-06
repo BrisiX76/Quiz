@@ -75,7 +75,10 @@
 .gruppo-logo-wrap {
   position: relative;
   width: 42px; height: 42px;
+  min-width: 42px;          /* ← evita che flex lo schiacci o espanda */
   flex-shrink: 0;
+  overflow: hidden;          /* ← blocca qualsiasi overflow dell'immagine */
+  border-radius: 50%;
 }
 
 .gruppo-logo-wrap::before {
