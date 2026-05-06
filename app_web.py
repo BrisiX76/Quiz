@@ -62,12 +62,24 @@ def get_storico():
              "totale": r[3], "percentuale": r[4], "data": r[5]} for r in rows]
 
 # ── GENERA DOMANDE ──
-def genera_domande(materia, livello, n=10, materia_str=""):
+def genera_domande(materia, livello, n=10, viste=None):
     pool = domande_db.get(materia, {}).get(livello, [])
-    campione = random.sample(pool, min(n, len(pool)))
+    # Assegna un ID univoco a ogni domanda basato sul testo
+    def domanda_id(d):
+        return d["domanda"][:40]
+    # Escludi domande già viste
+    if viste:
+        pool_non_viste = [d for d in pool if domanda_id(d) not in viste]
+        # Se rimangono meno di n domande, resetta e usa tutto il pool
+        if len(pool_non_viste) < n:
+            pool_non_viste = pool
+    else:
+        pool_non_viste = pool
+    campione = random.sample(pool_non_viste, min(n, len(pool_non_viste)))
     result = []
     for d in campione:
         nd = copy.deepcopy(d)
+        nd["_id"] = domanda_id(nd)  # aggiungi ID per tracking
         random.shuffle(nd["opzioni"])
         result.append(nd)
     return result
@@ -92,7 +104,9 @@ def start():
     materia = request.form.get("materia", "biologia")
     livello = request.form.get("livello", "medio")
     n_domande = int(request.form.get("n_domande", 10))
-    session["domande"]   = genera_domande(materia, livello, n=n_domande)
+    viste_raw = request.form.get("viste", "")
+    viste = set(v for v in viste_raw.split("||") if v) if viste_raw else set()
+    session["domande"]   = genera_domande(materia, livello, n=n_domande, viste=viste)
     session["indice"]    = 0
     session["punteggio"] = 0
     session["feedback"]  = None
@@ -108,7 +122,9 @@ def start_gruppo():
     livello    = request.form.get("livello", "medio")
     nome       = request.form.get("nome", "Anonimo").strip() or "Anonimo"
     n_domande  = int(request.form.get("n_domande", 10))
-    session["domande"]   = genera_domande("gruppo", livello, n=n_domande)
+    viste_raw  = request.form.get("viste", "")
+    viste      = set(v for v in viste_raw.split("||") if v) if viste_raw else set()
+    session["domande"]   = genera_domande("gruppo", livello, n=n_domande, viste=viste)
     session["indice"]    = 0
     session["punteggio"] = 0
     session["feedback"]  = None
@@ -208,15 +224,24 @@ def risultato():
     if modalita == "gruppo" and nome:
         salva_punteggio(nome, livello, punteggio, totale, percentuale)
 
+    # Raccoglie gli ID delle domande viste in questa sessione
+    domande_viste = [d.get("_id", d["domanda"][:40])
+                     for d in session.get("domande", [])]
+    # Calcola quante domande ci sono in totale per questa combinazione
+    pool = domande_db.get(materia, {}).get(livello, [])
+    max_domande = len(pool)
+
     return render_template(
         "risultato.html",
-        punteggio   = punteggio,
-        totale      = totale,
-        percentuale = percentuale,
-        materia     = materia,
-        livello     = livello,
-        modalita    = modalita,
-        nome        = nome
+        punteggio     = punteggio,
+        totale        = totale,
+        percentuale   = percentuale,
+        materia       = materia,
+        livello       = livello,
+        modalita      = modalita,
+        nome          = nome,
+        domande_viste = domande_viste,
+        max_domande   = max_domande
     )
 
 # ── CLASSIFICA ──

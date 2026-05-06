@@ -1686,6 +1686,448 @@
         ],
         "corretta": "Cileno ne ha scritti 106 in più",
         "spiegazione": "Cileno 626 vs Paggio 520 — Cileno è davanti di 106 messaggi. Paggio però compensa in qualità: arriva alle serate già mangiato, chiede le zuzze e propone orari impossibili. Efficienza comunicativa al massimo."
+      },
+      {
+        "domanda": "Questa è la faccia di Gala in stazione dopo la gita. Qual è la diagnosi medica ufficiale?",
+        "foto": "IMG_20150712_201603.jpg",
+        "opzioni": [
+          "Intossicazione da Eia🍷 acuta stadio finale",
+          "Sonno fisiologico da eccesso di cultura turistica",
+          "Ottima salute — è la sua faccia normale"
+        ],
+        "corretta": "Intossicazione da Eia🍷 acuta stadio finale",
+        "spiegazione": "La comunità scientifica del FantaLeggenda ha classificato questa espressione come 'Sindrome post-gita alcolica con ricaduta esistenziale'. Sintomi: sguardo nel vuoto, voglia di treno, promesse di sobrietà con scadenza 48 ore. Prognosi: recidiva certa alla gita successiva."
+      },
+      {
+        "domanda": "Gala in questa foto sembra cercare qualcosa con lo sguardo. Cosa?",
+        "foto": "IMG_20150712_201603.jpg",
+        "opzioni": [
+          "Il binario giusto",
+          "Una risposta al senso della vita dopo la quinta Eia",
+          "Canapino — che si nasconde anche nelle stazioni"
+        ],
+        "corretta": "Una risposta al senso della vita dopo la quinta Eia",
+        "spiegazione": "Quello sguardo assorto non è stanchezza — è filosofia. Gala sta elaborando domande profonde: 'Perché beviamo? Dove andiamo? Chi ha preso il scontrino del bar?' Nessuna risposta. Solo il treno delle 18:45."
+      },
+      {
+        "domanda": "Se potessimo leggere il pensiero di Gala in questa foto, cosa sentiremmo?",
+        "foto": "IMG_20150712_201603.jpg",
+        "opzioni": [
+          "La colonna sonora del Signore degli Anelli",
+          "Silenzio assoluto — il cervello è offline",
+          "La lista della spesa di Pierino"
+        ],
+        "corretta": "Silenzio assoluto — il cervello è offline",
+        "spiegazione": "Secondo gli esperti di neuroscienza applicata al FantaLeggenda, dopo una gita di questo livello il cervello entra in modalità risparmio energetico. Le uniche funzioni attive sono: respirare, stare in piedi, e ricordare di NON promettere di organizzare la prossima gita."
+      },
+      {
+        "domanda": "Gigio e Gala al matrimonio di Canapino. Un antropologo li osserva. Come li classifica?",
+        "foto": "galaegigio.jpg",
+        "opzioni": [
+          "Esemplari rari della specie 'Homo Aretinus Goliardicus'",
+          "Due turisti persi che hanno trovato un negozio di costumi",
+          "Canapino li ha pagati per distogliere l'attenzione dagli sposi"
+        ],
+        "corretta": "Esemplari rari della specie 'Homo Aretinus Goliardicus'",
+        "spiegazione": "Parrucca afro, baffi finti, camicia con le banane, collana CASH e occhiali dorati. Questi non sono costumi — è un'identità. L'antropologo ha scritto una tesi. Canapino invece non li ha visti perché si nascondeva anche al suo stesso matrimonio."
+      },
+      {
+        "domanda": "La collana CASH di Gigio al matrimonio di Canapino: perché ce l'ha?",
+        "foto": "galaegigio.jpg",
+        "opzioni": [
+          "L'ha vinta battendo Bindi al mini ping-pong",
+          "Era nel kit base del costume 'anni 70 del Bronx'",
+          "Gliela ha prestata Prisco — è l'unico del gruppo con soldi"
+        ],
+        "corretta": "Era nel kit base del costume 'anni 70 del Bronx'",
+        "spiegazione": "Gigio non porta quella collana per ostentare ricchezza. La porta perché il kit era completo e lui è un professionista. Come gestisce la Cimbanella FC: con dedizione totale ai dettagli. Gala invece ha optato per il minimalismo: parrucca e camicia tropicale. Due filosofie a confronto."
+      },
+      {
+        "domanda": "Cosa dicono esattamente Gigio e Gala in questo momento della foto?",
+        "foto": "galaegigio.jpg",
+        "opzioni": [
+          "Gigio: 'Eia!' — Gala: 'Eia!' — entrambi contemporaneamente",
+          "Gigio: 'Devo andare in bagno' — Gala: 'Anch'io'",
+          "Niente — stanno aspettando che Pierino smetta di fotografarli"
+        ],
+        "corretta": "Niente — stanno aspettando che Pierino smetta di fotografarli",
+        "spiegazione": "Pierino — con 759 media inviati in 9 anni — ha documentato ogni singolo momento della serata. Gigio e Gala hanno imparato a posare in attesa che il fotografo ufficiale della Desaparecidos FC si stanchi. Non si è mai stancato."
+      },
+      {
+        "domanda": "Frasca abbraccia il cartello Frascone con l'intensità di un incontro che aspettava da una vita. Quanto ci ha messo a trovarlo?",
+        "foto": "frasca_cartelli.jpg",
+        "opzioni": [
+          "29 anni — tutta la sua vita fino a quel momento",
+          "3 minuti — era il primo bivio della gita",
+          "Ha usato Google Maps cercando 'Frascone' per 6 mesi"
+        ],
+        "corretta": "3 minuti — era il primo bivio della gita",
+        "spiegazione": "La fortuna dei FantaLeggendari è che i cartelli stradali toscani sono abbondanti e spesso creativi. Frasca ha trovato Frascone al primo bivio, ha fermato la macchina, è sceso, ha abbracciato il cartello e ha chiesto una foto. Il tutto senza spiegazioni. Nessuno ha chiesto."
+      },
+      {
+        "domanda": "Cosa succede se Frasca trova anche il cartello per 'Frascone 2 — il ritorno'?",
+        "foto": "frasca_cartelli.jpg",
+        "opzioni": [
+          "Lo abbraccia ancora più forte",
+          "Ci vive — non torna più",
+          "Lo porta via come souvenir e lo appende in camera"
+        ],
+        "corretta": "Ci vive — non torna più",
+        "spiegazione": "Frascone è la sua destinazione finale. Il cartello sotto — Chitarrino — è probabilmente il nome del suo nuovo vicino di casa. Manu ha già prenotato un messaggio commovente per quando Frasca si trasferisce definitivamente alla rotonda tra Lucca e Fornaci di B."
+      },
+      {
+        "domanda": "Meo in cima alla montagna sorride. Cosa nasconde quel sorriso?",
+        "foto": "meoincazzato.jpg",
+        "opzioni": [
+          "Una profonda pace interiore conquistata col trekking",
+          "La consapevolezza che la Fulminense ha preso secchiate di gol anche durante la sua assenza",
+          "Il freddo — i pantaloncini erano una scelta ottimistica"
+        ],
+        "corretta": "Il freddo — i pantaloncini erano una scelta ottimistica",
+        "spiegazione": "La felpa dell'Arezzo Ultras sopra + pantaloncini corti sotto = qualcuno non ha guardato le previsioni del tempo. Oppure le ha guardate e ha pensato 'andiamo'. La nebbia alle spalle conferma che il meteo aveva altre idee. CIMBANELLA VAFFANCULO — ma detto sottovoce per non disturbare il silenzio montano."
+      },
+      {
+        "domanda": "La donna seduta alle spalle di Meo sulla montagna cosa sta pensando?",
+        "foto": "meoincazzato.jpg",
+        "opzioni": [
+          "'Quella felpa dell'Arezzo è un'opera d'arte'",
+          "'Spero che quel tizio con i pantaloncini non mi chieda come si scende'",
+          "'Anche lei ha fatto il trekking con Pierino — lo riconosce dall'espressione'"
+        ],
+        "corretta": "'Spero che quel tizio con i pantaloncini non mi chieda come si scende'",
+        "spiegazione": "La sconosciuta in nero alle spalle di Meo è l'unica persona in foto vestita appropriatamente per la montagna. Sta meditando o guardando il paesaggio. Probabilmente entrambe le cose. E sperando che il gruppo con i pantaloncini corti non le chieda indicazioni."
+      },
+      {
+        "domanda": "In questa foto il gruppo è travestito da Looney Tunes. Chi manca all'appello rispetto alla lista ufficiale?",
+        "foto": "foto_gruppo.jpg",
+        "opzioni": [
+          "Yuri — era già a letto da mezz'ora",
+          "Canapino — si nasconde anche nei travestimenti di gruppo",
+          "Lele — stava scrivendo un messaggio commovente di 3 schermate sul significato del costume"
+        ],
+        "corretta": "Canapino — si nasconde anche nei travestimenti di gruppo",
+        "spiegazione": "La lista ufficiale conta 10 personaggi ma nella foto non si vede Canapino. Arnold Swarzecanapo si nasconde nel deserto, nelle stazioni, nelle partite di ping-pong e anche nelle foto di gruppo in costume. Un vero professionista dell'invisibilità. O forse stava facendo la foto."
+      },
+      {
+        "domanda": "Padde è vestito da Shrek. Qual è il personaggio Looney Tunes che gli si addiceva di più e che non ha potuto fare?",
+        "foto": "foto_gruppo.jpg",
+        "opzioni": [
+          "Porky Pig — 'So un povero studente non ve lo dimenticate'",
+          "Silvestro — sempre a rincorrere qualcosa senza mai prenderla",
+          "Taz il diavolo della Tasmania — per le urla al ricorso sul Fanta"
+        ],
+        "corretta": "Taz il diavolo della Tasmania — per le urla al ricorso sul Fanta",
+        "spiegazione": "Padde come Taz: gira vorticosamente, fa un casino enorme, urla 'GRIDO AL RICORSO!!!', e poi sparisce. Il 27 ottobre 2015 alle 8 di mattina era già in piena modalità Taz. Shrek è comunque un'interpretazione dignitosa per un povero studente."
+      },
+      {
+        "domanda": "Lele è vestito da Sampei. Qual è il pesce che Sampei-Lele vorrebbe pescare nella chat del FantaLeggenda?",
+        "foto": "foto_gruppo.jpg",
+        "opzioni": [
+          "La risposta di Yuri alle 22:41 prima che vada a letto",
+          "Un 'Eia!' da Gala — che non scrive buongiorno in 9 anni",
+          "Una votazione che Canapino non boicotti con un comunicato ufficiale"
+        ],
+        "corretta": "Un 'Eia!' da Gala — che non scrive buongiorno in 9 anni",
+        "spiegazione": "Sampei aspetta per ore con la canna da pesca. Lele aspetta da 9 anni che Gala scriva buongiorno. Entrambi pazientano con filosolia orientale. Entrambi non pescano niente. Ma il viaggio vale la pena."
+      },
+      {
+        "domanda": "Prisco è vestito da Calimero. Qual è la frase che Calimero-Prisco dice più spesso?",
+        "foto": "foto_gruppo.jpg",
+        "opzioni": [
+          "'È un'ingiustizia però — e si fa come dico io'",
+          "'Auguri a tutti. Musi di merda.'",
+          "'Sono a Milano. Non so un cazzo.'"
+        ],
+        "corretta": "'È un'ingiustizia però — e si fa come dico io'",
+        "spiegazione": "Calimero si lamenta sempre che è un'ingiustizia però. Prisco — alias Caliprisco, il pulcino delle favelas — ha la stessa filosofia ma con un twist: nonostante le lamentele, si fa sempre come dice lui. È l'unica ingiustizia che va sempre a suo favore."
+      },
+      {
+        "domanda": "Frasca samurai nel cortile toscano. Come è arrivato lì vestito così?",
+        "foto": "frasca.jpg",
+        "opzioni": [
+          "Ha portato il costume appositamente — era il tema della gita",
+          "Era vestito così già da casa — lo fa ogni venerdì",
+          "Ha trovato il kimono in un casolare abbandonato lungo la strada"
+        ],
+        "corretta": "Ha portato il costume appositamente — era il tema della gita",
+        "spiegazione": "Il FantaLeggenda non improvvisa. Frasca ha pianificato il costume, ha stirato il kimono, ha lucidato la katana e ha scelto il tramonto come orario dello scatto. La sedia di plastica verde sullo sfondo era già lì — quella non era pianificata. Aggiunge carattere."
+      },
+      {
+        "domanda": "Cosa succederebbe se Frasca il Samurai incontrasse Arnold Swarzecanapo nel cortile?",
+        "foto": "frasca.jpg",
+        "opzioni": [
+          "Canapino si nasconderebbe — anche dalla katana",
+          "Epica battaglia seguita da Eia🍷 collettivo",
+          "Frasca abbraccerebbe il palo del cancello scambiandolo per un cartello"
+        ],
+        "corretta": "Canapino si nasconderebbe — anche dalla katana",
+        "spiegazione": "Canapino si nasconde anche nel deserto. Si nasconde nei risultati sportivi. Si nasconde nelle votazioni del Fanta con comunicati ufficiali. Una katana luminosa non cambia le cose — anzi, Canapino usa l'oscurità come vantaggio tattico. Frasca resterebbe solo, maestoso, con la sedia verde."
+      },
+      {
+        "domanda": "Canapino dorme durante FIFA. Quanti gol ha subito la sua squadra mentre dormiva?",
+        "foto": "manu_cana_dorme.jpg",
+        "opzioni": [
+          "0 — Manu era troppo intento a fotografarlo",
+          "7 — Manu ha approfittato come un professionista",
+          "Impossibile saperlo — Canapino ha detto 'ho fatto vincere apposta anche la partita'"
+        ],
+        "corretta": "7 — Manu ha approfittato come un professionista",
+        "spiegazione": "Manu con 3.468 messaggi e 14 vaffanculo certificati non è il tipo che aspetta. Con Canapino addormentato, ha continuato a giocare, ha segnato 7 gol, ha scattato la foto come prova e ha mandato il tutto nella chat. Canapino si è svegliato dicendo che ha lasciato vincere apposta."
+      },
+      {
+        "domanda": "Manu guarda l'obiettivo con quell'espressione. Cosa sta comunicando?",
+        "foto": "manu_cana_dorme.jpg",
+        "opzioni": [
+          "'Guardate cosa ho trovato — un commando che si nasconde anche nel sonno'",
+          "'Ho trovato i funghi — sono sotto il cuscino di Canapino'",
+          "'Questo è il mio tributo alla chat. 759 media non bastano — servono prove'"
+        ],
+        "corretta": "'Guardate cosa ho trovato — un commando che si nasconde anche nel sonno'",
+        "spiegazione": "Lo sguardo di Manu dice: 'Ho documentato tutto'. Con 3.468 messaggi nella chat, Manu sa che le prove vanno raccolte e diffuse. Canapino dorme. La foto entra nella leggenda. Questo è il FantaLeggenda."
+      },
+      {
+        "domanda": "Canapino dopo l'addio al celibato di Pierino. Il referto medico dice:",
+        "foto": "canapino_stanco.jpg",
+        "opzioni": [
+          "Paziente vigile ma distante — sindrome da Cavalier Piatto acuta",
+          "Ottimo stato di salute — espressione normale per un commando post-missione",
+          "Necessita riposo — ha visto cose che non possono essere descritte in sede legale"
+        ],
+        "corretta": "Necessita riposo — ha visto cose che non possono essere descritte in sede legale",
+        "spiegazione": "Il pronto soccorso del FantaLeggenda ha categorizzato questo caso come 'Sopravvissuto all'addio al celibato di Cavalier Piatto da Spezzacavalli'. Il commando che resiste al deserto, alle partite di FIFA e alle votazioni del Fanta ha trovato il suo limite. La tracolla è già pronta per fuggire."
+      },
+      {
+        "domanda": "Gli occhi spalancati di Canapino in questa foto contengono un messaggio segreto. Quale?",
+        "foto": "canapino_stanco.jpg",
+        "opzioni": [
+          "S.O.S. — mandatemi le coordinate per uscire da qui",
+          "Ho fatto 2 conti: il divorzio costa meno di un addio al celibato di Piatto",
+          "Comunicato ufficiale A.C.Picchia: mi astengo dal commentare la serata"
+        ],
+        "corretta": "Comunicato ufficiale A.C.Picchia: mi astengo dal commentare la serata",
+        "spiegazione": "Canapino non parla. Non vota. Si astiene con comunicato ufficiale anche dalle esperienze traumatiche. Gli occhi spalancati sono l'unico comunicato che l'A.C.Picchia rilascia su questa serata. Il resto è classificato."
+      },
+      {
+        "domanda": "Pierino fa l'arrabbiato con i guantini da ciclista e la maglietta della Desaparecidos. Come si chiama questa posa?",
+        "foto": "piatto_rabbia_finta.jpg",
+        "opzioni": [
+          "Il Cavalier Piatto Inferocito — pose 1 di 47",
+          "Il Tiger Man in modalità 'ho appena perso al Fanta'",
+          "Arnold Swarzecanapo lo chiama 'dilettante'"
+        ],
+        "corretta": "Il Cavalier Piatto Inferocito — pose 1 di 47",
+        "spiegazione": "Pierino ha un repertorio certificato di 47 pose da arrabbiato finto. Questa è la numero 1 — mani ad artiglio, bocca aperta, occhiali da sole per nascondere il fatto che sta ridendo. La maglietta della Desaparecidos scritta a mano aggiunge autorevolezza. I guantini da ciclista aggiungono mistero."
+      },
+      {
+        "domanda": "Sulla maglietta della Desaparecidos FC si leggono i nomi dei giocatori. Quale grande campione è in lista?",
+        "foto": "piatto_rabbia_finta.jpg",
+        "opzioni": [
+          "Haddaonovic — leggenda assoluta del calcio mondiale",
+          "Laxalt — per cui Gigio ha pregato tre volte in un giorno",
+          "Rombo di Tuono — perché fa ridere Meo da morire"
+        ],
+        "corretta": "Haddaonovic — leggenda assoluta del calcio mondiale",
+        "spiegazione": "Sulla maglietta artigianale di Pierino si leggono nomi come Haddaonovic, Bruno P., Ruoani, Romagnoli, Fangean, Feye. Nomi scritti con pennarello su una maglietta grigia come un atto di fede calcistica. Laxalt era nella Cimbanella di Gigio, non nelle Desaparecidos. Dettaglio importante."
+      },
+      {
+        "domanda": "La gita 2025 del FantaLeggenda aveva un tema. Di che tema si trattava?",
+        "opzioni": [
+          "Anni '80 italiani",
+          "Looney Tunes / Personaggi Tunes",
+          "Supereroi Marvel"
+        ],
+        "corretta": "Looney Tunes / Personaggi Tunes",
+        "spiegazione": "Pierino ha organizzato una 'Coppa Fantadecidopersonaggio' dove ogni membro sceglieva un personaggio Looney Tunes. La lista ufficiale includeva: Manu=Yosemite Sam, Lele&Meo=Bugs&Duffy, Frasca=Taddeo, Paggio=Speedy Gonzales. Gala ha optato per il personaggio segreto — un quadrato gigante con punto interrogativo."
+      },
+      {
+        "domanda": "Manu si è travestito da quale personaggio Looney Tunes per la gita 2025?",
+        "opzioni": [
+          "Bugs Bunny",
+          "Yosemite Sam",
+          "Taz il diavolo"
+        ],
+        "corretta": "Yosemite Sam",
+        "spiegazione": "Manu è Yosemite Sam — il pistolero baffuto e irascibile dei Looney Tunes. Una scelta che rispecchia perfettamente i suoi 14 vaffanculo certificati nella chat. Frasca ha commentato con un cuoricino. Manu ha risposto 'Bravo'."
+      },
+      {
+        "domanda": "Gala per la gita 2025 ha scelto un personaggio misterioso. Come si è presentato?",
+        "opzioni": [
+          "Vestito da Daffy Duck con occhi storti",
+          "Un quadrato gigante con un punto interrogativo — personaggio segreto",
+          "Naked Canapino — camuffato nel gruppo"
+        ],
+        "corretta": "Un quadrato gigante con un punto interrogativo — personaggio segreto",
+        "spiegazione": "\"Vengo in gita vestito da un quadrato gigante con un punto interrogativo... e a una certa esco fuori\" — Gala il 26 maggio 2025. Pierino ha risposto con 10 emoji di risata. Il personaggio segreto è rimasto segreto. Gala era ed è il mentecatto del gruppo, ma nel senso buono."
+      },
+      {
+        "domanda": "Cosa ha proposto Meo alla Fulminense come soluzione alla crisi portieri nel 2025?",
+        "opzioni": [
+          "Il portiere volante — un ruolo che esiste ma non esiste",
+          "Comprare Buffon a 47 anni",
+          "Giocare senza portiere — la costruzione dal basso estrema"
+        ],
+        "corretta": "Il portiere volante — un ruolo che esiste ma non esiste",
+        "spiegazione": "\"Portiere volante, un ruolo precursore del calcio liquido moderno\" — Pierino il 28 ottobre 2025. Meo aveva chiesto un portiere in prestito ma nessuno aveva qualcosa di decente. Il portiere volante è diventato il concetto tattico più innovativo della storia del FantaLeggenda."
+      },
+      {
+        "domanda": "Nel 2025 Gigio era sull'Elba. Come ha descritto il risveglio?",
+        "opzioni": [
+          "'Mi sono svegliato tardi e ho perso il traghetto'",
+          "'Vuoi i dettagli del risveglio? Neve sulla Corsica... bellissima Elba'",
+          "'So tornato a casa in una scatola di cartone'"
+        ],
+        "corretta": "'Vuoi i dettagli del risveglio? Neve sulla Corsica... bellissima Elba'",
+        "spiegazione": "Gigio dall'Elba in aprile 2026, con neve sulla Corsica sullo sfondo. Manu aveva chiesto se almeno avesse 'le mestruazioni' — e Gigio ha risposto con i dettagli del risveglio. Il clima perfetto e la neve lontana. Il FantaLeggenda va in vacanza con stile."
+      },
+      {
+        "domanda": "Come viene chiamato il venerdì sera di calcetto del gruppo nei messaggi più recenti?",
+        "opzioni": [
+          "Venerdissimo",
+          "Il giovedissimo",
+          "La partitaccia"
+        ],
+        "corretta": "Il giovedissimo",
+        "spiegazione": "Il 'giovedissimo' è la serata di calcetto del giovedì — che per il FantaLeggenda non è mai semplicemente giovedì. Meo nel 2025 ha scritto: 'Sennò non sarebbe giovediiiiissimo'. L'ultima volta qualcuno ha fatto le 2 di notte. Pierino era già in giro coi marmocchi il giorno dopo."
+      },
+      {
+        "domanda": "Pierino nel 2026 ha sostituito il buongiorno con cosa?",
+        "opzioni": [
+          "Un Eia! 🍷",
+          "🖕🏼",
+          "Una sola emoji del topo 🐭"
+        ],
+        "corretta": "🖕🏼",
+        "spiegazione": "\"Si è il nuovo buongiorno\" — Pierino il 7 aprile 2026 dopo aver mandato 🖕🏼 a tutta la chat. Meo ha commentato: 'Ma che mandi affanculo il Paggio?!'. Paggio ha risposto: 'Dai piatti era per ridere'. Evoluzione naturale dei 13 buongiorno storici."
+      },
+      {
+        "domanda": "Meo nell'aprile 2026 è andato a Milano per cosa?",
+        "opzioni": [
+          "Per vedere l'Inter — gemellaggio con la Fulminense",
+          "Una settimana di ferie allo IEO",
+          "Per trovare un portiere in prestito per la Fulminense"
+        ],
+        "corretta": "Una settimana di ferie allo IEO",
+        "spiegazione": "\"Io dopo pranzo parto per Milano, mi faccio una settimana allegra di ferie allo IEO 😂😂\" — Meo il 7 aprile 2026. IEO è l'Istituto Europeo di Oncologia — ferie con aggiornamento medico. Gala ha risposto 'Sei a Milano Meo 😅😂'. Meo: 'Te che dici Gala 😂😂'."
+      },
+      {
+        "domanda": "Come viene soprannominato Pierino quando allena i bambini al calcio?",
+        "opzioni": [
+          "Il Santone del giuoco del calcio",
+          "Cavalier Piatto allenatore",
+          "Il passeggiatore"
+        ],
+        "corretta": "Il passeggiatore",
+        "spiegazione": "\"No il passeggiatore\" — Gigio su Pierino il 9 aprile 2026, mentre si trovava in giro con i suoi 'marmocchi'. Pierino allena bambini con teorie avanzate come 'l'esperimento di autodeterminazione nei sistemi complessi' — 1 regola offensiva, 1 difensiva, 7 bambini che decidono in autonomia."
+      },
+      {
+        "domanda": "Che esperimento tattico ha proposto Pierino ai suoi bambini al calcetto?",
+        "opzioni": [
+          "Portiere volante con costruzione dal basso estrema",
+          "Autodeterminazione nei sistemi complessi — 1 regola offensiva, 1 difensiva",
+          "Il 3421 Rizla — sistema inventato da Gala"
+        ],
+        "corretta": "Autodeterminazione nei sistemi complessi — 1 regola offensiva, 1 difensiva",
+        "spiegazione": "\"Proviamo un 'esperimento' di autodeterminazione nei sistemi complessi. 1 regola offensiva, 1 regola difensiva, 7 giocatori che decidono in autonomia\" — Pierino il 28 ottobre 2025. Meo: 'Mamma mia l'esperimento di autodeterminazione'. Probabilmente i bambini hanno fatto quello che volevano. Come sempre."
+      },
+      {
+        "domanda": "La gita del gruppo era pianificata per quale weekend del giugno 2025?",
+        "opzioni": [
+          "6/7/8 giugno",
+          "20/21/22 giugno",
+          "27/28/29 giugno"
+        ],
+        "corretta": "20/21/22 giugno",
+        "spiegazione": "\"Si va via il 20/21/22 giugno\" — Pierino il 7 gennaio 2025 dopo un complicato sondaggio di disponibilità. A Yuri ha scritto: 'Ti spacco la faccia!! ci sei il 20?!'. Yuri ha confermato. La minaccia era affettuosa. Probabilmente."
+      },
+      {
+        "domanda": "Come ha risposto Pila quando Gigio gli ha chiesto 'Pila vaffanculo' il 9 aprile 2026?",
+        "opzioni": [
+          "Ha mandato 🖕🏼 di rimando",
+          "Ha mandato ❤️ e 😘",
+          "Si è astenuto con comunicato ufficiale"
+        ],
+        "corretta": "Ha mandato ❤️ e 😘",
+        "spiegazione": "Gigio: 'Pila vaffanculo'. Pila il 10 aprile 2026: ❤️ e 😘. Questa è la risposta di un professionista. Trasformare un insulto in un momento d'amore richiede anni di esperienza nel FantaLeggenda. Gala ha specificato che lui 'fa lavorare lui e non fa un cazzo'."
+      },
+      {
+        "domanda": "Cosa ha detto Meo su Spalletti nella chat del 2025?",
+        "opzioni": [
+          "'È il più grande allenatore della storia'",
+          "'Mi dà l'idea di essere un topo — uno di quelli che se si trova al giro ci tocca offenderlo'",
+          "'È come Canapino — si nasconde anche in conferenza stampa'"
+        ],
+        "corretta": "'Mi dà l'idea di essere un topo — uno di quelli che se si trova al giro ci tocca offenderlo'",
+        "spiegazione": "\"Mi da l'idea di essere un topo proprio. Uno di quelli che se si trova al giro ci tocca offenderlo alla fine\" — Meo il 2 novembre 2025 su Spalletti. La definizione 'topo' è la più grave nel vocabolario del FantaLeggenda — lo usa Pierino solo per le situazioni più serie."
+      },
+      {
+        "domanda": "Come viene chiamato affettuosamente il campo dove si gioca il giovedissimo?",
+        "opzioni": [
+          "Il Maracanà aretino",
+          "Il campo",
+          "Il giovedissimo non si fa al campo — si fa da Gigio"
+        ],
+        "corretta": "Il giovedissimo non si fa al campo — si fa da Gigio",
+        "spiegazione": "Nel 2026 Paggio ha scritto: 'Stasera champions dal Gigio'. La Champions League si vede da Gigio — il giovedissimo è al campo. Due cose diverse, entrambe sacre. Gigio ospita le partite di Champions, il campo è per il giovedissimo. La geografia del FantaLeggenda è precisa."
+      },
+      {
+        "domanda": "Lele nel 2026 ha aggiunto una bandiera alla fine del suo nome. Di quale paese?",
+        "opzioni": [
+          "🇮🇹 Italia",
+          "🇯🇲 Giamaica",
+          "🇭🇺 Ungheria — in onore del rifiuto di Budapest"
+        ],
+        "corretta": "🇯🇲 Giamaica",
+        "spiegazione": "Nei messaggi più recenti Lele firma come 'Lele 🇯🇲'. La Giamaica — terra di Bob Marley, ritmi lenti e 'no problem'. Una scelta che rispecchia lo spirito poetico di chi scrive messaggi commoventi alle 4:55 di notte di Natale e propone pedalate spurganti. Lele è andante, non prestissimo."
+      },
+      {
+        "domanda": "Nel Fanta 2025/26 Frasca si chiama con un soprannome calcistico. Quale?",
+        "opzioni": [
+          "Frasconi",
+          "Frascoigne",
+          "Frascalcio"
+        ],
+        "corretta": "Frascoigne",
+        "spiegazione": "Pierino lo chiama 'Frascoigne' — fusione tra Frasca e Paul Gascoigne, il centrocampista inglese noto per la tecnica e per le vicende extracalcistiche. Frasca ha risposto con 😘. Probabilmente stava ancora pensando a Frascone."
+      },
+      {
+        "domanda": "Cosa ha detto Gala della sua situazione lavorativa durante la settimana dell'Elba di Gigio?",
+        "opzioni": [
+          "'Lavoro tantissimo mentre Gigio è al mare'",
+          "'Io faccio lavorare lui e non faccio un cazzo'",
+          "'Sono in smart working dalla spiaggia'"
+        ],
+        "corretta": "'Io faccio lavorare lui e non faccio un cazzo'",
+        "spiegazione": "\"Io faccio lavorare lui e non faccio un cazzo 🫡😂\" — Gala il 9 aprile 2026, con il saluto militare. Gigio ha risposto 😂😂😂. Pierino ha aggiunto 'No il passeggiatore'. L'efficienza operativa di Gala è leggendaria quanto la sua assenza di buongiorno nella chat."
+      },
+      {
+        "domanda": "Come si chiama la squadra di Frasca nel Fantacalcio 2025?",
+        "opzioni": [
+          "Frascone FC",
+          "Rizla",
+          "Taddeo United"
+        ],
+        "corretta": "Rizla",
+        "spiegazione": "Gala il 26 maggio 2025: '3421 rizla'. La formazione di Frasca/Gala usa il modulo 3421 e il nome 'Rizla' — che nel gergo del gruppo ha un significato ben preciso. La cosa più importante è che Gala ha fatto uno screenshot per non sbagliare a scrivere 'Salamandra' e 'Soletta'. Priorità."
+      },
+      {
+        "domanda": "Cosa ha risposto Paggio quando Meo gli ha detto di vestirsi da sasso per la gita Tunes?",
+        "opzioni": [
+          "Ha accettato con entusiasmo",
+          "'Posso fare MJ?' — poi ha scelto Speedy Gonzales",
+          "Ha fatto il comunicato ufficiale dell'A.C.Paggio"
+        ],
+        "corretta": "'Posso fare MJ?' — poi ha scelto Speedy Gonzales",
+        "spiegazione": "Paggio voleva fare Michael Jordan. Pierino ha specificato che MJ era già di Pinolo. Meo ha suggerito il sasso. Paggio alla fine ha scelto Speedy Gonzales — 'quel topo'. Pierino: 'Un topo ti si addice sempre. Bravo!!!' La continuità con l'emoji 🐭 è perfetta."
+      },
+      {
+        "domanda": "Chi è 'il Citto' che Meo dice di voler pescare al Fanta 2025?",
+        "opzioni": [
+          "Un misterioso giocatore del mercato",
+          "Pinolo — figlio di Baldini soprannominato così",
+          "Il portiere volante della Fulminense"
+        ],
+        "corretta": "Pinolo — figlio di Baldini soprannominato così",
+        "spiegazione": "\"Sto aspettando che mi risponda anche il Lele ma intanto il Citto lo pesco sicuro\" — Meo il 26 maggio 2025. Meo e Lele ragionavano su Pinolo jr. (figlio di Baldini) che secondo loro promette bene al calcio. Pierino ha risposto 'Bastardo. Maledetto.' — evidentemente voleva pescarlo anche lui."
       }
     ],
     "difficile": [
@@ -2008,6 +2450,86 @@
         ],
         "corretta": "Branco",
         "spiegazione": "\"Buongiorno 'branco'!\" — Pierino il 29 giugno 2015. Un saluto affettuoso che dice tutto sul tipo di amicizia del gruppo: un branco unito, leale e rumoroso."
+      },
+      {
+        "domanda": "Pierino nel 2025 ha descritto il portiere volante come 'un ruolo precursore del calcio liquido moderno'. Cosa aveva risposto Meo?",
+        "opzioni": [
+          "'Innovativo non me l'aspettavo'",
+          "'Sei il Santone del giuoco del calcio'",
+          "Entrambe — prima l'una poi l'altra"
+        ],
+        "corretta": "Entrambe — prima l'una poi l'altra",
+        "spiegazione": "Meo il 28 ottobre 2025: 'Innovativo non me l'aspettavo'. Poi: 'Grazie Santone del giuoco del calcio 😂😂😂😂'. Pierino stava parlando del suo portiere della Desaparecidos ma anche del portiere volante che usava coi bambini. Due piani tattici. Un solo Cavalier Piatto."
+      },
+      {
+        "domanda": "Il 7 aprile 2026 c'è stata una partita di Champions. Chi la guardava a casa di Gigio?",
+        "opzioni": [
+          "Tutto il gruppo — era il giovedissimo speciale",
+          "Paggio aveva proposto — non è chiaro se siano andati",
+          "Solo Meo — gli altri erano al giovedissimo al campo"
+        ],
+        "corretta": "Paggio aveva proposto — non è chiaro se siano andati",
+        "spiegazione": "\"Stasera champions dal Gigio\" — Paggio il 7 aprile 2026. Ma Meo era partito per Milano allo IEO, Pierino era in giro coi marmocchi, Gigio era sull'Elba. Non è chiaro chi fosse rimasto ad Arezzo per vedere la Champions. Probabilmente Paggio era lì da solo con Pila."
+      },
+      {
+        "domanda": "Nel mercato Fanta 2026 Gigio cercava un portiere. Cosa ha offerto in cambio a Frasca?",
+        "opzioni": [
+          "Zielinsky o Davis per De Gea",
+          "Laxalt — per sempre nel suo cuore",
+          "Il portiere volante che usa coi bambini"
+        ],
+        "corretta": "Zielinsky o Davis per De Gea",
+        "spiegazione": "\"Zielinsky o Davis per de Gea..ma anche falcone\" — Gigio il 10 aprile 2026. Manu aveva offerto Falcone 'il leggendario'. Frasca aveva De Gea e lo avrebbe ceduto in cambio di un giocatore. La Cimbanella che non vuole Carnesecchi è finalmente entrata nell'era dei portieri vagamente decenti."
+      },
+      {
+        "domanda": "Cosa ha inventato Gigio come slogan per prendere in giro Pila durante il mercato Fanta 2026?",
+        "opzioni": [
+          "'Chi non salta è un Pila 🦘🦘'",
+          "'Pila colera'",
+          "Entrambe — le ha usate entrambe nello stesso periodo"
+        ],
+        "corretta": "Entrambe — le ha usate entrambe nello stesso periodo",
+        "spiegazione": "'Chi non salta è un Pila 🦘🦘' l'11 aprile 2026 — Meo: 'Quanta verità'. Pierino: 'Ho riso...oggi non è sprecato'. 'Pila colera' il 9 aprile. Pila ha risposto al tutto con ❤️ e 😘. Gigio ha risposto 'Fan culo'. Il ciclo del FantaLeggenda è completo."
+      },
+      {
+        "domanda": "SFIDA CRONOLOGICA: La chat dura dal 27 giugno 2015 al 14 aprile 2026. Quanti anni, mesi e giorni esatti?",
+        "opzioni": [
+          "10 anni e 9 mesi circa",
+          "10 anni, 9 mesi e 18 giorni",
+          "Esattamente 3940 giorni"
+        ],
+        "corretta": "10 anni, 9 mesi e 18 giorni",
+        "spiegazione": "Dal 27 giugno 2015 al 14 aprile 2026 = 10 anni, 9 mesi e 18 giorni. In questo periodo: 191.272 righe, 662 parolacce certificate, 14.060 😂, 23 'ti voglio bene', 1 divorzio sfiorato da Yuri, innumerevoli Eia🍷 e un portiere volante. Il FantaLeggenda non si ferma."
+      },
+      {
+        "domanda": "Nel 2025 Meo ha ragionato con Lele su Pinolo jr. (il Citto). Cosa lo ha sorpreso delle sue capacità calcistiche?",
+        "opzioni": [
+          "Segna come il padre Baldini — con grande stile",
+          "Guardando alcune immagini non si spiega come Costanza abbia scelto Pinolo",
+          "Ha già il portiere volante nel suo DNA"
+        ],
+        "corretta": "Guardando alcune immagini non si spiega come Costanza abbia scelto Pinolo",
+        "spiegazione": "\"Dopo aver visto alcune immagini del Base jr. giocare non mi spiego di come la Costanza abbia scelto Pinolo\" — Meo il 28 ottobre 2025. Una riflessione profonda sulla vita, l'amore e il Fantacalcio giovanile. Pierino ha risposto 'Ahahahhahah..questa mi ha fatto ridere'. Alta cultura."
+      },
+      {
+        "domanda": "Pierino ha minacciato Yuri di 'spaccargli la faccia' per una ragione specifica nel gennaio 2025. Quale?",
+        "opzioni": [
+          "Yuri aveva votato contro Pierino in una disputa Fanta",
+          "Yuri non aveva confermato la disponibilità per la gita del 20 giugno",
+          "Yuri aveva mandato solo emoji 😢 senza spiegazioni"
+        ],
+        "corretta": "Yuri non aveva confermato la disponibilità per la gita del 20 giugno",
+        "spiegazione": "\"@Yuri ti spacco la faccia!! ci sei il 20?!..si immagino\" — Pierino il 7 gennaio 2025 durante l'organizzazione della gita. Yuri ha confermato. La minaccia era seguita da 'si immagino' — quindi Pierino era già abbastanza sicuro della risposta. Una violenza preventiva e ottimista."
+      },
+      {
+        "domanda": "Nel Fanta 2025/26 il modulo di Gala era il 3421. Come si chiama la sua squadra?",
+        "opzioni": [
+          "Rizla",
+          "Salamandra FC",
+          "Soletta United"
+        ],
+        "corretta": "Rizla",
+        "spiegazione": "\"3421 rizla\" — Gala il 26 maggio 2025 con screenshot allegato perché temeva di sbagliare i nomi dei giocatori (specialmente 'Salamandra' e 'Soletta'). Rizla è il nome della squadra. La cosa più importante è che ha fatto uno screenshot. Priorità operative di alto livello."
       }
     ]
   }
