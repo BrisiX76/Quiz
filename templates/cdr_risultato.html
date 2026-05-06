@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Risultato · Quiz CdR</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_cdr.css') }}">
+</head>
+<body class="cdr-body">
+  <div class="page-wrapper" style="padding:1rem 0.8rem 2rem;">
+
+    <div class="cdr-header" style="margin-bottom:16px;">
+      <div class="cdr-logo-wrap">
+        <img src="{{ url_for('static', filename='logo_futura.png') }}" alt="Futura">
+      </div>
+      <div class="cdr-title-wrap">
+        <span class="cdr-title">Risultato</span>
+        <span class="cdr-subtitle">{{ nome }} · {{ livello }}</span>
+      </div>
+    </div>
+
+    <div class="card cdr-card" style="padding:1.4rem;">
+
+      <div class="score-circle-cdr">
+        <span class="score-num">{{ punteggio }}</span>
+        <span class="score-tot">SU {{ totale }}</span>
+      </div>
+
+      {% if percentuale >= 80 %}
+      <p class="result-message-cdr">✅ Ottimo risultato!</p>
+      <p class="result-sub-cdr">Preparazione eccellente sulle procedure CdR/STE.</p>
+      {% elif percentuale >= 60 %}
+      <p class="result-message-cdr">📋 Buona preparazione</p>
+      <p class="result-sub-cdr">Conosci le procedure principali. Ripassare i punti critici.</p>
+      {% elif percentuale >= 40 %}
+      <p class="result-message-cdr">⚠️ Da migliorare</p>
+      <p class="result-sub-cdr">Rivedere il Regolamento SSR e l'istruzione IATST04.</p>
+      {% else %}
+      <p class="result-message-cdr">📖 Studio necessario</p>
+      <p class="result-sub-cdr">Rileggere la documentazione operativa prima di riprovare.</p>
+      {% endif %}
+
+      <div class="divider" style="border-color:#d0d8e0; margin:1rem 0;"></div>
+
+      <div class="result-grid-cdr">
+        <div class="result-stat-cdr green-stat">
+          <span class="rs-val">{{ percentuale }}%</span>
+          <span class="rs-label">Percentuale</span>
+        </div>
+        <div class="result-stat-cdr red-stat">
+          <span class="rs-val">{{ totale - punteggio }}</span>
+          <span class="rs-label">Errori</span>
+        </div>
+        <div class="result-stat-cdr blue-stat">
+          <span class="rs-val">{{ punteggio }}</span>
+          <span class="rs-label">Corrette</span>
+        </div>
+        <div class="result-stat-cdr white-stat">
+          <span class="rs-val" style="font-size:1.2rem;">{{ livello | capitalize }}</span>
+          <span class="rs-label">Livello</span>
+        </div>
+      </div>
+
+      <a href="/cdr-start-same" style="text-decoration:none;">
+        <button class="btn-cdr" style="margin-bottom:6px;">🔄 RIPROVA</button>
+      </a>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+        <a href="/cdr-classifica" style="text-decoration:none;"><button class="btn-cdr-secondary">🏆 Classifica</button></a>
+        <a href="/cdr" style="text-decoration:none;"><button class="btn-cdr-secondary">▶ Nuovo quiz</button></a>
+      </div>
+      <a href="/" style="text-decoration:none;"><button class="btn-cdr-secondary" style="margin-top:5px;">🏠 Home</button></a>
+
+    </div>
+
+    <footer class="app-footer" style="margin-top:1rem; text-align:center;">
+      Futura Impresa Sociale · Formazione Operatori CdR/STE
+    </footer>
+  </div>
+
+  <script>
+    const domande_viste = {{ domande_viste | tojson }};
+    const chiave = 'viste_cdr_{{ livello }}';
+    const viste_att = JSON.parse(localStorage.getItem(chiave) || '[]');
+    const viste_new = [...new Set([...viste_att, ...domande_viste])];
+    if (viste_new.length >= {{ max_domande }}) localStorage.removeItem(chiave);
+    else localStorage.setItem(chiave, JSON.stringify(viste_new));
+  </script>
+</body>
+</html>

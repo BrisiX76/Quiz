@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Classifica · Quiz CdR</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_cdr.css') }}">
+</head>
+<body class="cdr-body">
+  <div class="page-wrapper" style="padding:1rem 0.8rem 2rem;">
+
+    <div class="cdr-header" style="margin-bottom:16px;">
+      <div class="cdr-logo-wrap">
+        <img src="{{ url_for('static', filename='logo_futura.png') }}" alt="Futura">
+      </div>
+      <div class="cdr-title-wrap">
+        <span class="cdr-title">Classifica</span>
+        <span class="cdr-subtitle">Migliori punteggi operatori</span>
+      </div>
+      <div style="margin-left:auto;">
+        <a href="/cdr" style="text-decoration:none;">
+          <div style="padding:7px 12px; border:1px solid rgba(255,255,255,0.15); border-radius:6px; font-size:11px; font-weight:600; color:rgba(255,255,255,0.6); text-transform:uppercase;">← Quiz</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="card cdr-card" style="margin-bottom:12px; padding:1.4rem;">
+      <span class="c-label green" style="margin-bottom:14px;">🥇 Migliori punteggi</span>
+      {% if classifica %}
+        {% for r in classifica %}
+        <div class="rank-row" style="display:flex; align-items:center; gap:12px;">
+          <span style="font-family:'Oswald',sans-serif; font-size:1.1rem; font-weight:700; min-width:30px;
+            color:{% if loop.index==1 %}#1a9e3f{% elif loop.index==2 %}#888{% elif loop.index==3 %}#cd7f32{% else %}#5a6a7a{% endif %};">
+            {% if loop.index == 1 %}🥇{% elif loop.index == 2 %}🥈{% elif loop.index == 3 %}🥉{% else %}{{ loop.index }}.{% endif %}
+          </span>
+          <div style="flex:1;">
+            <div class="rank-name">{{ r.nome }}</div>
+            <div class="rank-detail">{{ r.livello }} · {{ r.partite }} partite · media {{ r.media }}%</div>
+          </div>
+          <span class="rank-score">{{ r.best }}%</span>
+        </div>
+        {% endfor %}
+      {% else %}
+        <p style="color:#5a6a7a; font-size:0.9rem;">Nessun punteggio ancora. Inizia il quiz!</p>
+      {% endif %}
+    </div>
+
+    <div class="card cdr-card" style="margin-bottom:12px; padding:1.4rem;">
+      <span class="c-label green" style="margin-bottom:14px;">⏱ Ultime sessioni</span>
+      {% if storico %}
+        {% for s in storico %}
+        {% set col = "#1a9e3f" if s.percentuale >= 80 else ("#1a3a5c" if s.percentuale >= 60 else "#c0392b") %}
+        <div class="storico-row" style="display:flex; justify-content:space-between; align-items:center;">
+          <div>
+            <span style="font-weight:600; font-size:0.95rem; color:#1a2a3a;">{{ s.nome }}</span>
+            <span style="color:#5a6a7a; margin-left:0.4rem; font-size:0.75rem;">{{ s.livello }} · {{ s.data }}</span>
+          </div>
+          <span style="color:{{ col }}; font-family:'Oswald',sans-serif; font-size:1.1rem; font-weight:700;">{{ s.punteggio }}/{{ s.totale }}</span>
+        </div>
+        {% endfor %}
+      {% else %}
+        <p style="color:#5a6a7a; font-size:0.9rem;">Nessuna sessione ancora.</p>
+      {% endif %}
+    </div>
+
+    <a href="/cdr" style="text-decoration:none;"><button class="btn-cdr">▶ INIZIA IL QUIZ</button></a>
+
+    {% if session.get('cdr_admin') %}
+    <form method="post" action="/cdr-reset-classifica" style="margin-top:6px;" onsubmit="return confirm('Cancellare tutta la classifica CdR?')">
+      <button type="submit" class="btn-cdr-secondary" style="color:#c0392b; border-color:#c0392b;">🗑 Azzera classifica</button>
+    </form>
+    {% endif %}
+
+    <footer class="app-footer" style="margin-top:1rem; text-align:center;">
+      Futura Impresa Sociale · Formazione Operatori CdR/STE
+    </footer>
+  </div>
+</body>
+</html>

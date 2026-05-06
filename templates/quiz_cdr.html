@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Quiz CdR · Domanda {{ indice }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_cdr.css') }}">
+</head>
+<body class="cdr-body">
+
+  <div class="page-wrapper" style="padding:0.8rem 0.8rem 1.2rem;">
+
+    <!-- META BAR -->
+    <div class="quiz-meta" style="margin-bottom:0.5rem; color:#5a6a7a;">
+      <span>📋 DOM <span class="q-num" style="color:#1a9e3f; font-weight:700;">{{ indice }}</span> / {{ totale }}</span>
+      <div style="display:flex; align-items:center; gap:0.8rem;">
+        <span id="timer-display" style="font-family:'Oswald',sans-serif; font-size:1.15rem; color:#0a1628; font-weight:700; min-width:2.2rem; text-align:right;">90</span>
+        <a href="/cdr" style="color:#5a6a7a; text-decoration:none; font-size:0.75rem; font-weight:600;">✕ ESCI</a>
+      </div>
+    </div>
+
+    <!-- PROGRESS -->
+    <div class="progress-bar" style="margin-bottom:0.6rem; background:#e8edf2;">
+      <div class="progress-fill" style="width:{{ (indice/totale*100)|round }}%; background:linear-gradient(90deg,#1a9e3f,#22c050);"></div>
+    </div>
+
+    <!-- TIMER BAR -->
+    {% if feedback is none %}
+    <div id="timer-wrap" style="margin-bottom:0.8rem;">
+      <div id="timer-bar" style="position:absolute; top:0; left:0; bottom:0; width:100%;
+        background:linear-gradient(90deg,#1a9e3f,#22c050);
+        border-radius:inherit; transition:width 1s linear, background 0.5s;"></div>
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:0.5rem; z-index:1;">
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:#fff; opacity:0.9;">⏱ TEMPO</span>
+        <span id="timer-display2" style="font-family:'Oswald',monospace; font-size:1.2rem; font-weight:700; color:#fff; min-width:2rem; text-align:center;">90</span>
+        <span style="font-size:0.7rem; font-weight:700; color:#fff; opacity:0.9;">SEC</span>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- CARD QUIZ -->
+    <div class="card quiz-cdr" style="padding:{% if domanda.foto %}0{% else %}1.4rem{% endif %} 1.4rem 1.4rem;">
+
+      {% if domanda.foto %}
+      <div style="margin:0; border-radius:10px 10px 0 0; overflow:hidden; border-bottom:2px solid #d0d8e0;">
+        <img src="/static/{{ domanda.foto }}" alt="Foto domanda"
+             style="width:100%; height:300px; object-fit:cover; display:block;">
+      </div>
+      <div class="cdr-domanda-strip" style="margin-top:0;">
+        <div class="cdr-domanda-label">// domanda</div>
+        <div class="cdr-domanda-text">{{ domanda.domanda }}</div>
+      </div>
+      {% elif domanda.svg %}
+      <div class="question-svg">{{ domanda.svg | safe }}</div>
+      <div class="cdr-domanda-strip">
+        <div class="cdr-domanda-label">// domanda</div>
+        <div class="cdr-domanda-text">{{ domanda.domanda }}</div>
+      </div>
+      {% else %}
+      <div class="cdr-domanda-strip">
+        <div class="cdr-domanda-label">// domanda</div>
+        <div class="cdr-domanda-text">{{ domanda.domanda }}</div>
+      </div>
+      {% endif %}
+
+      <!-- OPZIONI -->
+      {% if feedback is none %}
+      <form method="post" action="/cdr-quiz" id="quiz-form">
+        <input type="hidden" name="action" value="risposta">
+        <input type="hidden" name="scelta" id="scelta-input" value="">
+        <ul class="options-list">
+          {% for op in domanda.opzioni %}
+          <li>
+            <button type="button" class="btn-option" onclick="seleziona({{ loop.index0 }}, this)">
+              <span class="opt-letter">{{ lettere[loop.index0] }}</span>{{ op }}
+            </button>
+          </li>
+          {% endfor %}
+        </ul>
+      </form>
+
+      {% else %}
+      <ul class="options-list">
+        {% for op in domanda.opzioni %}{% set i = loop.index0 %}
+          {% if op == feedback.risposta_giusta %}
+          <li><button class="btn-option correct" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          {% elif i == feedback.scelta and not feedback.corretta %}
+          <li><button class="btn-option wrong" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          {% else %}
+          <li><button class="btn-option" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+      {% if feedback.corretta %}
+      <div class="feedback-box correct-fb">
+        <div class="fb-title">✅ Risposta corretta</div>{{ feedback.spiegazione }}
+      </div>
+      {% else %}
+      <div class="feedback-box wrong-fb">
+        <div class="fb-title">❌ Risposta errata</div>{{ feedback.spiegazione }}
+      </div>
+      {% endif %}
+
+      <form method="post" action="/cdr-quiz">
+        <input type="hidden" name="action" value="avanti">
+        <button type="submit" class="btn-next" style="margin-top:0.8rem;">
+          {% if indice == totale %}🏁 VEDI RISULTATO{% else %}PROSSIMA DOMANDA →{% endif %}
+        </button>
+      </form>
+      {% endif %}
+
+    </div>
+
+    <footer class="app-footer" style="margin-top:0.7rem; text-align:center;">
+      // Futura Impresa Sociale · Formazione Operatori CdR/STE
+    </footer>
+  </div>
+
+  <script>
+    const TEMPO = 90;
+    let secondi = TEMPO, bloccato = false;
+    const d1 = document.getElementById('timer-display');
+    const d2 = document.getElementById('timer-display2');
+    const barra = document.getElementById('timer-bar');
+    const form = document.getElementById('quiz-form');
+    const inputS = document.getElementById('scelta-input');
+
+    {% if feedback is none %}
+    function aggiornaTick() {
+      if (d1) d1.textContent = secondi;
+      if (d2) d2.textContent = secondi;
+      const pct = secondi / TEMPO * 100;
+      if (barra) {
+        barra.style.width = pct + '%';
+        barra.style.background = secondi > 30
+          ? 'linear-gradient(90deg,#1a9e3f,#22c050)'
+          : secondi > 10
+            ? 'linear-gradient(90deg,#e67e22,#f39c12)'
+            : 'linear-gradient(90deg,#c0392b,#e74c3c)';
+        if (secondi <= 10 && d1) d1.style.color = '#c0392b';
+      }
+    }
+
+    function seleziona(idx, btn) {
+      if (bloccato) return;
+      bloccato = true; clearInterval(tick);
+      inputS.value = idx;
+      document.querySelectorAll('.btn-option').forEach(b => b.disabled = true);
+      btn.style.borderColor = '#1a9e3f';
+      setTimeout(() => form.submit(), 300);
+    }
+
+    function tempoScaduto() {
+      if (bloccato) return;
+      bloccato = true;
+      inputS.value = -1;
+      if (barra) barra.style.width = '0%';
+      if (d1) { d1.textContent = '0'; d1.style.color = '#c0392b'; }
+      if (d2) d2.textContent = '0';
+      document.querySelectorAll('.btn-option').forEach(b => b.disabled = true);
+      setTimeout(() => form.submit(), 500);
+    }
+
+    const tick = setInterval(() => {
+      secondi--;
+      aggiornaTick();
+      if (secondi <= 0) { clearInterval(tick); tempoScaduto(); }
+    }, 1000);
+    aggiornaTick();
+    {% endif %}
+  </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Quiz CdR/STE · Futura</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_cdr.css') }}">
+</head>
+<body class="cdr-body">
+  <div class="page-wrapper" style="padding:1rem 0.8rem 2rem;">
+
+    <!-- HEADER -->
+    <div class="cdr-header">
+      <div class="cdr-logo-wrap">
+        <img src="{{ url_for('static', filename='logo_futura.png') }}" alt="Futura">
+      </div>
+      <div class="cdr-title-wrap">
+        <span class="cdr-title">Come si gestisce un CdR</span>
+        <span class="cdr-subtitle">Quiz di formazione operatori · Benvenuto, {{ username }}</span>
+      </div>
+      <div style="margin-left:auto; display:flex; gap:7px;">
+        <a href="/cdr-classifica" style="text-decoration:none;">
+          <div style="padding:7px 12px; border:1px solid rgba(255,255,255,0.2); border-radius:6px; font-size:11px; font-weight:600; color:rgba(255,255,255,0.8); text-transform:uppercase; letter-spacing:1px;">🏆 Classifica</div>
+        </a>
+        <a href="/cdr-logout" style="text-decoration:none;">
+          <div style="padding:7px 12px; border:1px solid rgba(255,255,255,0.15); border-radius:6px; font-size:11px; font-weight:600; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:1px;">Esci</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD -->
+    <div class="card cdr-card" style="padding:1.4rem;">
+      <form action="/cdr-start" method="post">
+        <input type="hidden" name="viste" id="viste-input" value="">
+        <input type="hidden" name="livello" id="livello-hidden" value="medio">
+        <input type="hidden" name="n_domande" id="ndq-hidden" value="10">
+
+        <!-- Difficoltà -->
+        <div style="margin-bottom:16px;">
+          <span class="c-label green">Livello di difficoltà</span>
+          <div class="cdr-diff-toggle">
+            <button type="button" class="cdr-diff-btn active-medio" id="btn-medio" onclick="setDiff('medio')">📗 Medio</button>
+            <button type="button" class="cdr-diff-btn" id="btn-difficile" onclick="setDiff('difficile')">📕 Difficile</button>
+          </div>
+        </div>
+
+        <!-- N. domande -->
+        <div style="margin-bottom:18px;">
+          <span class="c-label green">Numero di domande</span>
+          <div class="cdr-ndq-toggle">
+            <button type="button" class="cdr-ndq-btn" onclick="setNdq(5,this)">5</button>
+            <button type="button" class="cdr-ndq-btn active" onclick="setNdq(10,this)">10</button>
+            <button type="button" class="cdr-ndq-btn" onclick="setNdq(12,this)">12</button>
+          </div>
+        </div>
+
+        <!-- Mini stats -->
+        <div class="cdr-mini-stats" style="margin-bottom:18px;">
+          <div class="cdr-mini-stat"><span class="cdr-mini-stat-num">24</span><span class="cdr-mini-stat-label">Domande totali</span></div>
+          <div class="cdr-mini-stat"><span class="cdr-mini-stat-num">2</span><span class="cdr-mini-stat-label">Livelli</span></div>
+          <div class="cdr-mini-stat"><span class="cdr-mini-stat-num">90s</span><span class="cdr-mini-stat-label">Timer per domanda</span></div>
+        </div>
+
+        <button type="submit" class="btn-cdr">▶ INIZIA IL QUIZ</button>
+      </form>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:6px;">
+        <a href="/cdr-classifica" style="text-decoration:none;"><button class="btn-cdr-secondary">🏆 Classifica</button></a>
+        <a href="/" style="text-decoration:none;"><button class="btn-cdr-secondary">🏠 Home</button></a>
+      </div>
+    </div>
+
+    <footer class="app-footer" style="margin-top:1rem; text-align:center;">
+      Futura Impresa Sociale · Formazione Operatori CdR/STE
+    </footer>
+  </div>
+
+  <script>
+    function setDiff(val) {
+      document.getElementById('livello-hidden').value = val;
+      document.getElementById('btn-medio').className = 'cdr-diff-btn' + (val==='medio' ? ' active-medio' : '');
+      document.getElementById('btn-difficile').className = 'cdr-diff-btn' + (val==='difficile' ? ' active-difficile' : '');
+      aggiornaViste();
+    }
+    function setNdq(val, btn) {
+      document.getElementById('ndq-hidden').value = val;
+      document.querySelectorAll('.cdr-ndq-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    function aggiornaViste() {
+      const liv = document.getElementById('livello-hidden').value;
+      const viste = JSON.parse(localStorage.getItem('viste_cdr_' + liv) || '[]');
+      document.getElementById('viste-input').value = viste.join('||');
+    }
+    aggiornaViste();
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Accesso · Quiz CdR/STE</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style_cdr.css') }}">
+</head>
+<body class="cdr-body">
+  <div class="cdr-login-wrap">
+    <div class="cdr-login-card">
+
+      <div class="cdr-login-logo">
+        <img src="{{ url_for('static', filename='logo_futura.png') }}" alt="Futura Impresa Sociale">
+      </div>
+
+      <div class="cdr-login-title">Quiz CdR/STE</div>
+      <div class="cdr-login-sub">Accesso riservato agli operatori</div>
+
+      {% if errore %}
+      <div class="cdr-error">⚠️ {{ errore }}</div>
+      {% endif %}
+
+      <form method="post" action="/cdr-login">
+        <div style="margin-bottom:14px;">
+          <span class="c-label green">Nome utente</span>
+          <input type="text" name="username" placeholder="Inserisci il tuo nome utente" autocomplete="off" required>
+        </div>
+        <div style="margin-bottom:22px;">
+          <span class="c-label green">Password</span>
+          <input type="password" name="password" placeholder="Inserisci la password" required>
+        </div>
+        <button type="submit" class="btn-cdr">ACCEDI</button>
+      </form>
+
+      <div style="text-align:center; margin-top:1.2rem;">
+        <a href="/" style="color:#5a6a7a; text-decoration:none; font-size:0.8rem; font-weight:500;">← Torna alla home</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -14,7 +14,7 @@
     <!-- HEADER -->
     <div class="gruppo-header">
       <div class="gruppo-logo-wrap">
-        <img src="{{ url_for('static', filename='dondroloni.jpg') }}" alt="Drondroloni">
+        <img src="{{ url_for('static', filename='dondroloni.png') }}" alt="Drondroloni">
       </div>
       <div>
         <div class="graffiti-title">
@@ -42,13 +42,13 @@
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
           <!-- Nome -->
           <div>
-            <span class="g-label amber">🦍 // il tuo nome</span>
+            <span class="g-label amber" style="font-size:11px; letter-spacing:2px;">🦍 // il tuo nome</span>
             <input type="text" name="nome" placeholder="Come ti chiami?" maxlength="20" autocomplete="off"
               style="width:100%; background:rgba(0,0,0,0.5); border:1px solid rgba(139,26,42,0.3); border-left:3px solid var(--gi); border-radius:10px; color:var(--cr); font-family:'Barlow',sans-serif; font-size:0.95rem; padding:0.75rem 1rem; outline:none;">
           </div>
           <!-- 15 ANNI -->
           <div>
-            <span class="g-label">⏱ // insieme da</span>
+            <span class="g-label" style="font-size:11px; letter-spacing:2px;">⏱ // insieme da</span>
             <div class="anni-box">
               <div class="anni-num">15</div>
               <div class="anni-label">anni<br>di<br>chat 🦍</div>
@@ -58,7 +58,7 @@
 
         <!-- Difficoltà -->
         <div style="margin-bottom:10px;">
-          <span class="g-label red">🔥 // difficoltà</span>
+          <span class="g-label red" style="font-size:11px; letter-spacing:2px;">🔥 // difficoltà</span>
           <div class="diff-toggle">
             <button type="button" class="diff-btn active-medio" id="btn-medio" onclick="setDiff('medio')">📗 MEDIO</button>
             <button type="button" class="diff-btn" id="btn-difficile" onclick="setDiff('difficile')">📕 DIFFICILE</button>
@@ -67,7 +67,7 @@
 
         <!-- N. domande -->
         <div style="margin-bottom:12px;">
-          <span class="g-label cyan">🎯 // numero domande</span>
+          <span class="g-label cyan" style="font-size:11px; letter-spacing:2px;">🎯 // numero domande</span>
           <div class="ndq-toggle">
             <button type="button" class="ndq-btn" onclick="setNdq(5,this)">5</button>
             <button type="button" class="ndq-btn active" onclick="setNdq(10,this)">10</button>
@@ -92,9 +92,9 @@
       </div>
 
       <div style="margin-top:12px; display:flex; gap:16px; justify-content:center;">
-        <div class="graffiti-tag" style="color:rgba(240,192,16,0.22); transform:rotate(-2deg);">Eia! 🍷</div>
-        <div class="graffiti-tag" style="color:rgba(192,40,60,0.18); transform:rotate(1deg);">Io sono leggenda!!!</div>
-        <div class="graffiti-tag" style="color:rgba(240,192,16,0.14); transform:rotate(-1deg);">Cimbanella vaffanculo</div>
+        <div class="graffiti-tag" style="color:rgba(240,192,16,0.45); transform:rotate(-2deg); font-size:13px;">Eia! 🍷</div>
+        <div class="graffiti-tag" style="color:rgba(192,40,60,0.40); transform:rotate(1deg); font-size:13px;">Io sono leggenda!!!</div>
+        <div class="graffiti-tag" style="color:rgba(240,192,16,0.35); transform:rotate(-1deg); font-size:13px;">Cimbanella vaffanculo</div>
       </div>
     </div>
 
