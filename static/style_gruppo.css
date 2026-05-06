@@ -62,46 +62,46 @@
 
 /* ── HEADER ── */
 .gruppo-header {
-  display: flex; align-items: center; gap: 12px;
+  display: flex; align-items: center; gap: 52px;
   padding: 12px 0 10px;
   border-bottom: 1px solid rgba(139,26,42,0.4);
   margin-bottom: 12px;
+  position: relative;
   background: rgba(0,0,0,0.55);
-  padding-left: 4px; padding-right: 4px;
+  padding-left: 10px; padding-right: 34px;
   border-radius: 10px 10px 0 0;
 }
 
-/* Logo piccolo e discreto */
+/* Logo più grande e senza cerchio */
 .gruppo-logo-wrap {
-  position: relative;
-  width: 42px; height: 42px;
-  min-width: 42px;          /* ← evita che flex lo schiacci o espanda */
+  position: absolute;
+  width: 180px; height: 180px;
+  border-radius: 10px;
+  overflow: hidden;
   flex-shrink: 0;
-  overflow: hidden;          /* ← blocca qualsiasi overflow dell'immagine */
-  border-radius: 50%;
+  z-index: 10;
 }
 
 .gruppo-logo-wrap::before {
-  content: '';
-  position: absolute; inset: -2px;
-  border-radius: 50%;
-  border: 2px solid var(--gi);
-  box-shadow: 0 0 10px rgba(240,192,16,0.25);
-  z-index: 1;
+  display: none;
 }
 
 .gruppo-logo-wrap img {
-  position: absolute; inset: 3px;
-  border-radius: 50%;
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  top: -5px;    /* distanza dal bordo superiore */
+  left: -25px;   /* distanza dal bordo sinistro */
+  border-radius: 0px;
   object-fit: cover; z-index: 2;
 }
 
 /* GRAFFITI — giallo con ombra amaranto */
-.graffiti-title { position: relative; line-height: 1; }
+.graffiti-title { position: relative; line-height: 1;
+margin-left: 140px; }
 
 .graffiti-title-inner {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 34px; font-style: italic;
+  font-size: 38px; font-style: italic;
   text-transform: uppercase; letter-spacing: 2px;
   color: var(--gi);
   -webkit-text-stroke: 1.5px var(--am);
@@ -112,8 +112,8 @@
 
 .graffiti-sub {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; letter-spacing: 4px;
-  color: var(--mu); text-transform: uppercase;
+  font-size: 12px; letter-spacing: 3px;
+  color: #8a6a70; text-transform: uppercase;
   margin-top: 2px; display: block;
 }
 
@@ -134,13 +134,13 @@
 /* ── LABEL ── */
 .g-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 9px; letter-spacing: 3px;
-  text-transform: uppercase; color: var(--mu);
+  font-size: 12px; letter-spacing: 2px;
+  text-transform: uppercase; color: #8a6a70;
   margin-bottom: 5px; display: block;
 }
-.g-label.amber { color: var(--gi); opacity: 0.85; }
-.g-label.red   { color: var(--am3); opacity: 0.85; }
-.g-label.cyan  { color: var(--gi2); opacity: 0.75; }
+.g-label.amber { color: var(--gi); opacity: 1; }
+.g-label.red   { color: var(--am3); opacity: 1; }
+.g-label.cyan  { color: var(--gi2); opacity: 1; }
 
 /* ── FORM ── */
 .gruppo-card label,
@@ -176,9 +176,9 @@
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 10px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 11px; font-weight: 700;
+  font-size: 13px; font-weight: 700;
   letter-spacing: 2px; text-transform: uppercase;
-  color: var(--mu2); cursor: pointer; text-align: center;
+  color: #7a5a60; cursor: pointer; text-align: center;
   transition: all 0.15s;
 }
 .diff-btn.active-medio    { background: rgba(240,192,16,0.10); border: 2px solid var(--gi); color: var(--gi); }
@@ -193,7 +193,7 @@
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 10px;
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 16px; color: var(--mu2);
+  font-size: 18px; color: #7a5a60;
   cursor: pointer; text-align: center; transition: all 0.15s;
 }
 .ndq-btn.active { background: rgba(139,26,42,0.15); border: 2px solid var(--am2); color: var(--am3); }
@@ -216,8 +216,8 @@
 }
 .anni-label {
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 12px; font-weight: 700;
-  letter-spacing: 3px; color: var(--mu);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 2px; color: #8a6a70;
   text-transform: uppercase; line-height: 1.6;
 }
 
@@ -228,8 +228,8 @@
   border-radius: 10px; text-align: center;
   background: rgba(0,0,0,0.25);
 }
-.mini-stat-num   { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--mu); display: block; }
-.mini-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 7px; color: var(--mu2); text-transform: uppercase; letter-spacing: 1px; }
+.mini-stat-num   { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--cr); display: block; }
+.mini-stat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 10px; color: #8a6a70; text-transform: uppercase; letter-spacing: 1px; }
 
 /* ── BOTTONI ── */
 .btn-gruppo {
