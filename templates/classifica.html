@@ -2,42 +2,39 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Classifica · FantaLeggenda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Classifica · Drondroloni</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
 </head>
-<body class="gruppo-body classifica-body">
+<body class="gruppo-body">
+  <div class="muro-texture"></div>
+  <div class="page-wrapper" style="position:relative; z-index:1; padding:1rem 0.8rem 2rem;">
 
-  <div class="campo-bg">
-    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <line x1="0" y1="450" x2="1440" y2="450" stroke="#1a5c2a" stroke-width="60" opacity="0.4"/>
-      <circle cx="720" cy="450" r="160" fill="none" stroke="#1e6b30" stroke-width="2" opacity="0.3"/>
-      <line x1="0" y1="450" x2="1440" y2="450" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
-      <rect x="0" y="270" width="200" height="360" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.2"/>
-      <rect x="1240" y="270" width="200" height="360" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.2"/>
-    </svg>
-  </div>
+    <div class="gruppo-header" style="margin-bottom:12px;">
+      <div class="gruppo-logo-wrap">
+        <img src="{{ url_for('static', filename='dondroloni.jpg') }}" alt="Drondroloni">
+      </div>
+      <div>
+        <div class="graffiti-title">
+          <span class="graffiti-title-inner">CLASSIFICA</span>
+          <span class="graffiti-sub">// chi è il più leggendario?</span>
+        </div>
+      </div>
+      <div style="margin-left:auto;">
+        <a href="/gruppo" style="text-decoration:none;">
+          <div style="padding:6px 10px; border:1px solid rgba(255,255,255,0.06); border-radius:8px; font-family:'Barlow Condensed',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#2a1a1e; text-transform:uppercase;">← QUIZ</div>
+        </a>
+      </div>
+    </div>
 
-  <div class="page-wrapper">
-    <header class="app-header">
-      <div class="badge gruppo-badge">🏆 Classifica</div>
-      <h1>Chi è il più <span class="verde">leggendario?</span></h1>
-    </header>
-
-    <!-- Classifica migliori score -->
-    <div class="card gruppo-card" style="margin-bottom:1.2rem;">
-      <p style="font-size:0.78rem; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; color:var(--g-muted); margin-bottom:1rem;">🥇 Migliori punteggi</p>
-
+    <div class="card gruppo-card" style="margin-bottom:10px;">
+      <span class="g-label amber" style="margin-bottom:10px; display:block;">🥇 // migliori punteggi</span>
       {% if classifica %}
         {% for r in classifica %}
         <div class="rank-row">
-          <span class="rank-pos">
-            {% if loop.index == 1 %}🥇
-            {% elif loop.index == 2 %}🥈
-            {% elif loop.index == 3 %}🥉
-            {% else %}{{ loop.index }}
-            {% endif %}
+          <span class="rank-pos" style="font-family:'Bebas Neue',sans-serif; font-style:italic; color:{% if loop.index==1 %}var(--gi){% elif loop.index==2 %}#aaa{% elif loop.index==3 %}#cd7f32{% else %}var(--mu){% endif %};">
+            {% if loop.index == 1 %}🥇{% elif loop.index == 2 %}🥈{% elif loop.index == 3 %}🥉{% else %}{{ loop.index }}.{% endif %}
           </span>
           <div style="flex:1;">
             <div class="rank-name">{{ r.nome }}</div>
@@ -47,43 +44,34 @@
         </div>
         {% endfor %}
       {% else %}
-        <p style="color:var(--g-muted); font-size:0.9rem;">Nessun punteggio ancora. Siate i primi!</p>
+        <p style="color:var(--mu); font-size:0.9rem; font-style:italic;">Nessun punteggio ancora. Siate i primi! 🦍</p>
       {% endif %}
     </div>
 
-    <!-- Storico ultime partite -->
-    <div class="card gruppo-card" style="margin-bottom:1.2rem;">
-      <p style="font-size:0.78rem; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; color:var(--g-muted); margin-bottom:1rem;">⏱ Ultime partite</p>
-
+    <div class="card gruppo-card" style="margin-bottom:10px;">
+      <span class="g-label cyan" style="margin-bottom:10px; display:block;">⏱ // ultime partite</span>
       {% if storico %}
         {% for s in storico %}
-        {% set colore = "#56d364" if s.percentuale >= 80 else ("#e3b341" if s.percentuale >= 60 else "#f85149") %}
+        {% set col = "var(--gi)" if s.percentuale >= 80 else ("var(--am3)" if s.percentuale >= 60 else "var(--am2)") %}
         <div class="storico-row">
           <div>
-            <span style="font-weight:600;">{{ s.nome }}</span>
-            <span style="color:var(--g-muted); margin-left:0.4rem; font-size:0.78rem;">{{ s.livello }} · {{ s.data }}</span>
+            <span style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.95rem; color:var(--cr);">{{ s.nome }}</span>
+            <span style="color:var(--mu); margin-left:0.4rem; font-size:0.75rem;">{{ s.livello }} · {{ s.data }}</span>
           </div>
-          <span style="color:{{ colore }}; font-weight:600;">{{ s.punteggio }}/{{ s.totale }}</span>
+          <span style="color:{{ col }}; font-family:'Bebas Neue',sans-serif; font-size:1.1rem; font-style:italic;">{{ s.punteggio }}/{{ s.totale }}</span>
         </div>
         {% endfor %}
       {% else %}
-        <p style="color:var(--g-muted); font-size:0.9rem;">Nessuna partita ancora.</p>
+        <p style="color:var(--mu); font-size:0.9rem; font-style:italic;">Nessuna partita ancora.</p>
       {% endif %}
     </div>
 
-    <a href="/gruppo" style="text-decoration:none;">
-      <button class="btn-gruppo">Gioca ora ⚽</button>
-    </a>
-
-    <form method="post" action="/reset-classifica" style="margin-top:0.7rem;" onsubmit="return confirm('Sei sicuro di voler cancellare tutta la classifica?')">
+    <a href="/gruppo" style="text-decoration:none;"><button class="btn-gruppo">🎮 GIOCA ORA</button></a>
+    <form method="post" action="/reset-classifica" style="margin-top:6px;" onsubmit="return confirm('Cancellare tutta la classifica?')">
       <button type="submit" class="btn-gruppo-secondary">🗑 Azzera classifica</button>
     </form>
 
-    <div style="text-align:center; margin-top:1.5rem;">
-      <a href="/" style="color:var(--g-muted); text-decoration:none; font-size:0.82rem;">← Home</a>
-    </div>
-
-    <footer class="app-footer" style="color:var(--g-muted);">FantaLeggenda · dal 2015 con furore</footer>
+    <footer class="app-footer" style="margin-top:1rem;">// Drondroloni · 🦍 · dal 2010 con furore</footer>
   </div>
 </body>
 </html>

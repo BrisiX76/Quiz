@@ -2,59 +2,127 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <title>Quiz · Domanda {{ indice }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
+  {% if modalita == 'gruppo' %}
+  <style>
+    /* Striscia domanda separata e riconoscibile */
+    .domanda-strip {
+      padding: 10px 1.4rem 8px;
+      background: rgba(0,0,0,0.82);
+      border-top: 2px solid rgba(192,40,60,0.55);
+      border-bottom: 1px solid rgba(139,26,42,0.2);
+      margin: 0 -1.4rem 1rem;
+    }
+    .domanda-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 8px; letter-spacing: 3px;
+      color: var(--gi); text-transform: uppercase;
+      opacity: 0.8; margin-bottom: 3px;
+    }
+    .domanda-text-inner {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.2rem; font-weight: 700;
+      font-style: italic; color: var(--cr);
+      line-height: 1.38;
+    }
+  </style>
+  {% endif %}
 </head>
 <body{% if modalita == 'gruppo' %} class="gruppo-body"{% endif %}>
+  {% if modalita == 'gruppo' %}<div class="muro-texture"></div>{% endif %}
 
   {% if modalita == 'gruppo' %}
-  <!-- Reazione overlay -->
-  <div class="reazione-overlay" id="reazione-overlay">
-    <span class="reazione-emoji" id="reazione-emoji"></span>
-  </div>
-
-  <!-- Classifica live -->
+  <div class="reazione-overlay" id="reazione-overlay"><span class="reazione-emoji" id="reazione-emoji"></span></div>
   <div class="live-rank" id="live-rank">
-    <div class="live-rank-title">🏆 Live</div>
-    <div id="live-rank-rows">carico...</div>
+    <div class="live-rank-title">🏆 // LIVE</div>
+    <div id="live-rank-rows">...</div>
   </div>
   {% endif %}
 
-  <div class="page-wrapper">
+  <div class="page-wrapper" style="position:relative; z-index:1; padding:0.8rem 0.8rem 1.2rem;">
 
-    <div class="quiz-meta">
-      <span>Domanda <span class="q-num">{{ indice }}</span> di {{ totale }}</span>
+    <!-- META BAR -->
+    <div class="quiz-meta" style="margin-bottom:0.5rem;">
+      <span>
+        {% if modalita == 'gruppo' %}🦍{% else %}🔬{% endif %}
+        DOM <span class="q-num">{{ indice }}</span> / {{ totale }}
+      </span>
       <div style="display:flex; align-items:center; gap:0.8rem;">
-        <span id="timer-display" style="font-family:'Playfair Display',serif; font-size:1.1rem; color:{% if modalita == 'gruppo' %}var(--g-green2){% else %}var(--accent){% endif %}; font-weight:600; min-width:2rem; text-align:right;">90</span>
-        <a href="{% if modalita == 'gruppo' %}/gruppo{% else %}/{% endif %}" style="color:var(--muted); text-decoration:none; font-size:0.82rem;">← Esci</a>
+        <span id="timer-display" style="
+          font-family:{% if modalita == 'gruppo' %}'Bebas Neue'{% else %}'Share Tech Mono'{% endif %},monospace;
+          font-size:1.15rem;
+          color:{% if modalita == 'gruppo' %}var(--gi){% else %}var(--accent2){% endif %};
+          font-weight:700; min-width:2.2rem; text-align:right;">90</span>
+        <a href="{% if modalita == 'gruppo' %}/gruppo{% else %}/medicina{% endif %}"
+           style="color:var(--muted); text-decoration:none; font-size:0.75rem;
+           {% if modalita == 'gruppo' %}font-family:'Barlow Condensed',sans-serif; letter-spacing:1px;{% else %}font-family:'Share Tech Mono',monospace;{% endif %}">
+          ✕ ESCI
+        </a>
       </div>
     </div>
 
-    <div class="progress-bar">
-      <div class="progress-fill" style="width: {{ (indice / totale * 100) | round }}%"></div>
+    <!-- PROGRESS -->
+    <div class="progress-bar" style="margin-bottom:0.6rem;">
+      <div class="progress-fill" style="width:{{ (indice/totale*100)|round }}%"></div>
     </div>
 
+    <!-- TIMER BAR -->
     {% if feedback is none %}
-    <div id="timer-wrap" style="position:relative; height:44px; background:var(--surface2); border:1px solid var(--border2); border-radius:var(--radius); overflow:hidden; margin-bottom:1.4rem;">
-      <div id="timer-bar" style="position:absolute; top:0; left:0; bottom:0; width:100%; background:linear-gradient(90deg,{% if modalita == 'gruppo' %}#2ea043,#56d364{% else %}#c8a96e,#e8c98e{% endif %}); border-radius:var(--radius); transition:width 1s linear, background 0.5s;"></div>
+    <div id="timer-wrap" style="margin-bottom:0.8rem;">
+      <div id="timer-bar" style="position:absolute; top:0; left:0; bottom:0; width:100%;
+        background:linear-gradient(90deg,{% if modalita == 'gruppo' %}var(--am),var(--am2){% else %}var(--accent),var(--accent2){% endif %});
+        border-radius:inherit; transition:width 1s linear, background 0.5s;"></div>
       <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; gap:0.5rem; z-index:1;">
-        <span style="font-size:0.75rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:#0a0f1e; opacity:0.7;">Tempo</span>
-        <span id="timer-display2" style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700; color:#0a0f1e; min-width:2rem; text-align:center;">90</span>
-        <span style="font-size:0.75rem; font-weight:600; color:#0a0f1e; opacity:0.7;">sec</span>
+        <span style="font-size:0.7rem; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+          color:{% if modalita == 'gruppo' %}var(--gi){% else %}#0a0a0f{% endif %}; opacity:0.75;
+          {% if modalita == 'gruppo' %}font-family:'Barlow Condensed',sans-serif;{% else %}font-family:'Share Tech Mono',monospace;{% endif %}">⏱ TEMPO</span>
+        <span id="timer-display2" style="
+          font-family:{% if modalita == 'gruppo' %}'Bebas Neue'{% else %}'Share Tech Mono'{% endif %},monospace;
+          font-size:1.2rem; font-weight:700;
+          color:{% if modalita == 'gruppo' %}var(--gi){% else %}#0a0a0f{% endif %};
+          min-width:2rem; text-align:center;">90</span>
+        <span style="font-size:0.7rem; font-weight:700;
+          color:{% if modalita == 'gruppo' %}var(--gi){% else %}#0a0a0f{% endif %}; opacity:0.75;">SEC</span>
       </div>
     </div>
     {% endif %}
 
-    <div class="card{% if modalita == 'gruppo' %} gruppo-card quiz-gruppo{% endif %}">
+    <!-- CARD QUIZ -->
+    <div class="card{% if modalita == 'gruppo' %} gruppo-card quiz-gruppo{% endif %}"
+         style="padding:{% if domanda.foto %}0{% else %}1.4rem{% endif %} 1.4rem 1.4rem;">
 
-      <p class="question-text">{{ domanda.domanda }}</p>
+      <!-- FOTO — bordo a bordo, grande -->
+      {% if domanda.foto %}
+      <div style="margin:-0px -0px 0; border-radius:12px 12px 0 0; overflow:hidden; border-bottom:2px solid rgba(192,40,60,0.4);">
+        <img src="/static/{{ domanda.foto }}" alt="Foto domanda"
+             style="width:100%; height:340px; object-fit:cover; object-position:center 20%; display:block;">
+      </div>
 
-      {% if domanda.svg %}
+      <!-- DOMANDA — striscia separata subito dopo la foto -->
+      <div class="domanda-strip" style="margin-top:0;">
+        <div class="domanda-label">// domanda</div>
+        <div class="domanda-text-inner">{{ domanda.domanda }}</div>
+      </div>
+
+      {% elif domanda.svg %}
       <div class="question-svg">{{ domanda.svg | safe }}</div>
+      <p class="question-text">{{ domanda.domanda }}</p>
+      {% else %}
+      <!-- Domanda senza foto — striscia leggera per distinguerla -->
+      {% if modalita == 'gruppo' %}
+      <div class="domanda-strip">
+        <div class="domanda-label">// domanda</div>
+        <div class="domanda-text-inner">{{ domanda.domanda }}</div>
+      </div>
+      {% else %}
+      <p class="question-text">{{ domanda.domanda }}</p>
+      {% endif %}
       {% endif %}
 
+      <!-- OPZIONI -->
       {% if feedback is none %}
       <form method="post" action="/quiz" id="quiz-form">
         <input type="hidden" name="action" value="risposta">
@@ -63,8 +131,7 @@
           {% for op in domanda.opzioni %}
           <li>
             <button type="button" class="btn-option" onclick="seleziona({{ loop.index0 }}, this)">
-              <span class="opt-letter">{{ lettere[loop.index0] }}</span>
-              {{ op }}
+              <span class="opt-letter">{{ lettere[loop.index0] }}</span>{{ op }}
             </button>
           </li>
           {% endfor %}
@@ -73,223 +140,198 @@
 
       {% else %}
       <ul class="options-list">
-        {% for op in domanda.opzioni %}
-          {% set i = loop.index0 %}
+        {% for op in domanda.opzioni %}{% set i = loop.index0 %}
           {% if op == feedback.risposta_giusta %}
-            <li><button class="btn-option correct" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          <li><button class="btn-option correct" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
           {% elif i == feedback.scelta and not feedback.corretta %}
-            <li><button class="btn-option wrong" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          <li><button class="btn-option wrong" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
           {% else %}
-            <li><button class="btn-option" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
+          <li><button class="btn-option" disabled><span class="opt-letter">{{ lettere[i] }}</span>{{ op }}</button></li>
           {% endif %}
         {% endfor %}
       </ul>
 
       {% if feedback.corretta %}
       <div class="feedback-box correct-fb">
-        <div class="fb-title">✓ Risposta corretta!</div>
-        {{ feedback.spiegazione }}
+        <div class="fb-title">✅ Risposta corretta!</div>{{ feedback.spiegazione }}
       </div>
-      {% if modalita == 'gruppo' %}
-      <div class="complimento-box" id="msg-reazione"></div>
-      {% endif %}
+      {% if modalita == 'gruppo' %}<div class="complimento-box" id="msg-reazione"></div>{% endif %}
       {% else %}
       <div class="feedback-box wrong-fb">
-        <div class="fb-title">✗ Risposta errata</div>
-        {{ feedback.spiegazione }}
+        <div class="fb-title">❌ Risposta errata</div>{{ feedback.spiegazione }}
       </div>
-      {% if modalita == 'gruppo' %}
-      <div class="insulto-box" id="msg-reazione"></div>
-      {% endif %}
+      {% if modalita == 'gruppo' %}<div class="insulto-box" id="msg-reazione"></div>{% endif %}
       {% endif %}
 
       <form method="post" action="/quiz">
         <input type="hidden" name="action" value="avanti">
-        {% if indice == totale %}
-          <button type="submit" class="btn-next{% if modalita == 'gruppo' %} btn-gruppo{% endif %}">Vedi risultato →</button>
-        {% else %}
-          <button type="submit" class="btn-next{% if modalita == 'gruppo' %} btn-gruppo{% endif %}">Prossima domanda →</button>
-        {% endif %}
+        <button type="submit" class="btn-next{% if modalita == 'gruppo' %} btn-gruppo btn-gruppo-amber{% endif %}">
+          {% if indice == totale %}🏁 VEDI RISULTATO{% else %}➡️ PROSSIMA DOMANDA{% endif %}
+        </button>
       </form>
       {% endif %}
 
     </div>
 
-    <footer class="app-footer">
-      {% if modalita == 'gruppo' %}FantaLeggenda · dal 2015 con furore
-      {% else %}Simulatore non ufficiale · uso didattico{% endif %}
+    <footer class="app-footer" style="margin-top:0.7rem;">
+      {% if modalita == 'gruppo' %}// Drondroloni · 🦍 · dal 2010 con furore{% else %}// Simulatore non ufficiale · uso didattico{% endif %}
     </footer>
   </div>
 
   <script>
     const TEMPO = 90;
     const MODALITA = "{{ modalita }}";
-    let secondi = TEMPO;
-    let bloccato = false;
+    let secondi = TEMPO, bloccato = false;
+    const d1 = document.getElementById('timer-display');
+    const d2 = document.getElementById('timer-display2');
+    const barra = document.getElementById('timer-bar');
+    const form = document.getElementById('quiz-form');
+    const inputS = document.getElementById('scelta-input');
 
-    const display1   = document.getElementById('timer-display');
-    const display2   = document.getElementById('timer-display2');
-    const barra      = document.getElementById('timer-bar');
-    const form       = document.getElementById('quiz-form');
-    const inputScelta = document.getElementById('scelta-input');
+    let ctx;
+    try { ctx = new (window.AudioContext || window.webkitAudioContext)(); } catch(e) {}
 
-    // ── AUDIO ──
-    const ctx = new (window.AudioContext || window.webkitAudioContext)();
     function suona(tipo) {
       if (!ctx) return;
       if (tipo === 'click') {
         const o = ctx.createOscillator(), g = ctx.createGain();
         o.connect(g); g.connect(ctx.destination);
-        o.type = 'sine'; o.frequency.setValueAtTime(820, ctx.currentTime);
-        o.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.08);
+        o.type = 'sine'; o.frequency.setValueAtTime(680, ctx.currentTime);
+        o.frequency.exponentialRampToValueAtTime(500, ctx.currentTime+0.08);
         g.gain.setValueAtTime(0.06, ctx.currentTime);
-        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.1);
-        o.start(); o.stop(ctx.currentTime + 0.1);
+        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime+0.1);
+        o.start(); o.stop(ctx.currentTime+0.1);
       } else if (tipo === 'timeout') {
-        [0, 0.15, 0.30].forEach((d, i) => {
+        [0,0.15,0.3].forEach((d,i) => {
           const o = ctx.createOscillator(), g = ctx.createGain();
           o.connect(g); g.connect(ctx.destination);
-          o.type = 'sine'; o.frequency.setValueAtTime(400 - i*60, ctx.currentTime + d);
-          g.gain.setValueAtTime(0.07, ctx.currentTime + d);
-          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + d + 0.12);
-          o.start(ctx.currentTime + d); o.stop(ctx.currentTime + d + 0.12);
+          o.type = 'sine'; o.frequency.setValueAtTime(380-i*60, ctx.currentTime+d);
+          g.gain.setValueAtTime(0.07, ctx.currentTime+d);
+          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime+d+0.12);
+          o.start(ctx.currentTime+d); o.stop(ctx.currentTime+d+0.12);
         });
       }
     }
 
     {% if feedback is none %}
-    document.querySelectorAll('.btn-option').forEach(btn => {
-      btn.addEventListener('mousedown', () => suona('click'));
-    });
+    document.querySelectorAll('.btn-option').forEach(btn =>
+      btn.addEventListener('mousedown', () => suona('click'))
+    );
 
-    function aggiornaTimer() {
-      if (display1) display1.textContent = secondi;
-      if (display2) display2.textContent = secondi;
-      const perc = (secondi / TEMPO) * 100;
+    function aggiornaTick() {
+      if (d1) d1.textContent = secondi;
+      if (d2) d2.textContent = secondi;
+      const pct = secondi / TEMPO * 100;
       if (barra) {
-        barra.style.width = perc + '%';
-        if (secondi > 30) {
-          barra.style.background = MODALITA === 'gruppo'
-            ? 'linear-gradient(90deg,#2ea043,#56d364)'
-            : 'linear-gradient(90deg,#c8a96e,#e8c98e)';
-        } else if (secondi > 10) {
-          barra.style.background = 'linear-gradient(90deg,#e67e22,#f39c12)';
+        barra.style.width = pct + '%';
+        if (MODALITA === 'gruppo') {
+          barra.style.background = secondi > 30
+            ? 'linear-gradient(90deg,var(--am),var(--am2))'
+            : secondi > 10
+              ? 'linear-gradient(90deg,#8b4000,#c06000)'
+              : 'linear-gradient(90deg,#6b0a10,#9b1020)';
         } else {
-          barra.style.background = 'linear-gradient(90deg,#c0392b,#e74c3c)';
+          barra.style.background = secondi > 30
+            ? 'linear-gradient(90deg,var(--accent),var(--accent2))'
+            : secondi > 10
+              ? 'linear-gradient(90deg,#e67e22,#f39c12)'
+              : 'linear-gradient(90deg,#c0392b,#e74c3c)';
         }
       }
     }
 
     function seleziona(idx, btn) {
       if (bloccato) return;
-      bloccato = true;
-      clearInterval(tick);
-      inputScelta.value = idx;
+      bloccato = true; clearInterval(tick);
+      inputS.value = idx;
       document.querySelectorAll('.btn-option').forEach(b => b.disabled = true);
-      btn.style.borderColor = MODALITA === 'gruppo' ? 'var(--g-green)' : 'var(--accent)';
+      btn.style.borderColor = MODALITA === 'gruppo' ? 'var(--gi)' : 'var(--accent)';
       setTimeout(() => form.submit(), 300);
     }
 
     function tempoScaduto() {
       if (bloccato) return;
-      bloccato = true;
-      suona('timeout');
-      inputScelta.value = -1;
+      bloccato = true; suona('timeout');
+      inputS.value = -1;
       if (barra) barra.style.width = '0%';
-      if (display1) display1.textContent = '0';
-      if (display2) display2.textContent = '0';
+      if (d1) d1.textContent = '0';
+      if (d2) d2.textContent = '0';
       document.querySelectorAll('.btn-option').forEach(b => b.disabled = true);
       setTimeout(() => form.submit(), 500);
     }
 
     const tick = setInterval(() => {
       secondi--;
-      aggiornaTimer();
+      aggiornaTick();
       if (secondi <= 0) { clearInterval(tick); tempoScaduto(); }
     }, 1000);
-    aggiornaTimer();
+    aggiornaTick();
     {% endif %}
 
     {% if modalita == 'gruppo' and feedback is not none %}
-    // ── INSULTI E COMPLIMENTI ──
     const insulti = [
-      "Pierino ti avrebbe risposto giusto anche al buio... e lui sa a malapena scrivere.",
-      "Manu con 3 caffè e 4 sfottò avrebbe fatto meglio. E lui non studia da vent'anni.",
-      "Canapino si nasconde anche nel deserto ma questa la sapeva pure lui.",
-      "Yuri ha fatto 2 conti e ha capito che neanche il divorzio ti salva da questa figuraccia.",
-      "Lele avrebbe scritto un messaggio poetico sulla tua ignoranza. Lunga tre schermate.",
-      "Paggio arriva alle 21 già mangiato e già più preparato di te.",
-      "Prisco con 22 ore e 50 minuti di ritardo conosce la risposta meglio di te.",
-      "Gala ha svuotato il bar E sapeva la risposta. Tu hai fatto solo metà lavoro.",
-      "Il Bindi al mini ping-pong ti avrebbe battuto anche in questo quiz.",
-      "Anche Arnold Swarzecanapo (aka Canapino) avrebbe fatto meglio. E lui si nasconde nel deserto.",
+      "Pierino ti avrebbe risposto giusto anche al buio.",
+      "Manu con 3 caffè avrebbe fatto meglio. E lui non studia.",
+      "Canapino si nasconde nel deserto ma questa la sapeva.",
+      "Yuri ha fatto 2 conti: anche il divorzio era meglio di questa risposta.",
+      "Lele avrebbe scritto un messaggio poetico sulla tua ignoranza. Tre schermate.",
+      "Paggio arriva già mangiato e già più preparato di te.",
+      "Il Bindi al mini ping-pong ti avrebbe battuto anche in questo.",
+      "Arnold Swarzecanapo si indigna.",
+      "Gala ha svuotato il bar E sapeva la risposta. Tu solo metà lavoro.",
+      "Il gorilla 🦍 piange.",
     ];
     const complimenti = [
-      "EIA! 🍷 Degno di entrare nella leggenda del gruppo!",
-      "Cavalier Piatto da Spezzacavalli sarebbe fiero di te!",
+      "EIA! 🍷 Degno del FantaLeggenda!",
+      "Cavalier Piatto da Spezzacavalli è fiero! 🦍",
       "Bravo! Anche Yuri ha smesso di piangere il divorzio per applaudirti.",
-      "Leggendario! Lele sta già scrivendo un messaggio commovente in tuo onore.",
-      "Pago! Sei il pulcino delle favelas che ce la fa.",
-      "Meno male che qualcuno studia in questo gruppo di somari!",
-      "Grandissimo! Anche Canapino è uscito dal deserto per vederti rispondere.",
-      "🔝 dei 🔝! Pierino ti cederebbe il titolo di Campione della Chat.",
-      "Madonna che risposta! Sei più forte di 14.060 😂 nella chat.",
-      "Eia! Degno erede del FantaLeggenda!",
+      "Leggendario! Lele ti dedica 3 schermate di poesia.",
+      "🔝 dei 🔝! Pierino ti cede il titolo per oggi.",
+      "Meno male che qualcuno studia nel gruppo! 🦍",
+      "Anche Canapino è uscito dal deserto per vederti rispondere.",
+      "EIA! 🍷🍷🍷 Degno erede del Drondroloni!",
+      "Il gorilla approva 🦍",
+      "Più forte di 14.060 😂 nella chat!",
     ];
-
     const corretta = {{ 'true' if feedback.corretta else 'false' }};
     const lista = corretta ? complimenti : insulti;
-    const msg = lista[Math.floor(Math.random() * lista.length)];
     const el = document.getElementById('msg-reazione');
-    if (el) el.textContent = msg;
+    if (el) el.textContent = lista[Math.floor(Math.random() * lista.length)];
 
-    // ── REAZIONE EMOJI ──
-    const overlay = document.getElementById('reazione-overlay');
-    const emojiEl = document.getElementById('reazione-emoji');
-    const emojiBene = ['🎉','🏆','⚽','🔝','🥳','👑','💚'];
-    const emojiMale = ['😂','💀','🪣','🤦','😭','🫠','💩'];
-    const emojiList = corretta ? emojiBene : emojiMale;
-    if (overlay && emojiEl) {
-      emojiEl.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
-      overlay.classList.add('show');
-      setTimeout(() => overlay.classList.remove('show'), 1200);
+    const emojiB = ['🎉','🏆','⚽','🔝','🥳','👑','🦍'];
+    const emojiM = ['😂','💀','🪣','🤦','😭','🫠','💩','🦍'];
+    const ov = document.getElementById('reazione-overlay');
+    const em = document.getElementById('reazione-emoji');
+    if (ov && em) {
+      em.textContent = (corretta ? emojiB : emojiM)[Math.floor(Math.random() * 7)];
+      ov.classList.add('show');
+      setTimeout(() => ov.classList.remove('show'), 1200);
     }
 
-    // ── FUOCHI D'ARTIFICIO (solo se corretto) ──
     {% if feedback.corretta %}
-    function fuochiArtificio() {
-      const colori = ['#56d364','#e3b341','#2ea043','#ffffff','#f85149'];
-      for (let i = 0; i < 18; i++) {
-        setTimeout(() => {
-          const el = document.createElement('div');
-          el.className = 'fuoco';
-          const x = Math.random() * window.innerWidth;
-          const y = Math.random() * window.innerHeight * 0.6;
-          const tx = (Math.random() - 0.5) * 200;
-          const ty = (Math.random() - 0.5) * 200;
-          el.style.cssText = `left:${x}px; top:${y}px; background:${colori[Math.floor(Math.random()*colori.length)]}; --tx:${tx}px; --ty:${ty}px; animation: fuoco-esplodi 0.8s ease-out forwards;`;
-          document.body.appendChild(el);
-          setTimeout(() => el.remove(), 900);
-        }, i * 60);
-      }
+    function fuochi() {
+      const col = ['#f0c010','#c0283c','#56d364','#fff','#ffd84a'];
+      for (let i=0; i<18; i++) setTimeout(() => {
+        const el = document.createElement('div'); el.className = 'fuoco';
+        const x=Math.random()*window.innerWidth, y=Math.random()*window.innerHeight*0.6;
+        const tx=(Math.random()-0.5)*200, ty=(Math.random()-0.5)*200;
+        el.style.cssText = `left:${x}px;top:${y}px;background:${col[Math.floor(Math.random()*5)]};--tx:${tx}px;--ty:${ty}px;animation:fuoco-esplodi .8s ease-out forwards;`;
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 900);
+      }, i*60);
     }
-    setTimeout(fuochiArtificio, 200);
+    setTimeout(fuochi, 200);
     {% endif %}
 
-    // ── CLASSIFICA LIVE ──
-    fetch('/api/classifica-live')
-      .then(r => r.json())
-      .then(data => {
-        const widget = document.getElementById('live-rank');
-        const rows = document.getElementById('live-rank-rows');
-        if (!widget || !rows || data.length === 0) return;
-        widget.classList.add('visible');
-        rows.innerHTML = data.slice(0,5).map((r,i) => `
-          <div class="live-rank-row">
-            <span>${['🥇','🥈','🥉','4.','5.'][i]} ${r.nome}</span>
-            <span style="color:var(--g-green2)">${r.best}%</span>
-          </div>`).join('');
-      }).catch(() => {});
+    fetch('/api/classifica-live').then(r=>r.json()).then(data => {
+      const w = document.getElementById('live-rank');
+      const r = document.getElementById('live-rank-rows');
+      if (!w || !r || !data.length) return;
+      w.classList.add('visible');
+      r.innerHTML = data.slice(0,5).map((d,i) =>
+        `<div class="live-rank-row"><span>${['🥇','🥈','🥉','4.','5.'][i]} ${d.nome}</span><span style="color:var(--gi)">${d.best}%</span></div>`
+      ).join('');
+    }).catch(()=>{});
     {% endif %}
   </script>
 </body>

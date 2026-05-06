@@ -2,106 +2,123 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FantaLeggenda Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Drondroloni Quiz</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
 </head>
 <body class="gruppo-body">
+  <div class="muro-texture"></div>
+  <div class="page-wrapper" style="position:relative; z-index:1; padding:1rem 0.8rem 2rem;">
 
-  <!-- Sfondo campo da calcio -->
-  <div class="campo-bg">
-    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <!-- Righe campo -->
-      <line x1="0" y1="450" x2="1440" y2="450" stroke="#1a5c2a" stroke-width="60" opacity="0.5"/>
-      <line x1="0" y1="150" x2="1440" y2="150" stroke="#1a5c2a" stroke-width="60" opacity="0.3"/>
-      <line x1="0" y1="750" x2="1440" y2="750" stroke="#1a5c2a" stroke-width="60" opacity="0.3"/>
-      <!-- Cerchio centrocampo -->
-      <circle cx="720" cy="450" r="160" fill="none" stroke="#1e6b30" stroke-width="2" opacity="0.4"/>
-      <circle cx="720" cy="450" r="5" fill="#1e6b30" opacity="0.5"/>
-      <!-- Linea centrocampo -->
-      <line x1="0" y1="450" x2="1440" y2="450" stroke="#1e6b30" stroke-width="1.5" opacity="0.4"/>
-      <!-- Area sx -->
-      <rect x="0" y="270" width="200" height="360" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
-      <rect x="0" y="360" width="80" height="180" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
-      <!-- Area dx -->
-      <rect x="1240" y="270" width="200" height="360" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
-      <rect x="1360" y="360" width="80" height="180" fill="none" stroke="#1e6b30" stroke-width="1.5" opacity="0.3"/>
-      <!-- Glow verde centrale -->
-      <ellipse cx="720" cy="450" rx="400" ry="300" fill="radial" opacity="0.08"/>
-      <!-- Testo sfondo -->
-      <text x="200" y="200" fill="#1e6b30" font-size="120" font-family="Georgia" opacity="0.06" transform="rotate(-15,200,200)">⚽</text>
-      <text x="1100" y="750" fill="#1e6b30" font-size="100" font-family="Georgia" opacity="0.06" transform="rotate(10,1100,750)">🏆</text>
-    </svg>
-  </div>
+    <!-- HEADER -->
+    <div class="gruppo-header">
+      <div class="gruppo-logo-wrap">
+        <img src="{{ url_for('static', filename='dondroloni.jpg') }}" alt="Drondroloni">
+      </div>
+      <div>
+        <div class="graffiti-title">
+          <span class="graffiti-title-inner">DRONDROLONI</span>
+          <span class="graffiti-sub">// quiz del gruppo</span>
+        </div>
+      </div>
+      <div style="margin-left:auto; display:flex; gap:7px;">
+        <a href="/classifica" style="text-decoration:none;">
+          <div style="padding:6px 10px; border:1px solid rgba(139,26,42,0.35); border-radius:8px; font-family:'Barlow Condensed',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:var(--mu); text-transform:uppercase;">🏆 Classifica</div>
+        </a>
+        <a href="/" style="text-decoration:none;">
+          <div style="padding:6px 10px; border:1px solid rgba(255,255,255,0.06); border-radius:8px; font-family:'Barlow Condensed',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; color:#2a1a1e; text-transform:uppercase;">← Home</div>
+        </a>
+      </div>
+    </div>
 
-  <div class="page-wrapper">
-
-    <header class="app-header">
-      <div class="badge gruppo-badge">🍷 FantaLeggenda</div>
-      <h1>Quiz del <span class="verde">Gruppo</span></h1>
-      <p>Quanto conosci davvero i tuoi amici?<br>Inserisci il tuo nome e scoprilo.</p>
-    </header>
-
+    <!-- CARD -->
     <div class="card gruppo-card">
       <form action="/start-gruppo" method="post">
+        <input type="hidden" name="viste" id="viste-input" value="">
+        <input type="hidden" name="livello" id="livello-hidden" value="medio">
+        <input type="hidden" name="n_domande" id="ndq-hidden" value="10">
 
-        <div class="form-group">
-          <label for="nome">Il tuo nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Come ti chiami?" maxlength="20" autocomplete="off" style="width:100%; background:var(--g-surface2); border:1px solid var(--g-border); border-radius:var(--radius); color:var(--g-text); font-family:'DM Sans',sans-serif; font-size:1rem; padding:0.85rem 1.1rem; outline:none;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+          <!-- Nome -->
+          <div>
+            <span class="g-label amber">🦍 // il tuo nome</span>
+            <input type="text" name="nome" placeholder="Come ti chiami?" maxlength="20" autocomplete="off"
+              style="width:100%; background:rgba(0,0,0,0.5); border:1px solid rgba(139,26,42,0.3); border-left:3px solid var(--gi); border-radius:10px; color:var(--cr); font-family:'Barlow',sans-serif; font-size:0.95rem; padding:0.75rem 1rem; outline:none;">
+          </div>
+          <!-- 15 ANNI -->
+          <div>
+            <span class="g-label">⏱ // insieme da</span>
+            <div class="anni-box">
+              <div class="anni-num">15</div>
+              <div class="anni-label">anni<br>di<br>chat 🦍</div>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="livello">Difficoltà</label>
-          <select id="livello" name="livello">
-            <option value="medio">🟡 Medio — Roba che dovresti sapere</option>
-            <option value="difficile">🔴 Difficile — Roba che probabilmente non sai</option>
-          </select>
+        <!-- Difficoltà -->
+        <div style="margin-bottom:10px;">
+          <span class="g-label red">🔥 // difficoltà</span>
+          <div class="diff-toggle">
+            <button type="button" class="diff-btn active-medio" id="btn-medio" onclick="setDiff('medio')">📗 MEDIO</button>
+            <button type="button" class="diff-btn" id="btn-difficile" onclick="setDiff('difficile')">📕 DIFFICILE</button>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="n_domande">Numero di domande</label>
-          <select id="n_domande" name="n_domande">
-            <option value="5">5 — Riscaldamento veloce</option>
-            <option value="10" selected>10 — Partita normale</option>
-            <option value="15">15 — Partita lunga</option>
-            <option value="20">20 — Maratona leggendaria</option>
-          </select>
+        <!-- N. domande -->
+        <div style="margin-bottom:12px;">
+          <span class="g-label cyan">🎯 // numero domande</span>
+          <div class="ndq-toggle">
+            <button type="button" class="ndq-btn" onclick="setNdq(5,this)">5</button>
+            <button type="button" class="ndq-btn active" onclick="setNdq(10,this)">10</button>
+            <button type="button" class="ndq-btn" onclick="setNdq(15,this)">15</button>
+            <button type="button" class="ndq-btn" onclick="setNdq(20,this)">20</button>
+          </div>
         </div>
 
-        <div class="divider"></div>
+        <!-- Mini stats -->
+        <div class="mini-stats" style="margin-bottom:14px;">
+          <div class="mini-stat"><span class="mini-stat-num">150</span><span class="mini-stat-label">🗂 Domande</span></div>
+          <div class="mini-stat"><span class="mini-stat-num">12</span><span class="mini-stat-label">🦍 Leggende</span></div>
+          <div class="mini-stat"><span class="mini-stat-num">8+</span><span class="mini-stat-label">📸 Foto</span></div>
+        </div>
 
-        <button type="submit" class="btn-gruppo">Inizia il Quiz ⚽</button>
-
+        <button type="submit" class="btn-gruppo">🎮 INIZIA IL QUIZ</button>
       </form>
 
-      <div class="divider"></div>
-
-      <a href="/classifica" style="text-decoration:none;">
-        <button class="btn-gruppo-secondary">🏆 Classifica del gruppo</button>
-      </a>
-    </div>
-
-    <div class="stats-row">
-      <div class="stat-box gruppo-stat">
-        <span class="stat-num verde">36</span>
-        <span class="stat-label">Domande</span>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:6px;">
+        <a href="/classifica" style="text-decoration:none;"><button class="btn-gruppo-secondary">🏆 Classifica</button></a>
+        <a href="/" style="text-decoration:none;"><button class="btn-gruppo-secondary">🏠 Home</button></a>
       </div>
-      <div class="stat-box gruppo-stat">
-        <span class="stat-num verde">9</span>
-        <span class="stat-label">Anni di chat</span>
-      </div>
-      <div class="stat-box gruppo-stat">
-        <span class="stat-num verde">12</span>
-        <span class="stat-label">Personaggi</span>
+
+      <div style="margin-top:12px; display:flex; gap:16px; justify-content:center;">
+        <div class="graffiti-tag" style="color:rgba(240,192,16,0.22); transform:rotate(-2deg);">Eia! 🍷</div>
+        <div class="graffiti-tag" style="color:rgba(192,40,60,0.18); transform:rotate(1deg);">Io sono leggenda!!!</div>
+        <div class="graffiti-tag" style="color:rgba(240,192,16,0.14); transform:rotate(-1deg);">Cimbanella vaffanculo</div>
       </div>
     </div>
 
-    <div style="text-align:center; margin-top:1.5rem;">
-      <a href="/" style="color:var(--g-muted); text-decoration:none; font-size:0.82rem;">← Torna al Test di Medicina</a>
-    </div>
-
-    <footer class="app-footer" style="color:var(--g-muted);">FantaLeggenda · dal 2015 con furore</footer>
+    <footer class="app-footer" style="margin-top:1rem;">// Drondroloni · dal 2010 con furore · 🦍</footer>
   </div>
+
+  <script>
+    function setDiff(val) {
+      document.getElementById('livello-hidden').value = val;
+      document.getElementById('btn-medio').className = 'diff-btn' + (val==='medio' ? ' active-medio' : '');
+      document.getElementById('btn-difficile').className = 'diff-btn' + (val==='difficile' ? ' active-difficile' : '');
+      aggiornaViste();
+    }
+    function setNdq(val, btn) {
+      document.getElementById('ndq-hidden').value = val;
+      document.querySelectorAll('.ndq-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+    function aggiornaViste() {
+      const liv = document.getElementById('livello-hidden').value;
+      const viste = JSON.parse(localStorage.getItem('viste_gruppo_' + liv) || '[]');
+      document.getElementById('viste-input').value = viste.join('||');
+    }
+    aggiornaViste();
+  </script>
 </body>
 </html>

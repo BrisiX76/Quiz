@@ -2,153 +2,180 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Risultato · Test Medicina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Risultato</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='style_gruppo.css') }}">
 </head>
-<body>
-  <!-- Sfondo accademico-scientifico -->
-  <div class="bg-canvas">
-    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <radialGradient id="glow1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a3a6e" stop-opacity="0.7"/><stop offset="100%" stop-color="#0a0f1e" stop-opacity="0"/></radialGradient>
-        <radialGradient id="glow2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#c8a96e" stop-opacity="0.45"/><stop offset="100%" stop-color="#0a0f1e" stop-opacity="0"/></radialGradient>
-      </defs>
-      <ellipse cx="200" cy="200" rx="400" ry="350" fill="url(#glow1)"/>
-      <ellipse cx="1200" cy="700" rx="380" ry="300" fill="url(#glow1)"/>
-      <ellipse cx="900" cy="150" rx="300" ry="250" fill="url(#glow2)"/>
-      <g class="bg-el-1" fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.35"><rect x="60" y="200" width="28" height="480" rx="2"/><rect x="55" y="190" width="38" height="18" rx="1"/><line x1="68" y1="210" x2="68" y2="668"/><line x1="74" y1="210" x2="74" y2="668"/><line x1="80" y1="210" x2="80" y2="668"/></g>
-      <g class="bg-el-3" fill="none" stroke="#c8a96e" stroke-width="0.8" opacity="0.28"><rect x="1350" y="180" width="28" height="500" rx="2"/><rect x="1345" y="170" width="38" height="18" rx="1"/><line x1="1358" y1="190" x2="1358" y2="670"/><line x1="1364" y1="190" x2="1364" y2="670"/><line x1="1370" y1="190" x2="1370" y2="670"/></g>
-      <g class="bg-el-2" fill="none" stroke="#8aafdf" stroke-width="0.7" opacity="0.35"><path d="M 180 350 Q 220 370 180 390 Q 140 410 180 430 Q 220 450 180 470 Q 140 490 180 510 Q 220 530 180 550"/><path d="M 200 350 Q 160 370 200 390 Q 240 410 200 430 Q 160 450 200 470 Q 240 490 200 510 Q 160 530 200 550"/><line x1="185" y1="368" x2="195" y2="372"/><line x1="183" y1="408" x2="197" y2="412"/><line x1="185" y1="448" x2="195" y2="452"/></g>
-      <g class="bg-el-1" opacity="0.25" font-family="Georgia, serif" fill="#c8a96e"><text x="80" y="160" font-size="13">F = ma</text><text x="1300" y="280" font-size="11">E = hν</text><text x="70" y="750" font-size="11">λ = v/f</text><text x="1290" y="800" font-size="12">pH = -log[H⁺]</text></g>
-      <g class="bg-el-3" opacity="0.22" font-family="Georgia, serif" fill="#8aafdf"><text x="100" y="580" font-size="10">2n = 46</text><text x="1310" y="160" font-size="11">ATP → ADP</text><text x="85" y="480" font-size="11">I = V/R</text></g>
-    </svg>
-  </div>
+<body{% if modalita == 'gruppo' %} class="gruppo-body"{% endif %}>
+  {% if modalita == 'gruppo' %}<div class="muro-texture"></div>{% endif %}
 
-  <div class="page-wrapper">
+  <div class="page-wrapper" style="position:relative; z-index:1; padding:1rem 0.8rem 2rem;">
 
+    <!-- HEADER -->
+    {% if modalita == 'gruppo' %}
+    <div class="gruppo-header" style="margin-bottom:12px;">
+      <div class="gruppo-logo-wrap">
+        <img src="{{ url_for('static', filename='dondroloni.jpg') }}" alt="Drondroloni">
+      </div>
+      <div>
+        <div class="graffiti-title">
+          <span class="graffiti-title-inner">RISULTATO</span>
+          <span class="graffiti-sub">// {{ nome or 'Anonimo' }} · {{ livello }}</span>
+        </div>
+      </div>
+    </div>
+    {% else %}
     <header class="app-header">
-      <div class="badge">Risultato</div>
+      <div class="badge">🔬 Risultato · {{ materia | capitalize }} · {{ livello }}</div>
       <h1>Il tuo <span>Score</span></h1>
     </header>
+    {% endif %}
 
-    <div class="card">
+    <div class="card{% if modalita == 'gruppo' %} gruppo-card{% endif %}">
 
+      <!-- CERCHIO SCORE -->
+      {% if modalita == 'gruppo' %}
+      <div class="score-circle-gruppo">
+        <span class="score-num">{{ punteggio }}</span>
+        <span class="score-tot">SU {{ totale }}</span>
+      </div>
+
+      <!-- MESSAGGIO -->
+      {% if percentuale >= 80 %}
+      <p class="result-message-gruppo">🦍 LEGGENDARIO!</p>
+      <p class="result-sub-gruppo">"Cavalier Piatto da Spezzacavalli è fiero di te."</p>
+      {% elif percentuale >= 60 %}
+      <p class="result-message-gruppo">🔥 Bravo gorilla!</p>
+      <p class="result-sub-gruppo">"Eia! 🍷 — Qualche lacuna ma ci siamo."</p>
+      {% elif percentuale >= 40 %}
+      <p class="result-message-gruppo">⚠️ Si può fare di più</p>
+      <p class="result-sub-gruppo">"Lele ti dedica 3 schermate di poesia sulla tua ignoranza."</p>
+      {% else %}
+      <p class="result-message-gruppo">💩 Che disastro!</p>
+      <p class="result-sub-gruppo">"Il gorilla piange 🦍 — rileggi la chat."</p>
+      {% endif %}
+
+      <div class="divider" style="border-color:rgba(139,26,42,0.25); margin:1rem 0;"></div>
+
+      <div class="result-grid-gruppo">
+        <div class="result-stat-gruppo amber-stat">
+          <span class="rs-val">{{ percentuale }}%</span>
+          <span class="rs-label">📊 Percentuale</span>
+        </div>
+        <div class="result-stat-gruppo red-stat">
+          <span class="rs-val">{{ totale - punteggio }}</span>
+          <span class="rs-label">❌ Errori</span>
+        </div>
+        <div class="result-stat-gruppo green-stat">
+          <span class="rs-val">{{ punteggio }}</span>
+          <span class="rs-label">✅ Corrette</span>
+        </div>
+        <div class="result-stat-gruppo cyan-stat">
+          <span class="rs-val" style="font-size:1.3rem; font-family:'Barlow Condensed',sans-serif; font-style:normal;">{{ livello | upper }}</span>
+          <span class="rs-label">⚡ Livello</span>
+        </div>
+      </div>
+
+      <a href="/start-same" style="text-decoration:none;">
+        <button class="btn-gruppo" style="margin-bottom:6px;">🔄 RIPROVA</button>
+      </a>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px;">
+        <a href="/classifica" style="text-decoration:none;"><button class="btn-gruppo-secondary">🏆 Classifica</button></a>
+        <a href="/gruppo" style="text-decoration:none;"><button class="btn-gruppo-secondary">🦍 Nuovo quiz</button></a>
+      </div>
+      <a href="/" style="text-decoration:none;"><button class="btn-gruppo-secondary" style="margin-top:5px;">🏠 Home</button></a>
+
+      {% else %}
+      <!-- MEDICINA -->
       <div class="score-circle">
         <span class="score-num">{{ punteggio }}</span>
         <span class="score-tot">su {{ totale }}</span>
       </div>
 
       {% if percentuale >= 80 %}
-        <p class="result-message">🎯 Ottimo lavoro!</p>
-        <p class="result-sub">Sei sulla strada giusta per superare il filtro.</p>
+      <p class="result-message">🎯 Ottimo lavoro!</p>
+      <p class="result-sub">// Sei sulla strada giusta.</p>
       {% elif percentuale >= 60 %}
-        <p class="result-message">📚 Buona base</p>
-        <p class="result-sub">Ancora qualche lacuna — ripassaci sopra.</p>
+      <p class="result-message">📚 Buona base</p>
+      <p class="result-sub">// Ancora qualche lacuna.</p>
       {% elif percentuale >= 40 %}
-        <p class="result-message">⚠️ Da migliorare</p>
-        <p class="result-sub">Torna sui fondamentali prima di riprovare.</p>
+      <p class="result-message">⚠️ Da migliorare</p>
+      <p class="result-sub">// Torna sui fondamentali.</p>
       {% else %}
-        <p class="result-message">💡 Continua a studiare</p>
-        <p class="result-sub">Non mollare — riparti dalla teoria.</p>
+      <p class="result-message">💡 Continua a studiare</p>
+      <p class="result-sub">// Riparti dalla teoria.</p>
       {% endif %}
 
       <div class="divider"></div>
 
       <div class="result-grid">
-        <div class="result-stat">
-          <div class="rs-val">{{ percentuale }}%</div>
-          <div class="rs-label">Percentuale</div>
-        </div>
-        <div class="result-stat">
-          <div class="rs-val">{{ totale - punteggio }}</div>
-          <div class="rs-label">Errori</div>
-        </div>
-        <div class="result-stat">
-          <div class="rs-val">{{ materia | capitalize }}</div>
-          <div class="rs-label">Materia</div>
-        </div>
-        <div class="result-stat">
-          <div class="rs-val">{{ livello | capitalize }}</div>
-          <div class="rs-label">Livello</div>
-        </div>
+        <div class="result-stat"><div class="rs-val">{{ percentuale }}%</div><div class="rs-label">📊 Score</div></div>
+        <div class="result-stat"><div class="rs-val">{{ totale - punteggio }}</div><div class="rs-label">❌ Errori</div></div>
+        <div class="result-stat"><div class="rs-val">{{ materia | capitalize }}</div><div class="rs-label">🔬 Materia</div></div>
+        <div class="result-stat"><div class="rs-val">{{ livello | capitalize }}</div><div class="rs-label">⚡ Livello</div></div>
       </div>
 
       <a href="/start-same" style="text-decoration:none;">
-        <button class="{% if modalita == 'gruppo' %}btn-gruppo{% else %}btn-primary{% endif %}" style="margin-bottom: 0.7rem;">Riprova →</button>
+        <button class="btn-primary" style="margin-bottom:0.6rem;">🔄 Riprova stesso test</button>
       </a>
-      {% if modalita == 'gruppo' %}
-      <a href="/classifica" style="text-decoration:none;">
-        <button class="btn-gruppo-secondary" style="margin-bottom: 0.7rem;">🏆 Vedi classifica</button>
-      </a>
-      <a href="/gruppo" style="text-decoration:none;">
-        <button class="btn-gruppo-secondary">Cambia livello</button>
-      </a>
-      {% else %}
       <a href="/statistiche" style="text-decoration:none;">
-        <button class="btn-secondary" style="margin-bottom: 0.7rem;">Vedi statistiche →</button>
+        <button class="btn-secondary" style="margin-bottom:0.5rem;">📈 Vedi statistiche</button>
       </a>
       <a href="/medicina" style="text-decoration:none;">
-        <button class="btn-secondary">Cambia materia / livello</button>
+        <button class="btn-secondary">🔬 Cambia materia</button>
       </a>
       {% endif %}
 
     </div>
 
-    <footer class="app-footer">Simulatore non ufficiale · uso didattico</footer>
+    <footer class="app-footer" style="margin-top:1rem;">
+      {% if modalita == 'gruppo' %}// Drondroloni · 🦍 · dal 2010 con furore{% else %}// Simulatore non ufficiale · uso didattico{% endif %}
+    </footer>
   </div>
 
   <script>
-    // Salva il risultato nel localStorage
     const risultato = {
       data: new Date().toLocaleDateString('it-IT'),
-      materia: "{{ materia }}",
-      livello: "{{ livello }}",
-      punteggio: {{ punteggio }},
-      totale: {{ totale }},
-      percentuale: {{ percentuale }}
+      materia: "{{ materia }}", livello: "{{ livello }}",
+      punteggio: {{ punteggio }}, totale: {{ totale }}, percentuale: {{ percentuale }}
     };
     const storico = JSON.parse(localStorage.getItem('quiz_storico') || '[]');
     storico.unshift(risultato);
     if (storico.length > 50) storico.pop();
     localStorage.setItem('quiz_storico', JSON.stringify(storico));
 
-    // ── SUONO RISULTATO ──
-    const ctx = new (window.AudioContext || window.webkitAudioContext)();
-    const perc = {{ percentuale }};
+    const domande_viste = {{ domande_viste | tojson }};
+    const chiave = '{{ "viste_gruppo_" + livello if materia == "gruppo" else "viste_" + materia + "_" + livello }}';
+    const viste_att = JSON.parse(localStorage.getItem(chiave) || '[]');
+    const viste_new = [...new Set([...viste_att, ...domande_viste])];
+    if (viste_new.length >= {{ max_domande }}) localStorage.removeItem(chiave);
+    else localStorage.setItem(chiave, JSON.stringify(viste_new));
 
-    function suonaRisultato() {
-      if (perc >= 60) {
-        // Due note ascendenti morbide — esito positivo
-        [[520, 0], [780, 0.18]].forEach(([freq, delay]) => {
-          const o = ctx.createOscillator();
-          const g = ctx.createGain();
-          o.connect(g); g.connect(ctx.destination);
-          o.type = 'sine';
-          o.frequency.setValueAtTime(freq, ctx.currentTime + delay);
-          g.gain.setValueAtTime(0.08, ctx.currentTime + delay);
-          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + delay + 0.35);
-          o.start(ctx.currentTime + delay);
-          o.stop(ctx.currentTime + delay + 0.35);
-        });
-      } else {
-        // Nota bassa discendente — esito negativo
-        const o = ctx.createOscillator();
-        const g = ctx.createGain();
-        o.connect(g); g.connect(ctx.destination);
-        o.type = 'sine';
-        o.frequency.setValueAtTime(320, ctx.currentTime);
-        o.frequency.exponentialRampToValueAtTime(200, ctx.currentTime + 0.4);
-        g.gain.setValueAtTime(0.07, ctx.currentTime);
-        g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
-        o.start(ctx.currentTime);
-        o.stop(ctx.currentTime + 0.4);
-      }
-    }
-
-    // Piccolo delay per dare tempo alla pagina di caricarsi
-    setTimeout(suonaRisultato, 400);
+    try {
+      const actx = new (window.AudioContext || window.webkitAudioContext)();
+      const perc = {{ percentuale }};
+      setTimeout(() => {
+        if (perc >= 60) {
+          [[520,0],[780,.18]].forEach(([f,d]) => {
+            const o=actx.createOscillator(), g=actx.createGain();
+            o.connect(g); g.connect(actx.destination);
+            o.type='sine'; o.frequency.setValueAtTime(f, actx.currentTime+d);
+            g.gain.setValueAtTime(0.08, actx.currentTime+d);
+            g.gain.exponentialRampToValueAtTime(0.001, actx.currentTime+d+.35);
+            o.start(actx.currentTime+d); o.stop(actx.currentTime+d+.35);
+          });
+        } else {
+          const o=actx.createOscillator(), g=actx.createGain();
+          o.connect(g); g.connect(actx.destination);
+          o.type='sine'; o.frequency.setValueAtTime(320, actx.currentTime);
+          o.frequency.exponentialRampToValueAtTime(200, actx.currentTime+.4);
+          g.gain.setValueAtTime(0.07, actx.currentTime);
+          g.gain.exponentialRampToValueAtTime(0.001, actx.currentTime+.4);
+          o.start(); o.stop(actx.currentTime+.4);
+        }
+      }, 400);
+    } catch(e) {}
   </script>
 </body>
 </html>

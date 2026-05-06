@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Statistiche · Medicina</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="bg-canvas">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs><radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#1a3a6e" stop-opacity="0.5"/><stop offset="100%" stop-color="#0a0a0f" stop-opacity="0"/></radialGradient></defs>
+      <ellipse cx="200" cy="200" rx="400" ry="350" fill="url(#g1)"/>
+      <ellipse cx="1200" cy="700" rx="380" ry="300" fill="url(#g1)"/>
+    </svg>
+  </div>
+
+  <div class="page-wrapper">
+    <header class="app-header">
+      <div class="badge">📈 Statistiche</div>
+      <h1>Il tuo <span>Progresso</span></h1>
+    </header>
+
+    <div class="stats-row" id="riepilogo" style="margin-bottom:1rem;">
+      <div class="stat-box"><span class="stat-num" id="tot-test">—</span><span class="stat-label">🎯 Test totali</span></div>
+      <div class="stat-box"><span class="stat-num" id="media-globale">—</span><span class="stat-label">📊 Media %</span></div>
+      <div class="stat-box"><span class="stat-num" id="migliore">—</span><span class="stat-label">🏆 Best score</span></div>
+    </div>
+
+    <div class="card" style="margin-bottom:1rem;">
+      <p style="font-family:'Share Tech Mono',monospace; font-size:0.75rem; color:var(--muted); margin-bottom:1rem; letter-spacing:1px; text-transform:uppercase;">// Media per materia</p>
+      <div id="per-materia"><p style="color:var(--muted); font-size:0.9rem;">Nessun test ancora.</p></div>
+    </div>
+
+    <div class="card">
+      <p style="font-family:'Share Tech Mono',monospace; font-size:0.75rem; color:var(--muted); margin-bottom:1rem; letter-spacing:1px; text-transform:uppercase;">// Storico test</p>
+      <div id="storico-lista"><p style="color:var(--muted); font-size:0.9rem;">Nessun test ancora.</p></div>
+    </div>
+
+    <div style="margin-top:1rem; display:flex; flex-direction:column; gap:0.6rem;">
+      <a href="/medicina" style="text-decoration:none;"><button class="btn-primary">🚀 Nuovo test</button></a>
+      <button class="btn-secondary" onclick="resetStorico()">🗑 Cancella storico</button>
+    </div>
+
+    <div style="text-align:center; margin-top:1rem;">
+      <a href="/" style="color:var(--muted); text-decoration:none; font-family:'Share Tech Mono',monospace; font-size:0.75rem;">← HOME</a>
+    </div>
+    <footer class="app-footer">// Simulatore non ufficiale · uso didattico</footer>
+  </div>
+
+  <script>
+    const COLORI = { biologia:'#3ddc84', chimica:'#a89cef', fisica:'#00c8ff' };
+    const ICONE  = { biologia:'🧬', chimica:'⚗️', fisica:'⚡' };
+
+    function resetStorico() {
+      if (confirm('Cancellare tutto lo storico?')) { localStorage.removeItem('quiz_storico'); location.reload(); }
+    }
+
+    function render() {
+      const storico = JSON.parse(localStorage.getItem('quiz_storico') || '[]');
+      if (!storico.length) return;
+      const media = Math.round(storico.reduce((s,t) => s+t.percentuale, 0) / storico.length);
+      const best = Math.max(...storico.map(t => t.percentuale));
+      document.getElementById('tot-test').textContent = storico.length;
+      document.getElementById('media-globale').textContent = media + '%';
+      document.getElementById('migliore').textContent = best + '%';
+
+      const pmEl = document.getElementById('per-materia');
+      pmEl.innerHTML = '';
+      ['biologia','chimica','fisica'].forEach(m => {
+        const tests = storico.filter(t => t.materia === m);
+        if (!tests.length) return;
+        const med = Math.round(tests.reduce((s,t) => s+t.percentuale, 0) / tests.length);
+        pmEl.innerHTML += `
+          <div style="margin-bottom:1rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.4rem;">
+              <span style="font-size:0.9rem; font-weight:500;">${ICONE[m]} ${m}</span>
+              <span style="font-size:0.85rem; color:var(--muted); font-family:'Share Tech Mono',monospace;">${med}% · ${tests.length} test</span>
+            </div>
+            <div style="height:5px; background:var(--border2); border-radius:3px; overflow:hidden;">
+              <div style="height:100%; width:${med}%; background:${COLORI[m]}; border-radius:3px; transition:width .6s;"></div>
+            </div>
+          </div>`;
+      });
+
+      const slEl = document.getElementById('storico-lista');
+      slEl.innerHTML = '';
+      storico.slice(0,20).forEach((t,i) => {
+        const c = t.percentuale>=80?'#3ddc84':t.percentuale>=60?'#a89cef':'#ff4f6a';
+        slEl.innerHTML += `
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--border);">
+            <div>
+              <span style="font-size:0.9rem; font-weight:500;">${ICONE[t.materia]||'📚'} ${t.materia}</span>
+              <span style="font-size:0.75rem; color:var(--muted); margin-left:0.4rem; font-family:'Share Tech Mono',monospace;">${t.livello} · ${t.data}</span>
+            </div>
+            <span style="font-size:1rem; font-weight:700; color:${c}; font-family:'Oswald',sans-serif;">${t.punteggio}/${t.totale}</span>
+          </div>`;
+      });
+    }
+    render();
+  </script>
+</body>
+</html>
